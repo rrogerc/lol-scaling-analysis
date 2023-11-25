@@ -4,7 +4,7 @@ from sklearn.cluster import KMeans
 import matplotlib.pyplot as plt
 
 # Load the winrate data
-with open('/Users/rogerchen/Programming/LOL Data/onetrick30days_all_champions_data.json', 'r') as file:
+with open('/Users/rogerchen/Programming/LOL Data/new_champion_data.json', 'r') as file:
     all_champions_data = json.load(file)
 
 # Convert the data into a DataFrame for easier manipulation
