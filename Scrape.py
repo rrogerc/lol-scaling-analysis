@@ -383,7 +383,7 @@ for champion in champions:
     # url = f"https://lolalytics.com/lol/{boy}/build"
     # session.get(url)
 
-    data_url = f"https://ax.lolalytics.com/mega/?ep=champion&p=d&v=1&patch=30&cid={champion_numbers[cnt]}&lane=default&tier=1trick&queue=420&region=all"
+    data_url = f"https://ax.lolalytics.com/mega/?ep=champion&p=d&v=1&patch=30&cid={champion_numbers[cnt]}&lane=default&tier=master_plus&queue=420&region=all"
     # print(data_url)
     response = session.get(data_url)
 
@@ -420,7 +420,7 @@ for champion in champions:
 
     all_champions_data[champion] = sorted_winrates
 
-    save_data("new_champion_data.json", all_champions_data)
+    save_data("master_plus.json", all_champions_data)
 
     # Plot
     # plt.figure(figsize=(10, 6))
