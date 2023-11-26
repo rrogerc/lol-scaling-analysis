@@ -33,38 +33,39 @@ for i in range(kmeans.n_clusters):
     plt.legend()
     plt.show()
 
+exit(0)
 
 
-# import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt
 
-# # Assuming 'kmeans.n_clusters' is the number of clusters you have
-# n_clusters = kmeans.n_clusters
-# n_cols = 5  # This can be adjusted as needed
-# n_rows = n_clusters // n_cols + (n_clusters % n_cols > 0)
+# Assuming 'kmeans.n_clusters' is the number of clusters you have
+n_clusters = kmeans.n_clusters
+n_cols = 5  # This can be adjusted as needed
+n_rows = n_clusters // n_cols + (n_clusters % n_cols > 0)
 
-# # Create a large figure to hold all the subplots
-# fig, axs = plt.subplots(n_rows, n_cols, figsize=(20, n_rows * 4), sharex=True, sharey=True)
+# Create a large figure to hold all the subplots
+fig, axs = plt.subplots(n_rows, n_cols, figsize=(20, n_rows * 4), sharex=True, sharey=True)
 
-# # Flatten the axis array for easy iteration
-# axs = axs.ravel()
+# Flatten the axis array for easy iteration
+axs = axs.ravel()
 
-# for i in range(n_clusters):
-#     cluster_data = champions_df[champions_df['Cluster'] == i]
-#     for index, row in cluster_data.iterrows():
-#         axs[i].plot(row[:-1], label=index)  # Exclude the cluster label from the plot
-#     axs[i].set_title(f'Cluster {i}')
-#     axs[i].legend()
+for i in range(n_clusters):
+    cluster_data = champions_df[champions_df['Cluster'] == i]
+    for index, row in cluster_data.iterrows():
+        axs[i].plot(row[:-1], label=index)  # Exclude the cluster label from the plot
+    axs[i].set_title(f'Cluster {i}')
+    axs[i].legend()
 
-# # Set a common title and axis labels
-# fig.suptitle('K-means Clustering of Champion Winrate vs Game Length (k=20)', fontsize=16)
-# plt.setp(axs[-n_cols:], xlabel='Game Length Bin')
-# plt.setp(axs[::n_cols], ylabel='Winrate')
+# Set a common title and axis labels
+fig.suptitle('K-means Clustering of Champion Winrate vs Game Length (k=20)', fontsize=16)
+plt.setp(axs[-n_cols:], xlabel='Game Length Bin')
+plt.setp(axs[::n_cols], ylabel='Winrate')
 
-# # Adjust layout for title and subplots to not overlap
-# plt.tight_layout()
-# plt.subplots_adjust(top=0.95)  # Adjust the top value as needed to fit the suptitle
+# Adjust layout for title and subplots to not overlap
+plt.tight_layout()
+plt.subplots_adjust(top=0.95)  # Adjust the top value as needed to fit the suptitle
 
-# # Show the plot
-# plt.show()
+# Show the plot
+plt.show()
 
 
