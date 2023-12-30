@@ -13,7 +13,7 @@ for i in range(champions.__len__()):
     response = session.get(data_url)
 
     if response.status_code != 200:
-        print("Failed to retrieve data. Status code: {response.status_code}: " + boy)
+        print("Failed to retrieve data. Status code: {response.status_code}: " + champions[i])
         continue
 
     print(f"Processing: {champions[i]} + {champion_numbers[i]}")
