@@ -3,11 +3,12 @@ import json
 from Champions import champions, champion_numbers
 
 all_champions_data = {}
-json_filename = "new_champion_data.json"
+json_filename = "diamond_plus.json"
+tier = "diamond_plus"
 session = requests.Session()
 
 for i in range(champions.__len__()):
-    data_url = f"https://ax.lolalytics.com/mega/?ep=champion&p=d&v=1&patch=30&cid={champion_numbers[i]}&lane=default&tier=master_plus&queue=420&region=all"
+    data_url = f"https://ax.lolalytics.com/mega/?ep=champion&p=d&v=1&patch=30&cid={champion_numbers[i]}&lane=default&tier={tier}&queue=420&region=all"
     
     response = session.get(data_url)
 
@@ -34,10 +35,6 @@ for i in range(champions.__len__()):
 
     all_champions_data[champions[i]] = sorted_winrates
 
-print(all_champions_data)
-
-
-# Write the data to a file
 with open(json_filename, "w") as file:
     json.dump(all_champions_data, file)
 
