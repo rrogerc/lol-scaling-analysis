@@ -1,5 +1,6 @@
 import requests
 import json
+
 from Champions import champions, champion_numbers
 
 all_champions_data = {}
