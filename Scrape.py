@@ -1,10 +1,5 @@
 import requests
-from bs4 import BeautifulSoup
 import json
-import re
-import matplotlib.pyplot as plt
-
-import time
 
 champions = [
     "Aatrox",
@@ -344,12 +339,11 @@ champion_numbers = [
 ]
 
 all_champions_data = {}
-cnt = 0
 
 session = requests.Session()
 
-for champion in champions:
-    data_url = f"https://ax.lolalytics.com/mega/?ep=champion&p=d&v=1&patch=30&cid={champion_numbers[cnt]}&lane=default&tier=master_plus&queue=420&region=all"
+for i in range(champions.__len__()):
+    data_url = f"https://ax.lolalytics.com/mega/?ep=champion&p=d&v=1&patch=30&cid={champion_numbers[i]}&lane=default&tier=master_plus&queue=420&region=all"
     
     response = session.get(data_url)
 
@@ -357,7 +351,7 @@ for champion in champions:
         print("Failed to retrieve data. Status code: {response.status_code}: " + boy)
         continue
 
-    print(f"Processing: {champion} + {champion_numbers[cnt]}")
+    print(f"Processing: {champions[i]} + {champion_numbers[i]}")
 
     data = response.json()
 
@@ -374,25 +368,14 @@ for champion in champions:
     sorted_data = sorted(winrates.items())
     sorted_game_lengths, sorted_winrates = zip(*sorted_data)
 
-    all_champions_data[champion] = sorted_winrates
+    all_champions_data[champions[i]] = sorted_winrates
 
+print(all_champions_data)
 
-    # Plot
-    # plt.figure(figsize=(10, 6))
-    # plt.plot(sorted_game_lengths, sorted_winrates, marker='o', linestyle='-', color='b')
-    # plt.title("Winrate vs Sorted Game Length")
-    # plt.xlabel("Sorted Game Length")
-    # plt.ylabel("Winrate")
-    # plt.grid(True)
-    # plt.show()
-    cnt = cnt + 1
+filename = "new_champion_data.json"
 
-# print(all_champions_data)
+# Write the data to a file
+with open(filename, "w") as file:
+    json.dump(all_champions_data, file)
 
-# filename = "new_champion_data.json"
-
-# # Write the data to a file
-# with open(filename, "w") as file:
-#     json.dump(all_champions_data, file)
-
-# print(f"Data saved to {filename}")
+print(f"Data saved to {filename}")
