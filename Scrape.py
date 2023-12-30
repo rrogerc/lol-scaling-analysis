@@ -343,48 +343,14 @@ champion_numbers = [
     143,
 ]
 
-# print(len(champions), len(champion_numbers))
-
-# exit()
-
-
-import os
-
-
-# Function to load existing data
-def load_existing_data(filename):
-    if os.path.exists(filename):
-        with open(filename, "r") as file:
-            return json.load(file)
-    return {}
-
-
-# Function to save data
-def save_data(filename, data):
-    with open(filename, "w") as file:
-        json.dump(data, file)
-
-
-# all_champions_data = load_existing_data('new_champion_data.json')
 all_champions_data = {}
 cnt = 0
 
 session = requests.Session()
-url = f"https://lolalytics.com/lol/{champions[0]}/build/?tier=1trick&patch=30"
-session.get(url)
-
 
 for champion in champions:
-    boy = re.sub(r"[^a-zA-Z0-9]", "", champion).lower()
-
-    # print(boy)
-    # Create the session on the page
-    # session = requests.Session()
-    # url = f"https://lolalytics.com/lol/{boy}/build"
-    # session.get(url)
-
     data_url = f"https://ax.lolalytics.com/mega/?ep=champion&p=d&v=1&patch=30&cid={champion_numbers[cnt]}&lane=default&tier=master_plus&queue=420&region=all"
-    # print(data_url)
+    
     response = session.get(data_url)
 
     if response.status_code != 200:
@@ -395,19 +361,9 @@ for champion in champions:
 
     data = response.json()
 
-    # while 'timeWin' not in data:
-    #     print(data)
-    #     time.sleep(15)
-
     # Extract 'timeWin' and 'time' data and calculate winrates
     time_win_data = data["timeWin"]
     time_data = data["time"]
-
-    # asd = {k: time_win_data[k] for k in sorted(time_win_data, key=lambda x: int(x))}
-    # asd2 = {k: time_data[k] for k in sorted(time_data, key=lambda x: int(x))}
-
-    # print(asd)
-    # print(asd2)
 
     winrates = {
         int(key): time_win_data[key] / time_data[key] if time_data[key] != 0 else 0
@@ -418,11 +374,8 @@ for champion in champions:
     sorted_data = sorted(winrates.items())
     sorted_game_lengths, sorted_winrates = zip(*sorted_data)
 
-    if (len(sorted_winrates) == 7):
+    all_champions_data[champion] = sorted_winrates
 
-        all_champions_data[champion] = sorted_winrates
-
-        save_data("master_plus.json", all_champions_data)
 
     # Plot
     # plt.figure(figsize=(10, 6))
