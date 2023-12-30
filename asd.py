@@ -4,7 +4,7 @@ from sklearn.cluster import KMeans
 import matplotlib.pyplot as plt
 
 # Load the winrate data
-with open('/Users/rogerchen/Programming/LOL Data/master_plus.json', 'r') as file:
+with open('/Users/rogerchen/Programming/LOL Data/top_master_plus.json', 'r') as file:
     all_champions_data = json.load(file)
 
 # Convert the data into a DataFrame for easier manipulation
@@ -14,7 +14,7 @@ champions_df = pd.DataFrame(all_champions_data)
 champions_df = champions_df.T
 
 # Perform K-means clustering
-kmeans = KMeans(n_clusters=40, random_state=0)  # You can choose the number of clusters
+kmeans = KMeans(n_clusters=20, random_state=0)  # You can choose the number of clusters
 clusters = kmeans.fit_predict(champions_df)
 
 # Add the cluster labels to your DataFrame
@@ -24,16 +24,16 @@ champions_df['Cluster'] = clusters
 
 
 # # Plot each cluster
-# for i in range(kmeans.n_clusters):
-#     cluster_data = champions_df[champions_df['Cluster'] == i]
-#     plt.figure(figsize=(10, 6))
-#     for index, row in cluster_data.iterrows():
-#         plt.plot(row.drop('Cluster'), label=index)
-#     plt.title(f'Cluster {i}')
-#     plt.legend()
-#     plt.show()
+for i in range(kmeans.n_clusters):
+    cluster_data = champions_df[champions_df['Cluster'] == i]
+    plt.figure(figsize=(10, 6))
+    for index, row in cluster_data.iterrows():
+        plt.plot(row.drop('Cluster'), label=index)
+    plt.title(f'Cluster {i}')
+    plt.legend()
+    plt.show()
 
-# exit(0)
+exit(0)
 
 
 import matplotlib.pyplot as plt

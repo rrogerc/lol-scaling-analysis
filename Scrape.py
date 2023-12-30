@@ -418,9 +418,11 @@ for champion in champions:
     sorted_data = sorted(winrates.items())
     sorted_game_lengths, sorted_winrates = zip(*sorted_data)
 
-    all_champions_data[champion] = sorted_winrates
+    if (len(sorted_winrates) == 7):
 
-    save_data("master_plus.json", all_champions_data)
+        all_champions_data[champion] = sorted_winrates
+
+        save_data("master_plus.json", all_champions_data)
 
     # Plot
     # plt.figure(figsize=(10, 6))
