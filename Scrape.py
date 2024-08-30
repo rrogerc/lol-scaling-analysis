@@ -1,17 +1,22 @@
+import re
 import requests
 import json
 
 from Champions import champions, champion_numbers
 
 all_champions_data = {}
-json_filename = "diamond_plus.json"
-tier = "diamond_plus"
-role = "bottom"  # default, top, jungle, middle, bottom, support
+tier = "emerald_plus" # emerald_plus, diamond_plus, all
+role = "default"  # default, top, jungle, middle, bottom, support
+json_filename = f"{tier}.json"
 session = requests.Session()
 
 for i in range(champions.__len__()):
-    data_url = f"https://ax.lolalytics.com/mega/?ep=champion&p=d&v=1&patch=30&cid={champion_numbers[i]}&lane={role}&tier={tier}&queue=420&region=all"
+    if role == "default":
+        data_url = f"https://lolalytics.com/lol/{champions[i].lower()}/build/?tier={tier}&patch=30"
+    else:
+        data_url = f"https://lolalytics.com/lol/{champions[i].lower()}/build/?lane={role}&tier={tier}&patch=30"
     
+    print(data_url)
     response = session.get(data_url)
 
     if response.status_code != 200:
@@ -19,25 +24,44 @@ for i in range(champions.__len__()):
         continue
     print(f"Processing: {champions[i]} + {champion_numbers[i]}")
 
-    data = response.json()
+    html_content = response.text
 
-    if role != "default" and data["nav"]["lanes"][role] <= 7:
+    sentinel_position = html_content.find('"timeWin"')
+
+    if sentinel_position != -1:
+
+        line_start = html_content.rfind('\n', 0, sentinel_position)        
+        line_end = html_content.find('\n', sentinel_position)
+        relevant_content = html_content[line_start + 1: line_end if line_end != -1 else len(html_content)]
+    
+       
+        # Use a regular expression to find the last two sequences of 7 numbers before the sentinel
+        pattern = r'(\d{3,6}(?:,\d{3,6}){6})'
+        matches = re.findall(pattern, relevant_content)
+
+        # Assuming the last two matches are the ones you want
+        if len(matches) >= 2:
+            first_array = [int(num) for num in matches[-2].split(",")]
+            second_array = [int(num) for num in matches[-1].split(",")]
+        else:
+            print("Not enough number sequences found.")
+            continue
+    else:
+        print("Sentinel 'timeWin' not found.")
         continue
 
     # Extract 'timeWin' and 'time' data and calculate winrates
-    time_win_data = data["timeWin"]
-    time_data = data["time"]
+    time_win_data = second_array
+    time_data = first_array
+    # print("time_win_data:", time_win_data)
+    # print("time_data:", time_data)
 
-    winrates = {
-        int(key): time_win_data[key] / time_data[key] if time_data[key] != 0 else 0
-        for key in time_win_data
-    }
+    # print(len(time_win_data))
+    # print(len(time_data))
 
-    # Sort the data by game length
-    sorted_data = sorted(winrates.items())
-    sorted_game_lengths, sorted_winrates = zip(*sorted_data)
+    sorted_data = [time_win_data / time_data for time_win_data, time_data in zip(time_win_data, time_data)]
 
-    all_champions_data[champions[i]] = sorted_winrates
+    all_champions_data[champions[i]] = sorted_data
 
 with open(json_filename, "w") as file:
     json.dump(all_champions_data, file)
