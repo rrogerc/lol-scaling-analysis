@@ -5,13 +5,13 @@ This project analyzes champion performance data to determine which champions sca
 ## Project Overview
 
 - **Scrape.py**
-  A script used to scrape and collect champion data from the web. This data serves as the basis for further analysis.
+A script used to scrape and collect champion data from the web. This data serves as the basis for further analysis.
 
 - **Cluster.py**
-  Contains the clustering algorithm to group champions according to their scaling metrics, helping to identify which champions perform better as the game progresses.
+Contains the clustering algorithm to group champions according to their scaling metrics, helping to identify which champions perform better as the game progresses.
 
 - **Analysis.ipynb**
-  A Jupyter Notebook that combines data exploration, visualization, and further statistical analysis to interpret champion scaling trends.
+A Jupyter Notebook that combines data exploration, visualization, and further statistical analysis to interpret champion scaling trends.
 
 - **Data Files**
   - **diamond_plus.json**: Scaling metrics for champions from the Diamond+ tier.
