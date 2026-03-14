@@ -204,18 +204,33 @@ async def main():
         print("No champions found. Check the bootstrap logic.")
         return
     
+    # Identify the latest patch to determine what to skip
+    try:
+        latest_patch = max(patches, key=lambda v: tuple(map(int, v.split('.'))))
+        print(f"Latest patch identified as: {latest_patch} (will always rescrape)")
+    except ValueError:
+        # Fallback if version parsing fails
+        latest_patch = patches[0] if patches else None
+        print(f"Could not parse versions. Treating {latest_patch} as latest.")
+
     # 2. Iterate through config and fetch data
     async with aiohttp.ClientSession() as session:
         sem = asyncio.Semaphore(concurrency_limit)
         
         for patch in patches:
             for tier in tiers:
-                print(f"\n--- Starting extraction for Patch: {patch}, Tier: {tier} ---")
-                
                 # Create directory structure: data/{patch}/{tier}/
                 output_dir = os.path.join("data", patch, tier)
-                os.makedirs(output_dir, exist_ok=True)
                 output_file = os.path.join(output_dir, "champion_win_rates.json")
+                
+                # Smart Skip Logic:
+                # If it's NOT the latest patch AND we already have the file, skip it.
+                if patch != latest_patch and os.path.exists(output_file):
+                    print(f"Skipping Patch: {patch}, Tier: {tier} (Data exists and not latest patch)")
+                    continue
+
+                print(f"\n--- Starting extraction for Patch: {patch}, Tier: {tier} ---")
+                os.makedirs(output_dir, exist_ok=True)
                 
                 results = []
                 
