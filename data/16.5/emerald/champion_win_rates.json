@@ -1,0 +1,6882 @@
+[
+  {
+    "champion": "xinzhao",
+    "buckets": {
+      "1": {
+        "games": 568,
+        "wins": 272,
+        "win_rate": 47.89
+      },
+      "2": {
+        "games": 6942,
+        "wins": 3429,
+        "win_rate": 49.39
+      },
+      "3": {
+        "games": 10856,
+        "wins": 5704,
+        "win_rate": 52.54
+      },
+      "4": {
+        "games": 23887,
+        "wins": 12797,
+        "win_rate": 53.57
+      },
+      "5": {
+        "games": 20598,
+        "wins": 10880,
+        "win_rate": 52.82
+      },
+      "6": {
+        "games": 9180,
+        "wins": 4869,
+        "win_rate": 53.04
+      },
+      "7": {
+        "games": 3551,
+        "wins": 1868,
+        "win_rate": 52.6
+      }
+    }
+  },
+  {
+    "champion": "olaf",
+    "buckets": {
+      "1": {
+        "games": 189,
+        "wins": 102,
+        "win_rate": 53.97
+      },
+      "2": {
+        "games": 2011,
+        "wins": 1057,
+        "win_rate": 52.56
+      },
+      "3": {
+        "games": 3336,
+        "wins": 1712,
+        "win_rate": 51.32
+      },
+      "4": {
+        "games": 7647,
+        "wins": 4083,
+        "win_rate": 53.39
+      },
+      "5": {
+        "games": 7145,
+        "wins": 3680,
+        "win_rate": 51.5
+      },
+      "6": {
+        "games": 3334,
+        "wins": 1717,
+        "win_rate": 51.5
+      },
+      "7": {
+        "games": 1305,
+        "wins": 673,
+        "win_rate": 51.57
+      }
+    }
+  },
+  {
+    "champion": "annie",
+    "buckets": {
+      "1": {
+        "games": 203,
+        "wins": 92,
+        "win_rate": 45.32
+      },
+      "2": {
+        "games": 1910,
+        "wins": 841,
+        "win_rate": 44.03
+      },
+      "3": {
+        "games": 3350,
+        "wins": 1599,
+        "win_rate": 47.73
+      },
+      "4": {
+        "games": 8204,
+        "wins": 4320,
+        "win_rate": 52.66
+      },
+      "5": {
+        "games": 8074,
+        "wins": 4524,
+        "win_rate": 56.03
+      },
+      "6": {
+        "games": 4141,
+        "wins": 2332,
+        "win_rate": 56.31
+      },
+      "7": {
+        "games": 1783,
+        "wins": 999,
+        "win_rate": 56.03
+      }
+    }
+  },
+  {
+    "champion": "twistedfate",
+    "buckets": {
+      "1": {
+        "games": 430,
+        "wins": 201,
+        "win_rate": 46.74
+      },
+      "2": {
+        "games": 5146,
+        "wins": 2410,
+        "win_rate": 46.83
+      },
+      "3": {
+        "games": 8586,
+        "wins": 4516,
+        "win_rate": 52.6
+      },
+      "4": {
+        "games": 19082,
+        "wins": 9968,
+        "win_rate": 52.24
+      },
+      "5": {
+        "games": 17349,
+        "wins": 9073,
+        "win_rate": 52.3
+      },
+      "6": {
+        "games": 7723,
+        "wins": 4041,
+        "win_rate": 52.32
+      },
+      "7": {
+        "games": 2789,
+        "wins": 1393,
+        "win_rate": 49.95
+      }
+    }
+  },
+  {
+    "champion": "galio",
+    "buckets": {
+      "1": {
+        "games": 323,
+        "wins": 150,
+        "win_rate": 46.44
+      },
+      "2": {
+        "games": 3555,
+        "wins": 1605,
+        "win_rate": 45.15
+      },
+      "3": {
+        "games": 6071,
+        "wins": 2758,
+        "win_rate": 45.43
+      },
+      "4": {
+        "games": 13664,
+        "wins": 6847,
+        "win_rate": 50.11
+      },
+      "5": {
+        "games": 12334,
+        "wins": 6419,
+        "win_rate": 52.04
+      },
+      "6": {
+        "games": 5624,
+        "wins": 2998,
+        "win_rate": 53.31
+      },
+      "7": {
+        "games": 2099,
+        "wins": 1104,
+        "win_rate": 52.6
+      }
+    }
+  },
+  {
+    "champion": "urgot",
+    "buckets": {
+      "1": {
+        "games": 223,
+        "wins": 116,
+        "win_rate": 52.02
+      },
+      "2": {
+        "games": 2111,
+        "wins": 1055,
+        "win_rate": 49.98
+      },
+      "3": {
+        "games": 3763,
+        "wins": 2098,
+        "win_rate": 55.75
+      },
+      "4": {
+        "games": 9143,
+        "wins": 4904,
+        "win_rate": 53.64
+      },
+      "5": {
+        "games": 9339,
+        "wins": 4831,
+        "win_rate": 51.73
+      },
+      "6": {
+        "games": 4806,
+        "wins": 2352,
+        "win_rate": 48.94
+      },
+      "7": {
+        "games": 2005,
+        "wins": 1046,
+        "win_rate": 52.17
+      }
+    }
+  },
+  {
+    "champion": "leblanc",
+    "buckets": {
+      "1": {
+        "games": 394,
+        "wins": 221,
+        "win_rate": 56.09
+      },
+      "2": {
+        "games": 4412,
+        "wins": 2577,
+        "win_rate": 58.41
+      },
+      "3": {
+        "games": 6376,
+        "wins": 3251,
+        "win_rate": 50.99
+      },
+      "4": {
+        "games": 14776,
+        "wins": 7309,
+        "win_rate": 49.47
+      },
+      "5": {
+        "games": 14674,
+        "wins": 7423,
+        "win_rate": 50.59
+      },
+      "6": {
+        "games": 7350,
+        "wins": 3667,
+        "win_rate": 49.89
+      },
+      "7": {
+        "games": 3252,
+        "wins": 1594,
+        "win_rate": 49.02
+      }
+    }
+  },
+  {
+    "champion": "vladimir",
+    "buckets": {
+      "1": {
+        "games": 296,
+        "wins": 148,
+        "win_rate": 50.0
+      },
+      "2": {
+        "games": 2602,
+        "wins": 1289,
+        "win_rate": 49.54
+      },
+      "3": {
+        "games": 4768,
+        "wins": 2262,
+        "win_rate": 47.44
+      },
+      "4": {
+        "games": 10932,
+        "wins": 5402,
+        "win_rate": 49.41
+      },
+      "5": {
+        "games": 9924,
+        "wins": 5236,
+        "win_rate": 52.76
+      },
+      "6": {
+        "games": 4714,
+        "wins": 2569,
+        "win_rate": 54.5
+      },
+      "7": {
+        "games": 1829,
+        "wins": 984,
+        "win_rate": 53.8
+      }
+    }
+  },
+  {
+    "champion": "fiddlesticks",
+    "buckets": {
+      "1": {
+        "games": 287,
+        "wins": 141,
+        "win_rate": 49.13
+      },
+      "2": {
+        "games": 2183,
+        "wins": 1206,
+        "win_rate": 55.25
+      },
+      "3": {
+        "games": 3514,
+        "wins": 1883,
+        "win_rate": 53.59
+      },
+      "4": {
+        "games": 9382,
+        "wins": 4886,
+        "win_rate": 52.08
+      },
+      "5": {
+        "games": 10277,
+        "wins": 5430,
+        "win_rate": 52.84
+      },
+      "6": {
+        "games": 5452,
+        "wins": 2884,
+        "win_rate": 52.9
+      },
+      "7": {
+        "games": 2614,
+        "wins": 1396,
+        "win_rate": 53.4
+      }
+    }
+  },
+  {
+    "champion": "masteryi",
+    "buckets": {
+      "1": {
+        "games": 598,
+        "wins": 309,
+        "win_rate": 51.67
+      },
+      "2": {
+        "games": 4984,
+        "wins": 2620,
+        "win_rate": 52.57
+      },
+      "3": {
+        "games": 10039,
+        "wins": 5063,
+        "win_rate": 50.43
+      },
+      "4": {
+        "games": 22400,
+        "wins": 11547,
+        "win_rate": 51.55
+      },
+      "5": {
+        "games": 20674,
+        "wins": 10987,
+        "win_rate": 53.14
+      },
+      "6": {
+        "games": 9664,
+        "wins": 5192,
+        "win_rate": 53.73
+      },
+      "7": {
+        "games": 3571,
+        "wins": 1931,
+        "win_rate": 54.07
+      }
+    }
+  },
+  {
+    "champion": "kayle",
+    "buckets": {
+      "1": {
+        "games": 320,
+        "wins": 153,
+        "win_rate": 47.81
+      },
+      "2": {
+        "games": 2622,
+        "wins": 1207,
+        "win_rate": 46.03
+      },
+      "3": {
+        "games": 5722,
+        "wins": 2439,
+        "win_rate": 42.62
+      },
+      "4": {
+        "games": 14240,
+        "wins": 7301,
+        "win_rate": 51.27
+      },
+      "5": {
+        "games": 13326,
+        "wins": 7713,
+        "win_rate": 57.88
+      },
+      "6": {
+        "games": 6216,
+        "wins": 3764,
+        "win_rate": 60.55
+      },
+      "7": {
+        "games": 2388,
+        "wins": 1447,
+        "win_rate": 60.59
+      }
+    }
+  },
+  {
+    "champion": "alistar",
+    "buckets": {
+      "1": {
+        "games": 359,
+        "wins": 178,
+        "win_rate": 49.58
+      },
+      "2": {
+        "games": 3993,
+        "wins": 1816,
+        "win_rate": 45.48
+      },
+      "3": {
+        "games": 6763,
+        "wins": 3177,
+        "win_rate": 46.98
+      },
+      "4": {
+        "games": 15008,
+        "wins": 7408,
+        "win_rate": 49.36
+      },
+      "5": {
+        "games": 13478,
+        "wins": 7094,
+        "win_rate": 52.63
+      },
+      "6": {
+        "games": 6173,
+        "wins": 3202,
+        "win_rate": 51.87
+      },
+      "7": {
+        "games": 2225,
+        "wins": 1136,
+        "win_rate": 51.06
+      }
+    }
+  },
+  {
+    "champion": "ryze",
+    "buckets": {
+      "1": {
+        "games": 328,
+        "wins": 166,
+        "win_rate": 50.61
+      },
+      "2": {
+        "games": 3529,
+        "wins": 1423,
+        "win_rate": 40.32
+      },
+      "3": {
+        "games": 5842,
+        "wins": 2610,
+        "win_rate": 44.68
+      },
+      "4": {
+        "games": 13617,
+        "wins": 6718,
+        "win_rate": 49.34
+      },
+      "5": {
+        "games": 12670,
+        "wins": 6170,
+        "win_rate": 48.7
+      },
+      "6": {
+        "games": 5974,
+        "wins": 2989,
+        "win_rate": 50.03
+      },
+      "7": {
+        "games": 2178,
+        "wins": 1130,
+        "win_rate": 51.88
+      }
+    }
+  },
+  {
+    "champion": "sion",
+    "buckets": {
+      "1": {
+        "games": 347,
+        "wins": 168,
+        "win_rate": 48.41
+      },
+      "2": {
+        "games": 3470,
+        "wins": 1782,
+        "win_rate": 51.35
+      },
+      "3": {
+        "games": 6395,
+        "wins": 3513,
+        "win_rate": 54.93
+      },
+      "4": {
+        "games": 16794,
+        "wins": 8866,
+        "win_rate": 52.79
+      },
+      "5": {
+        "games": 16558,
+        "wins": 8473,
+        "win_rate": 51.17
+      },
+      "6": {
+        "games": 8522,
+        "wins": 4250,
+        "win_rate": 49.87
+      },
+      "7": {
+        "games": 3513,
+        "wins": 1774,
+        "win_rate": 50.5
+      }
+    }
+  },
+  {
+    "champion": "sivir",
+    "buckets": {
+      "1": {
+        "games": 510,
+        "wins": 254,
+        "win_rate": 49.8
+      },
+      "2": {
+        "games": 6137,
+        "wins": 2854,
+        "win_rate": 46.5
+      },
+      "3": {
+        "games": 9086,
+        "wins": 4585,
+        "win_rate": 50.46
+      },
+      "4": {
+        "games": 21871,
+        "wins": 11186,
+        "win_rate": 51.15
+      },
+      "5": {
+        "games": 21032,
+        "wins": 11063,
+        "win_rate": 52.6
+      },
+      "6": {
+        "games": 10217,
+        "wins": 5477,
+        "win_rate": 53.61
+      },
+      "7": {
+        "games": 4178,
+        "wins": 2308,
+        "win_rate": 55.24
+      }
+    }
+  },
+  {
+    "champion": "soraka",
+    "buckets": {
+      "1": {
+        "games": 476,
+        "wins": 241,
+        "win_rate": 50.63
+      },
+      "2": {
+        "games": 4483,
+        "wins": 2412,
+        "win_rate": 53.8
+      },
+      "3": {
+        "games": 8121,
+        "wins": 4155,
+        "win_rate": 51.16
+      },
+      "4": {
+        "games": 18700,
+        "wins": 9595,
+        "win_rate": 51.31
+      },
+      "5": {
+        "games": 17168,
+        "wins": 9165,
+        "win_rate": 53.38
+      },
+      "6": {
+        "games": 8217,
+        "wins": 4403,
+        "win_rate": 53.58
+      },
+      "7": {
+        "games": 3398,
+        "wins": 1801,
+        "win_rate": 53.0
+      }
+    }
+  },
+  {
+    "champion": "teemo",
+    "buckets": {
+      "1": {
+        "games": 242,
+        "wins": 141,
+        "win_rate": 58.26
+      },
+      "2": {
+        "games": 2574,
+        "wins": 1268,
+        "win_rate": 49.26
+      },
+      "3": {
+        "games": 3830,
+        "wins": 1872,
+        "win_rate": 48.88
+      },
+      "4": {
+        "games": 9747,
+        "wins": 5108,
+        "win_rate": 52.41
+      },
+      "5": {
+        "games": 10401,
+        "wins": 5615,
+        "win_rate": 53.99
+      },
+      "6": {
+        "games": 5890,
+        "wins": 3226,
+        "win_rate": 54.77
+      },
+      "7": {
+        "games": 3188,
+        "wins": 1806,
+        "win_rate": 56.65
+      }
+    }
+  },
+  {
+    "champion": "tristana",
+    "buckets": {
+      "1": {
+        "games": 370,
+        "wins": 200,
+        "win_rate": 54.05
+      },
+      "2": {
+        "games": 3676,
+        "wins": 1920,
+        "win_rate": 52.23
+      },
+      "3": {
+        "games": 6736,
+        "wins": 3346,
+        "win_rate": 49.67
+      },
+      "4": {
+        "games": 15321,
+        "wins": 7761,
+        "win_rate": 50.66
+      },
+      "5": {
+        "games": 14096,
+        "wins": 7332,
+        "win_rate": 52.01
+      },
+      "6": {
+        "games": 6632,
+        "wins": 3549,
+        "win_rate": 53.51
+      },
+      "7": {
+        "games": 2592,
+        "wins": 1373,
+        "win_rate": 52.97
+      }
+    }
+  },
+  {
+    "champion": "warwick",
+    "buckets": {
+      "1": {
+        "games": 246,
+        "wins": 151,
+        "win_rate": 61.38
+      },
+      "2": {
+        "games": 2107,
+        "wins": 1222,
+        "win_rate": 58.0
+      },
+      "3": {
+        "games": 3967,
+        "wins": 2120,
+        "win_rate": 53.44
+      },
+      "4": {
+        "games": 9391,
+        "wins": 4997,
+        "win_rate": 53.21
+      },
+      "5": {
+        "games": 9241,
+        "wins": 4743,
+        "win_rate": 51.33
+      },
+      "6": {
+        "games": 4437,
+        "wins": 2226,
+        "win_rate": 50.17
+      },
+      "7": {
+        "games": 1779,
+        "wins": 935,
+        "win_rate": 52.56
+      }
+    }
+  },
+  {
+    "champion": "missfortune",
+    "buckets": {
+      "1": {
+        "games": 856,
+        "wins": 431,
+        "win_rate": 50.35
+      },
+      "2": {
+        "games": 8034,
+        "wins": 4012,
+        "win_rate": 49.94
+      },
+      "3": {
+        "games": 13843,
+        "wins": 7072,
+        "win_rate": 51.09
+      },
+      "4": {
+        "games": 34498,
+        "wins": 18056,
+        "win_rate": 52.34
+      },
+      "5": {
+        "games": 34164,
+        "wins": 18507,
+        "win_rate": 54.17
+      },
+      "6": {
+        "games": 17174,
+        "wins": 9472,
+        "win_rate": 55.15
+      },
+      "7": {
+        "games": 7233,
+        "wins": 3914,
+        "win_rate": 54.11
+      }
+    }
+  },
+  {
+    "champion": "nunu",
+    "buckets": {
+      "1": {
+        "games": 216,
+        "wins": 121,
+        "win_rate": 56.02
+      },
+      "2": {
+        "games": 2034,
+        "wins": 1099,
+        "win_rate": 54.03
+      },
+      "3": {
+        "games": 3870,
+        "wins": 2298,
+        "win_rate": 59.38
+      },
+      "4": {
+        "games": 8248,
+        "wins": 4400,
+        "win_rate": 53.35
+      },
+      "5": {
+        "games": 7649,
+        "wins": 3924,
+        "win_rate": 51.3
+      },
+      "6": {
+        "games": 3503,
+        "wins": 1741,
+        "win_rate": 49.7
+      },
+      "7": {
+        "games": 1407,
+        "wins": 717,
+        "win_rate": 50.96
+      }
+    }
+  },
+  {
+    "champion": "ashe",
+    "buckets": {
+      "1": {
+        "games": 956,
+        "wins": 476,
+        "win_rate": 49.79
+      },
+      "2": {
+        "games": 9588,
+        "wins": 4869,
+        "win_rate": 50.78
+      },
+      "3": {
+        "games": 15832,
+        "wins": 8557,
+        "win_rate": 54.05
+      },
+      "4": {
+        "games": 36893,
+        "wins": 19822,
+        "win_rate": 53.73
+      },
+      "5": {
+        "games": 34673,
+        "wins": 18074,
+        "win_rate": 52.13
+      },
+      "6": {
+        "games": 16167,
+        "wins": 8506,
+        "win_rate": 52.61
+      },
+      "7": {
+        "games": 6346,
+        "wins": 3319,
+        "win_rate": 52.3
+      }
+    }
+  },
+  {
+    "champion": "tryndamere",
+    "buckets": {
+      "1": {
+        "games": 251,
+        "wins": 129,
+        "win_rate": 51.39
+      },
+      "2": {
+        "games": 2270,
+        "wins": 1279,
+        "win_rate": 56.34
+      },
+      "3": {
+        "games": 3780,
+        "wins": 1953,
+        "win_rate": 51.67
+      },
+      "4": {
+        "games": 8500,
+        "wins": 4304,
+        "win_rate": 50.64
+      },
+      "5": {
+        "games": 8013,
+        "wins": 3979,
+        "win_rate": 49.66
+      },
+      "6": {
+        "games": 3978,
+        "wins": 2022,
+        "win_rate": 50.83
+      },
+      "7": {
+        "games": 1640,
+        "wins": 825,
+        "win_rate": 50.3
+      }
+    }
+  },
+  {
+    "champion": "jax",
+    "buckets": {
+      "1": {
+        "games": 586,
+        "wins": 300,
+        "win_rate": 51.19
+      },
+      "2": {
+        "games": 5848,
+        "wins": 2989,
+        "win_rate": 51.11
+      },
+      "3": {
+        "games": 9729,
+        "wins": 4907,
+        "win_rate": 50.44
+      },
+      "4": {
+        "games": 21968,
+        "wins": 11248,
+        "win_rate": 51.2
+      },
+      "5": {
+        "games": 20058,
+        "wins": 10112,
+        "win_rate": 50.41
+      },
+      "6": {
+        "games": 9446,
+        "wins": 4745,
+        "win_rate": 50.23
+      },
+      "7": {
+        "games": 3677,
+        "wins": 1867,
+        "win_rate": 50.78
+      }
+    }
+  },
+  {
+    "champion": "morgana",
+    "buckets": {
+      "1": {
+        "games": 560,
+        "wins": 278,
+        "win_rate": 49.64
+      },
+      "2": {
+        "games": 4356,
+        "wins": 2269,
+        "win_rate": 52.09
+      },
+      "3": {
+        "games": 7238,
+        "wins": 3858,
+        "win_rate": 53.3
+      },
+      "4": {
+        "games": 17811,
+        "wins": 9334,
+        "win_rate": 52.41
+      },
+      "5": {
+        "games": 18296,
+        "wins": 9379,
+        "win_rate": 51.26
+      },
+      "6": {
+        "games": 9803,
+        "wins": 5052,
+        "win_rate": 51.54
+      },
+      "7": {
+        "games": 4616,
+        "wins": 2366,
+        "win_rate": 51.26
+      }
+    }
+  },
+  {
+    "champion": "singed",
+    "buckets": {
+      "1": {
+        "games": 203,
+        "wins": 105,
+        "win_rate": 51.72
+      },
+      "2": {
+        "games": 2154,
+        "wins": 1049,
+        "win_rate": 48.7
+      },
+      "3": {
+        "games": 3812,
+        "wins": 1981,
+        "win_rate": 51.97
+      },
+      "4": {
+        "games": 9688,
+        "wins": 5240,
+        "win_rate": 54.09
+      },
+      "5": {
+        "games": 9742,
+        "wins": 5490,
+        "win_rate": 56.35
+      },
+      "6": {
+        "games": 5031,
+        "wins": 2752,
+        "win_rate": 54.7
+      },
+      "7": {
+        "games": 2047,
+        "wins": 1070,
+        "win_rate": 52.27
+      }
+    }
+  },
+  {
+    "champion": "zilean",
+    "buckets": {
+      "1": {
+        "games": 270,
+        "wins": 105,
+        "win_rate": 38.89
+      },
+      "2": {
+        "games": 2217,
+        "wins": 1116,
+        "win_rate": 50.34
+      },
+      "3": {
+        "games": 3961,
+        "wins": 2072,
+        "win_rate": 52.31
+      },
+      "4": {
+        "games": 9477,
+        "wins": 4976,
+        "win_rate": 52.51
+      },
+      "5": {
+        "games": 9597,
+        "wins": 5150,
+        "win_rate": 53.66
+      },
+      "6": {
+        "games": 4887,
+        "wins": 2630,
+        "win_rate": 53.82
+      },
+      "7": {
+        "games": 2075,
+        "wins": 1098,
+        "win_rate": 52.92
+      }
+    }
+  },
+  {
+    "champion": "evelynn",
+    "buckets": {
+      "1": {
+        "games": 234,
+        "wins": 129,
+        "win_rate": 55.13
+      },
+      "2": {
+        "games": 2078,
+        "wins": 1192,
+        "win_rate": 57.36
+      },
+      "3": {
+        "games": 3574,
+        "wins": 1828,
+        "win_rate": 51.15
+      },
+      "4": {
+        "games": 8710,
+        "wins": 4331,
+        "win_rate": 49.72
+      },
+      "5": {
+        "games": 8821,
+        "wins": 4573,
+        "win_rate": 51.84
+      },
+      "6": {
+        "games": 4469,
+        "wins": 2431,
+        "win_rate": 54.4
+      },
+      "7": {
+        "games": 1923,
+        "wins": 1032,
+        "win_rate": 53.67
+      }
+    }
+  },
+  {
+    "champion": "twitch",
+    "buckets": {
+      "1": {
+        "games": 546,
+        "wins": 261,
+        "win_rate": 47.8
+      },
+      "2": {
+        "games": 4549,
+        "wins": 2254,
+        "win_rate": 49.55
+      },
+      "3": {
+        "games": 8953,
+        "wins": 3798,
+        "win_rate": 42.42
+      },
+      "4": {
+        "games": 22359,
+        "wins": 10840,
+        "win_rate": 48.48
+      },
+      "5": {
+        "games": 22090,
+        "wins": 12118,
+        "win_rate": 54.86
+      },
+      "6": {
+        "games": 11257,
+        "wins": 6507,
+        "win_rate": 57.8
+      },
+      "7": {
+        "games": 4812,
+        "wins": 2833,
+        "win_rate": 58.87
+      }
+    }
+  },
+  {
+    "champion": "karthus",
+    "buckets": {
+      "1": {
+        "games": 111,
+        "wins": 50,
+        "win_rate": 45.05
+      },
+      "2": {
+        "games": 1146,
+        "wins": 595,
+        "win_rate": 51.92
+      },
+      "3": {
+        "games": 1677,
+        "wins": 855,
+        "win_rate": 50.98
+      },
+      "4": {
+        "games": 4162,
+        "wins": 2032,
+        "win_rate": 48.82
+      },
+      "5": {
+        "games": 4542,
+        "wins": 2172,
+        "win_rate": 47.82
+      },
+      "6": {
+        "games": 2386,
+        "wins": 1224,
+        "win_rate": 51.3
+      },
+      "7": {
+        "games": 1226,
+        "wins": 643,
+        "win_rate": 52.45
+      }
+    }
+  },
+  {
+    "champion": "amumu",
+    "buckets": {
+      "1": {
+        "games": 250,
+        "wins": 134,
+        "win_rate": 53.6
+      },
+      "2": {
+        "games": 1950,
+        "wins": 1008,
+        "win_rate": 51.69
+      },
+      "3": {
+        "games": 3958,
+        "wins": 2089,
+        "win_rate": 52.78
+      },
+      "4": {
+        "games": 9935,
+        "wins": 5248,
+        "win_rate": 52.82
+      },
+      "5": {
+        "games": 9720,
+        "wins": 5233,
+        "win_rate": 53.84
+      },
+      "6": {
+        "games": 5077,
+        "wins": 2737,
+        "win_rate": 53.91
+      },
+      "7": {
+        "games": 2066,
+        "wins": 1106,
+        "win_rate": 53.53
+      }
+    }
+  },
+  {
+    "champion": "rammus",
+    "buckets": {
+      "1": {
+        "games": 205,
+        "wins": 102,
+        "win_rate": 49.76
+      },
+      "2": {
+        "games": 1465,
+        "wins": 770,
+        "win_rate": 52.56
+      },
+      "3": {
+        "games": 2583,
+        "wins": 1345,
+        "win_rate": 52.07
+      },
+      "4": {
+        "games": 6642,
+        "wins": 3540,
+        "win_rate": 53.3
+      },
+      "5": {
+        "games": 6752,
+        "wins": 3728,
+        "win_rate": 55.21
+      },
+      "6": {
+        "games": 3368,
+        "wins": 1920,
+        "win_rate": 57.01
+      },
+      "7": {
+        "games": 1290,
+        "wins": 711,
+        "win_rate": 55.12
+      }
+    }
+  },
+  {
+    "champion": "anivia",
+    "buckets": {
+      "1": {
+        "games": 321,
+        "wins": 159,
+        "win_rate": 49.53
+      },
+      "2": {
+        "games": 3002,
+        "wins": 1580,
+        "win_rate": 52.63
+      },
+      "3": {
+        "games": 4962,
+        "wins": 2692,
+        "win_rate": 54.25
+      },
+      "4": {
+        "games": 11763,
+        "wins": 6357,
+        "win_rate": 54.04
+      },
+      "5": {
+        "games": 11315,
+        "wins": 5951,
+        "win_rate": 52.59
+      },
+      "6": {
+        "games": 5634,
+        "wins": 2829,
+        "win_rate": 50.21
+      },
+      "7": {
+        "games": 2504,
+        "wins": 1224,
+        "win_rate": 48.88
+      }
+    }
+  },
+  {
+    "champion": "shaco",
+    "buckets": {
+      "1": {
+        "games": 437,
+        "wins": 239,
+        "win_rate": 54.69
+      },
+      "2": {
+        "games": 3275,
+        "wins": 1815,
+        "win_rate": 55.42
+      },
+      "3": {
+        "games": 5483,
+        "wins": 2669,
+        "win_rate": 48.68
+      },
+      "4": {
+        "games": 14088,
+        "wins": 6888,
+        "win_rate": 48.89
+      },
+      "5": {
+        "games": 16015,
+        "wins": 8176,
+        "win_rate": 51.05
+      },
+      "6": {
+        "games": 9368,
+        "wins": 4982,
+        "win_rate": 53.18
+      },
+      "7": {
+        "games": 4825,
+        "wins": 2722,
+        "win_rate": 56.41
+      }
+    }
+  },
+  {
+    "champion": "drmundo",
+    "buckets": {
+      "1": {
+        "games": 323,
+        "wins": 151,
+        "win_rate": 46.75
+      },
+      "2": {
+        "games": 2866,
+        "wins": 1410,
+        "win_rate": 49.2
+      },
+      "3": {
+        "games": 6147,
+        "wins": 3003,
+        "win_rate": 48.85
+      },
+      "4": {
+        "games": 14675,
+        "wins": 7647,
+        "win_rate": 52.11
+      },
+      "5": {
+        "games": 13238,
+        "wins": 6942,
+        "win_rate": 52.44
+      },
+      "6": {
+        "games": 6179,
+        "wins": 3336,
+        "win_rate": 53.99
+      },
+      "7": {
+        "games": 2344,
+        "wins": 1250,
+        "win_rate": 53.33
+      }
+    }
+  },
+  {
+    "champion": "sona",
+    "buckets": {
+      "1": {
+        "games": 452,
+        "wins": 215,
+        "win_rate": 47.57
+      },
+      "2": {
+        "games": 3604,
+        "wins": 1608,
+        "win_rate": 44.62
+      },
+      "3": {
+        "games": 7366,
+        "wins": 3864,
+        "win_rate": 52.46
+      },
+      "4": {
+        "games": 17419,
+        "wins": 9399,
+        "win_rate": 53.96
+      },
+      "5": {
+        "games": 15558,
+        "wins": 8470,
+        "win_rate": 54.44
+      },
+      "6": {
+        "games": 7186,
+        "wins": 3920,
+        "win_rate": 54.55
+      },
+      "7": {
+        "games": 2479,
+        "wins": 1379,
+        "win_rate": 55.63
+      }
+    }
+  },
+  {
+    "champion": "kassadin",
+    "buckets": {
+      "1": {
+        "games": 268,
+        "wins": 130,
+        "win_rate": 48.51
+      },
+      "2": {
+        "games": 2338,
+        "wins": 1005,
+        "win_rate": 42.99
+      },
+      "3": {
+        "games": 5081,
+        "wins": 1906,
+        "win_rate": 37.51
+      },
+      "4": {
+        "games": 11787,
+        "wins": 5847,
+        "win_rate": 49.61
+      },
+      "5": {
+        "games": 10713,
+        "wins": 6137,
+        "win_rate": 57.29
+      },
+      "6": {
+        "games": 4838,
+        "wins": 2796,
+        "win_rate": 57.79
+      },
+      "7": {
+        "games": 1824,
+        "wins": 958,
+        "win_rate": 52.52
+      }
+    }
+  },
+  {
+    "champion": "irelia",
+    "buckets": {
+      "1": {
+        "games": 521,
+        "wins": 284,
+        "win_rate": 54.51
+      },
+      "2": {
+        "games": 5192,
+        "wins": 3044,
+        "win_rate": 58.63
+      },
+      "3": {
+        "games": 8432,
+        "wins": 5011,
+        "win_rate": 59.43
+      },
+      "4": {
+        "games": 17036,
+        "wins": 8988,
+        "win_rate": 52.76
+      },
+      "5": {
+        "games": 15027,
+        "wins": 7139,
+        "win_rate": 47.51
+      },
+      "6": {
+        "games": 6726,
+        "wins": 3127,
+        "win_rate": 46.49
+      },
+      "7": {
+        "games": 2474,
+        "wins": 1195,
+        "win_rate": 48.3
+      }
+    }
+  },
+  {
+    "champion": "janna",
+    "buckets": {
+      "1": {
+        "games": 349,
+        "wins": 169,
+        "win_rate": 48.42
+      },
+      "2": {
+        "games": 2780,
+        "wins": 1407,
+        "win_rate": 50.61
+      },
+      "3": {
+        "games": 5531,
+        "wins": 2925,
+        "win_rate": 52.88
+      },
+      "4": {
+        "games": 12780,
+        "wins": 6766,
+        "win_rate": 52.94
+      },
+      "5": {
+        "games": 11943,
+        "wins": 6373,
+        "win_rate": 53.36
+      },
+      "6": {
+        "games": 5720,
+        "wins": 3028,
+        "win_rate": 52.94
+      },
+      "7": {
+        "games": 2273,
+        "wins": 1240,
+        "win_rate": 54.55
+      }
+    }
+  },
+  {
+    "champion": "gangplank",
+    "buckets": {
+      "1": {
+        "games": 404,
+        "wins": 187,
+        "win_rate": 46.29
+      },
+      "2": {
+        "games": 3854,
+        "wins": 1932,
+        "win_rate": 50.13
+      },
+      "3": {
+        "games": 6466,
+        "wins": 3326,
+        "win_rate": 51.44
+      },
+      "4": {
+        "games": 16232,
+        "wins": 8258,
+        "win_rate": 50.87
+      },
+      "5": {
+        "games": 17146,
+        "wins": 8892,
+        "win_rate": 51.86
+      },
+      "6": {
+        "games": 9309,
+        "wins": 4806,
+        "win_rate": 51.63
+      },
+      "7": {
+        "games": 4542,
+        "wins": 2308,
+        "win_rate": 50.81
+      }
+    }
+  },
+  {
+    "champion": "corki",
+    "buckets": {
+      "1": {
+        "games": 284,
+        "wins": 134,
+        "win_rate": 47.18
+      },
+      "2": {
+        "games": 2356,
+        "wins": 1144,
+        "win_rate": 48.56
+      },
+      "3": {
+        "games": 4156,
+        "wins": 2169,
+        "win_rate": 52.19
+      },
+      "4": {
+        "games": 10356,
+        "wins": 5197,
+        "win_rate": 50.18
+      },
+      "5": {
+        "games": 10275,
+        "wins": 4876,
+        "win_rate": 47.45
+      },
+      "6": {
+        "games": 5114,
+        "wins": 2432,
+        "win_rate": 47.56
+      },
+      "7": {
+        "games": 2189,
+        "wins": 1041,
+        "win_rate": 47.56
+      }
+    }
+  },
+  {
+    "champion": "karma",
+    "buckets": {
+      "1": {
+        "games": 973,
+        "wins": 538,
+        "win_rate": 55.29
+      },
+      "2": {
+        "games": 10523,
+        "wins": 5563,
+        "win_rate": 52.87
+      },
+      "3": {
+        "games": 16484,
+        "wins": 8669,
+        "win_rate": 52.59
+      },
+      "4": {
+        "games": 37931,
+        "wins": 19411,
+        "win_rate": 51.17
+      },
+      "5": {
+        "games": 35730,
+        "wins": 17753,
+        "win_rate": 49.69
+      },
+      "6": {
+        "games": 17157,
+        "wins": 8475,
+        "win_rate": 49.4
+      },
+      "7": {
+        "games": 7158,
+        "wins": 3595,
+        "win_rate": 50.22
+      }
+    }
+  },
+  {
+    "champion": "taric",
+    "buckets": {
+      "1": {
+        "games": 129,
+        "wins": 60,
+        "win_rate": 46.51
+      },
+      "2": {
+        "games": 1187,
+        "wins": 622,
+        "win_rate": 52.4
+      },
+      "3": {
+        "games": 2322,
+        "wins": 1228,
+        "win_rate": 52.89
+      },
+      "4": {
+        "games": 5007,
+        "wins": 2679,
+        "win_rate": 53.51
+      },
+      "5": {
+        "games": 4288,
+        "wins": 2287,
+        "win_rate": 53.33
+      },
+      "6": {
+        "games": 1912,
+        "wins": 1021,
+        "win_rate": 53.4
+      },
+      "7": {
+        "games": 655,
+        "wins": 348,
+        "win_rate": 53.13
+      }
+    }
+  },
+  {
+    "champion": "veigar",
+    "buckets": {
+      "1": {
+        "games": 459,
+        "wins": 207,
+        "win_rate": 45.1
+      },
+      "2": {
+        "games": 3382,
+        "wins": 1597,
+        "win_rate": 47.22
+      },
+      "3": {
+        "games": 6904,
+        "wins": 3425,
+        "win_rate": 49.61
+      },
+      "4": {
+        "games": 17972,
+        "wins": 9545,
+        "win_rate": 53.11
+      },
+      "5": {
+        "games": 17938,
+        "wins": 9851,
+        "win_rate": 54.92
+      },
+      "6": {
+        "games": 9246,
+        "wins": 5187,
+        "win_rate": 56.1
+      },
+      "7": {
+        "games": 4130,
+        "wins": 2353,
+        "win_rate": 56.97
+      }
+    }
+  },
+  {
+    "champion": "trundle",
+    "buckets": {
+      "1": {
+        "games": 179,
+        "wins": 98,
+        "win_rate": 54.75
+      },
+      "2": {
+        "games": 1342,
+        "wins": 675,
+        "win_rate": 50.3
+      },
+      "3": {
+        "games": 2759,
+        "wins": 1522,
+        "win_rate": 55.16
+      },
+      "4": {
+        "games": 6064,
+        "wins": 3066,
+        "win_rate": 50.56
+      },
+      "5": {
+        "games": 5541,
+        "wins": 2671,
+        "win_rate": 48.2
+      },
+      "6": {
+        "games": 2527,
+        "wins": 1206,
+        "win_rate": 47.72
+      },
+      "7": {
+        "games": 946,
+        "wins": 502,
+        "win_rate": 53.07
+      }
+    }
+  },
+  {
+    "champion": "swain",
+    "buckets": {
+      "1": {
+        "games": 329,
+        "wins": 186,
+        "win_rate": 56.53
+      },
+      "2": {
+        "games": 2727,
+        "wins": 1466,
+        "win_rate": 53.76
+      },
+      "3": {
+        "games": 4693,
+        "wins": 2464,
+        "win_rate": 52.5
+      },
+      "4": {
+        "games": 11170,
+        "wins": 5572,
+        "win_rate": 49.88
+      },
+      "5": {
+        "games": 10877,
+        "wins": 5193,
+        "win_rate": 47.74
+      },
+      "6": {
+        "games": 5321,
+        "wins": 2603,
+        "win_rate": 48.92
+      },
+      "7": {
+        "games": 2140,
+        "wins": 1064,
+        "win_rate": 49.72
+      }
+    }
+  },
+  {
+    "champion": "caitlyn",
+    "buckets": {
+      "1": {
+        "games": 1833,
+        "wins": 963,
+        "win_rate": 52.54
+      },
+      "2": {
+        "games": 16045,
+        "wins": 7889,
+        "win_rate": 49.17
+      },
+      "3": {
+        "games": 27967,
+        "wins": 14403,
+        "win_rate": 51.5
+      },
+      "4": {
+        "games": 66583,
+        "wins": 33757,
+        "win_rate": 50.7
+      },
+      "5": {
+        "games": 64558,
+        "wins": 33282,
+        "win_rate": 51.55
+      },
+      "6": {
+        "games": 32989,
+        "wins": 17202,
+        "win_rate": 52.14
+      },
+      "7": {
+        "games": 14093,
+        "wins": 7674,
+        "win_rate": 54.45
+      }
+    }
+  },
+  {
+    "champion": "blitzcrank",
+    "buckets": {
+      "1": {
+        "games": 419,
+        "wins": 224,
+        "win_rate": 53.46
+      },
+      "2": {
+        "games": 5217,
+        "wins": 2759,
+        "win_rate": 52.88
+      },
+      "3": {
+        "games": 8368,
+        "wins": 4267,
+        "win_rate": 50.99
+      },
+      "4": {
+        "games": 19251,
+        "wins": 9898,
+        "win_rate": 51.42
+      },
+      "5": {
+        "games": 18067,
+        "wins": 9451,
+        "win_rate": 52.31
+      },
+      "6": {
+        "games": 8632,
+        "wins": 4412,
+        "win_rate": 51.11
+      },
+      "7": {
+        "games": 3367,
+        "wins": 1761,
+        "win_rate": 52.3
+      }
+    }
+  },
+  {
+    "champion": "malphite",
+    "buckets": {
+      "1": {
+        "games": 523,
+        "wins": 300,
+        "win_rate": 57.36
+      },
+      "2": {
+        "games": 5343,
+        "wins": 2960,
+        "win_rate": 55.4
+      },
+      "3": {
+        "games": 9441,
+        "wins": 5034,
+        "win_rate": 53.32
+      },
+      "4": {
+        "games": 23333,
+        "wins": 12199,
+        "win_rate": 52.28
+      },
+      "5": {
+        "games": 22323,
+        "wins": 11606,
+        "win_rate": 51.99
+      },
+      "6": {
+        "games": 10589,
+        "wins": 5561,
+        "win_rate": 52.52
+      },
+      "7": {
+        "games": 4269,
+        "wins": 2199,
+        "win_rate": 51.51
+      }
+    }
+  },
+  {
+    "champion": "chogath",
+    "buckets": {
+      "1": {
+        "games": 232,
+        "wins": 112,
+        "win_rate": 48.28
+      },
+      "2": {
+        "games": 1922,
+        "wins": 930,
+        "win_rate": 48.39
+      },
+      "3": {
+        "games": 3690,
+        "wins": 1846,
+        "win_rate": 50.03
+      },
+      "4": {
+        "games": 9500,
+        "wins": 4806,
+        "win_rate": 50.59
+      },
+      "5": {
+        "games": 9394,
+        "wins": 4939,
+        "win_rate": 52.58
+      },
+      "6": {
+        "games": 4934,
+        "wins": 2657,
+        "win_rate": 53.85
+      },
+      "7": {
+        "games": 2211,
+        "wins": 1196,
+        "win_rate": 54.09
+      }
+    }
+  },
+  {
+    "champion": "katarina",
+    "buckets": {
+      "1": {
+        "games": 717,
+        "wins": 397,
+        "win_rate": 55.37
+      },
+      "2": {
+        "games": 6600,
+        "wins": 3916,
+        "win_rate": 59.33
+      },
+      "3": {
+        "games": 11731,
+        "wins": 6194,
+        "win_rate": 52.8
+      },
+      "4": {
+        "games": 26110,
+        "wins": 13343,
+        "win_rate": 51.1
+      },
+      "5": {
+        "games": 23685,
+        "wins": 11924,
+        "win_rate": 50.34
+      },
+      "6": {
+        "games": 11041,
+        "wins": 5533,
+        "win_rate": 50.11
+      },
+      "7": {
+        "games": 4319,
+        "wins": 2203,
+        "win_rate": 51.01
+      }
+    }
+  },
+  {
+    "champion": "nocturne",
+    "buckets": {
+      "1": {
+        "games": 718,
+        "wins": 374,
+        "win_rate": 52.09
+      },
+      "2": {
+        "games": 6566,
+        "wins": 3748,
+        "win_rate": 57.08
+      },
+      "3": {
+        "games": 11255,
+        "wins": 6270,
+        "win_rate": 55.71
+      },
+      "4": {
+        "games": 28605,
+        "wins": 15372,
+        "win_rate": 53.74
+      },
+      "5": {
+        "games": 28613,
+        "wins": 15047,
+        "win_rate": 52.59
+      },
+      "6": {
+        "games": 14331,
+        "wins": 7558,
+        "win_rate": 52.74
+      },
+      "7": {
+        "games": 5633,
+        "wins": 2895,
+        "win_rate": 51.39
+      }
+    }
+  },
+  {
+    "champion": "maokai",
+    "buckets": {
+      "1": {
+        "games": 205,
+        "wins": 101,
+        "win_rate": 49.27
+      },
+      "2": {
+        "games": 1836,
+        "wins": 934,
+        "win_rate": 50.87
+      },
+      "3": {
+        "games": 3455,
+        "wins": 1737,
+        "win_rate": 50.27
+      },
+      "4": {
+        "games": 8506,
+        "wins": 4534,
+        "win_rate": 53.3
+      },
+      "5": {
+        "games": 8097,
+        "wins": 4294,
+        "win_rate": 53.03
+      },
+      "6": {
+        "games": 3804,
+        "wins": 2002,
+        "win_rate": 52.63
+      },
+      "7": {
+        "games": 1555,
+        "wins": 828,
+        "win_rate": 53.25
+      }
+    }
+  },
+  {
+    "champion": "renekton",
+    "buckets": {
+      "1": {
+        "games": 559,
+        "wins": 299,
+        "win_rate": 53.49
+      },
+      "2": {
+        "games": 5404,
+        "wins": 2801,
+        "win_rate": 51.83
+      },
+      "3": {
+        "games": 8388,
+        "wins": 4361,
+        "win_rate": 51.99
+      },
+      "4": {
+        "games": 19272,
+        "wins": 9875,
+        "win_rate": 51.24
+      },
+      "5": {
+        "games": 17984,
+        "wins": 8988,
+        "win_rate": 49.98
+      },
+      "6": {
+        "games": 8961,
+        "wins": 4420,
+        "win_rate": 49.32
+      },
+      "7": {
+        "games": 3614,
+        "wins": 1807,
+        "win_rate": 50.0
+      }
+    }
+  },
+  {
+    "champion": "jarvaniv",
+    "buckets": {
+      "1": {
+        "games": 554,
+        "wins": 275,
+        "win_rate": 49.64
+      },
+      "2": {
+        "games": 5278,
+        "wins": 2763,
+        "win_rate": 52.35
+      },
+      "3": {
+        "games": 9085,
+        "wins": 4666,
+        "win_rate": 51.36
+      },
+      "4": {
+        "games": 21386,
+        "wins": 10958,
+        "win_rate": 51.24
+      },
+      "5": {
+        "games": 19878,
+        "wins": 10215,
+        "win_rate": 51.39
+      },
+      "6": {
+        "games": 9480,
+        "wins": 5007,
+        "win_rate": 52.82
+      },
+      "7": {
+        "games": 3485,
+        "wins": 1768,
+        "win_rate": 50.73
+      }
+    }
+  },
+  {
+    "champion": "elise",
+    "buckets": {
+      "1": {
+        "games": 262,
+        "wins": 145,
+        "win_rate": 55.34
+      },
+      "2": {
+        "games": 2219,
+        "wins": 1217,
+        "win_rate": 54.84
+      },
+      "3": {
+        "games": 3776,
+        "wins": 2012,
+        "win_rate": 53.28
+      },
+      "4": {
+        "games": 8404,
+        "wins": 4326,
+        "win_rate": 51.48
+      },
+      "5": {
+        "games": 7908,
+        "wins": 4046,
+        "win_rate": 51.16
+      },
+      "6": {
+        "games": 3752,
+        "wins": 1864,
+        "win_rate": 49.68
+      },
+      "7": {
+        "games": 1582,
+        "wins": 860,
+        "win_rate": 54.36
+      }
+    }
+  },
+  {
+    "champion": "orianna",
+    "buckets": {
+      "1": {
+        "games": 409,
+        "wins": 176,
+        "win_rate": 43.03
+      },
+      "2": {
+        "games": 4150,
+        "wins": 1798,
+        "win_rate": 43.33
+      },
+      "3": {
+        "games": 6445,
+        "wins": 2960,
+        "win_rate": 45.93
+      },
+      "4": {
+        "games": 14878,
+        "wins": 7052,
+        "win_rate": 47.4
+      },
+      "5": {
+        "games": 13983,
+        "wins": 6856,
+        "win_rate": 49.03
+      },
+      "6": {
+        "games": 6770,
+        "wins": 3421,
+        "win_rate": 50.53
+      },
+      "7": {
+        "games": 2746,
+        "wins": 1392,
+        "win_rate": 50.69
+      }
+    }
+  },
+  {
+    "champion": "wukong",
+    "buckets": {
+      "1": {
+        "games": 258,
+        "wins": 126,
+        "win_rate": 48.84
+      },
+      "2": {
+        "games": 2266,
+        "wins": 1086,
+        "win_rate": 47.93
+      },
+      "3": {
+        "games": 4076,
+        "wins": 2095,
+        "win_rate": 51.4
+      },
+      "4": {
+        "games": 9686,
+        "wins": 5080,
+        "win_rate": 52.45
+      },
+      "5": {
+        "games": 9175,
+        "wins": 4782,
+        "win_rate": 52.12
+      },
+      "6": {
+        "games": 4479,
+        "wins": 2371,
+        "win_rate": 52.94
+      },
+      "7": {
+        "games": 1856,
+        "wins": 974,
+        "win_rate": 52.48
+      }
+    }
+  },
+  {
+    "champion": "leesin",
+    "buckets": {
+      "1": {
+        "games": 1027,
+        "wins": 575,
+        "win_rate": 55.99
+      },
+      "2": {
+        "games": 13075,
+        "wins": 7468,
+        "win_rate": 57.12
+      },
+      "3": {
+        "games": 19245,
+        "wins": 10399,
+        "win_rate": 54.03
+      },
+      "4": {
+        "games": 41958,
+        "wins": 21375,
+        "win_rate": 50.94
+      },
+      "5": {
+        "games": 37593,
+        "wins": 18132,
+        "win_rate": 48.23
+      },
+      "6": {
+        "games": 17607,
+        "wins": 8525,
+        "win_rate": 48.42
+      },
+      "7": {
+        "games": 6797,
+        "wins": 3285,
+        "win_rate": 48.33
+      }
+    }
+  },
+  {
+    "champion": "rumble",
+    "buckets": {
+      "1": {
+        "games": 176,
+        "wins": 86,
+        "win_rate": 48.86
+      },
+      "2": {
+        "games": 2201,
+        "wins": 1015,
+        "win_rate": 46.12
+      },
+      "3": {
+        "games": 3178,
+        "wins": 1498,
+        "win_rate": 47.14
+      },
+      "4": {
+        "games": 7514,
+        "wins": 3573,
+        "win_rate": 47.55
+      },
+      "5": {
+        "games": 7390,
+        "wins": 3799,
+        "win_rate": 51.41
+      },
+      "6": {
+        "games": 3783,
+        "wins": 1921,
+        "win_rate": 50.78
+      },
+      "7": {
+        "games": 1647,
+        "wins": 857,
+        "win_rate": 52.03
+      }
+    }
+  },
+  {
+    "champion": "vayne",
+    "buckets": {
+      "1": {
+        "games": 647,
+        "wins": 315,
+        "win_rate": 48.69
+      },
+      "2": {
+        "games": 5636,
+        "wins": 2992,
+        "win_rate": 53.09
+      },
+      "3": {
+        "games": 11409,
+        "wins": 5502,
+        "win_rate": 48.23
+      },
+      "4": {
+        "games": 27375,
+        "wins": 14217,
+        "win_rate": 51.93
+      },
+      "5": {
+        "games": 26411,
+        "wins": 14167,
+        "win_rate": 53.64
+      },
+      "6": {
+        "games": 12651,
+        "wins": 6758,
+        "win_rate": 53.42
+      },
+      "7": {
+        "games": 5005,
+        "wins": 2680,
+        "win_rate": 53.55
+      }
+    }
+  },
+  {
+    "champion": "brand",
+    "buckets": {
+      "1": {
+        "games": 310,
+        "wins": 149,
+        "win_rate": 48.06
+      },
+      "2": {
+        "games": 2504,
+        "wins": 1274,
+        "win_rate": 50.88
+      },
+      "3": {
+        "games": 4085,
+        "wins": 2287,
+        "win_rate": 55.99
+      },
+      "4": {
+        "games": 10876,
+        "wins": 6070,
+        "win_rate": 55.81
+      },
+      "5": {
+        "games": 12103,
+        "wins": 6268,
+        "win_rate": 51.79
+      },
+      "6": {
+        "games": 6620,
+        "wins": 3408,
+        "win_rate": 51.48
+      },
+      "7": {
+        "games": 3339,
+        "wins": 1706,
+        "win_rate": 51.09
+      }
+    }
+  },
+  {
+    "champion": "cassiopeia",
+    "buckets": {
+      "1": {
+        "games": 114,
+        "wins": 58,
+        "win_rate": 50.88
+      },
+      "2": {
+        "games": 1016,
+        "wins": 460,
+        "win_rate": 45.28
+      },
+      "3": {
+        "games": 1811,
+        "wins": 859,
+        "win_rate": 47.43
+      },
+      "4": {
+        "games": 3970,
+        "wins": 1997,
+        "win_rate": 50.3
+      },
+      "5": {
+        "games": 3698,
+        "wins": 1949,
+        "win_rate": 52.7
+      },
+      "6": {
+        "games": 1736,
+        "wins": 886,
+        "win_rate": 51.04
+      },
+      "7": {
+        "games": 805,
+        "wins": 429,
+        "win_rate": 53.29
+      }
+    }
+  },
+  {
+    "champion": "skarner",
+    "buckets": {
+      "1": {
+        "games": 43,
+        "wins": 18,
+        "win_rate": 41.86
+      },
+      "2": {
+        "games": 444,
+        "wins": 233,
+        "win_rate": 52.48
+      },
+      "3": {
+        "games": 780,
+        "wins": 371,
+        "win_rate": 47.56
+      },
+      "4": {
+        "games": 1870,
+        "wins": 943,
+        "win_rate": 50.43
+      },
+      "5": {
+        "games": 1898,
+        "wins": 948,
+        "win_rate": 49.95
+      },
+      "6": {
+        "games": 958,
+        "wins": 497,
+        "win_rate": 51.88
+      },
+      "7": {
+        "games": 377,
+        "wins": 197,
+        "win_rate": 52.25
+      }
+    }
+  },
+  {
+    "champion": "heimerdinger",
+    "buckets": {
+      "1": {
+        "games": 107,
+        "wins": 69,
+        "win_rate": 64.49
+      },
+      "2": {
+        "games": 911,
+        "wins": 521,
+        "win_rate": 57.19
+      },
+      "3": {
+        "games": 1577,
+        "wins": 888,
+        "win_rate": 56.31
+      },
+      "4": {
+        "games": 3730,
+        "wins": 1935,
+        "win_rate": 51.88
+      },
+      "5": {
+        "games": 3779,
+        "wins": 1873,
+        "win_rate": 49.56
+      },
+      "6": {
+        "games": 2050,
+        "wins": 1043,
+        "win_rate": 50.88
+      },
+      "7": {
+        "games": 999,
+        "wins": 526,
+        "win_rate": 52.65
+      }
+    }
+  },
+  {
+    "champion": "nasus",
+    "buckets": {
+      "1": {
+        "games": 414,
+        "wins": 231,
+        "win_rate": 55.8
+      },
+      "2": {
+        "games": 3878,
+        "wins": 2187,
+        "win_rate": 56.4
+      },
+      "3": {
+        "games": 7238,
+        "wins": 3686,
+        "win_rate": 50.93
+      },
+      "4": {
+        "games": 17110,
+        "wins": 8861,
+        "win_rate": 51.79
+      },
+      "5": {
+        "games": 16135,
+        "wins": 8567,
+        "win_rate": 53.1
+      },
+      "6": {
+        "games": 7438,
+        "wins": 3939,
+        "win_rate": 52.96
+      },
+      "7": {
+        "games": 2875,
+        "wins": 1538,
+        "win_rate": 53.5
+      }
+    }
+  },
+  {
+    "champion": "nidalee",
+    "buckets": {
+      "1": {
+        "games": 145,
+        "wins": 75,
+        "win_rate": 51.72
+      },
+      "2": {
+        "games": 2115,
+        "wins": 1118,
+        "win_rate": 52.86
+      },
+      "3": {
+        "games": 2977,
+        "wins": 1569,
+        "win_rate": 52.7
+      },
+      "4": {
+        "games": 6327,
+        "wins": 3151,
+        "win_rate": 49.8
+      },
+      "5": {
+        "games": 5533,
+        "wins": 2614,
+        "win_rate": 47.24
+      },
+      "6": {
+        "games": 2607,
+        "wins": 1254,
+        "win_rate": 48.1
+      },
+      "7": {
+        "games": 1105,
+        "wins": 569,
+        "win_rate": 51.49
+      }
+    }
+  },
+  {
+    "champion": "udyr",
+    "buckets": {
+      "1": {
+        "games": 160,
+        "wins": 78,
+        "win_rate": 48.75
+      },
+      "2": {
+        "games": 1378,
+        "wins": 715,
+        "win_rate": 51.89
+      },
+      "3": {
+        "games": 2536,
+        "wins": 1340,
+        "win_rate": 52.84
+      },
+      "4": {
+        "games": 6184,
+        "wins": 3235,
+        "win_rate": 52.31
+      },
+      "5": {
+        "games": 5654,
+        "wins": 2908,
+        "win_rate": 51.43
+      },
+      "6": {
+        "games": 2681,
+        "wins": 1381,
+        "win_rate": 51.51
+      },
+      "7": {
+        "games": 1156,
+        "wins": 596,
+        "win_rate": 51.56
+      }
+    }
+  },
+  {
+    "champion": "poppy",
+    "buckets": {
+      "1": {
+        "games": 145,
+        "wins": 71,
+        "win_rate": 48.97
+      },
+      "2": {
+        "games": 1442,
+        "wins": 780,
+        "win_rate": 54.09
+      },
+      "3": {
+        "games": 2397,
+        "wins": 1202,
+        "win_rate": 50.15
+      },
+      "4": {
+        "games": 5597,
+        "wins": 2905,
+        "win_rate": 51.9
+      },
+      "5": {
+        "games": 5372,
+        "wins": 2754,
+        "win_rate": 51.27
+      },
+      "6": {
+        "games": 2656,
+        "wins": 1381,
+        "win_rate": 52.0
+      },
+      "7": {
+        "games": 1165,
+        "wins": 567,
+        "win_rate": 48.67
+      }
+    }
+  },
+  {
+    "champion": "gragas",
+    "buckets": {
+      "1": {
+        "games": 187,
+        "wins": 95,
+        "win_rate": 50.8
+      },
+      "2": {
+        "games": 1633,
+        "wins": 811,
+        "win_rate": 49.66
+      },
+      "3": {
+        "games": 3010,
+        "wins": 1530,
+        "win_rate": 50.83
+      },
+      "4": {
+        "games": 7027,
+        "wins": 3576,
+        "win_rate": 50.89
+      },
+      "5": {
+        "games": 6841,
+        "wins": 3437,
+        "win_rate": 50.24
+      },
+      "6": {
+        "games": 3385,
+        "wins": 1636,
+        "win_rate": 48.33
+      },
+      "7": {
+        "games": 1394,
+        "wins": 692,
+        "win_rate": 49.64
+      }
+    }
+  },
+  {
+    "champion": "pantheon",
+    "buckets": {
+      "1": {
+        "games": 295,
+        "wins": 158,
+        "win_rate": 53.56
+      },
+      "2": {
+        "games": 2474,
+        "wins": 1301,
+        "win_rate": 52.59
+      },
+      "3": {
+        "games": 4358,
+        "wins": 2235,
+        "win_rate": 51.28
+      },
+      "4": {
+        "games": 10482,
+        "wins": 5274,
+        "win_rate": 50.31
+      },
+      "5": {
+        "games": 10095,
+        "wins": 4868,
+        "win_rate": 48.22
+      },
+      "6": {
+        "games": 5190,
+        "wins": 2455,
+        "win_rate": 47.3
+      },
+      "7": {
+        "games": 2037,
+        "wins": 1035,
+        "win_rate": 50.81
+      }
+    }
+  },
+  {
+    "champion": "ezreal",
+    "buckets": {
+      "1": {
+        "games": 1708,
+        "wins": 907,
+        "win_rate": 53.1
+      },
+      "2": {
+        "games": 19325,
+        "wins": 10129,
+        "win_rate": 52.41
+      },
+      "3": {
+        "games": 29151,
+        "wins": 15688,
+        "win_rate": 53.82
+      },
+      "4": {
+        "games": 65294,
+        "wins": 33386,
+        "win_rate": 51.13
+      },
+      "5": {
+        "games": 61323,
+        "wins": 28986,
+        "win_rate": 47.27
+      },
+      "6": {
+        "games": 30307,
+        "wins": 13651,
+        "win_rate": 45.04
+      },
+      "7": {
+        "games": 12947,
+        "wins": 5820,
+        "win_rate": 44.95
+      }
+    }
+  },
+  {
+    "champion": "mordekaiser",
+    "buckets": {
+      "1": {
+        "games": 607,
+        "wins": 317,
+        "win_rate": 52.22
+      },
+      "2": {
+        "games": 5539,
+        "wins": 3052,
+        "win_rate": 55.1
+      },
+      "3": {
+        "games": 9249,
+        "wins": 4920,
+        "win_rate": 53.19
+      },
+      "4": {
+        "games": 22641,
+        "wins": 11695,
+        "win_rate": 51.65
+      },
+      "5": {
+        "games": 22840,
+        "wins": 11947,
+        "win_rate": 52.31
+      },
+      "6": {
+        "games": 11554,
+        "wins": 6036,
+        "win_rate": 52.24
+      },
+      "7": {
+        "games": 4958,
+        "wins": 2565,
+        "win_rate": 51.73
+      }
+    }
+  },
+  {
+    "champion": "yorick",
+    "buckets": {
+      "1": {
+        "games": 377,
+        "wins": 198,
+        "win_rate": 52.52
+      },
+      "2": {
+        "games": 3747,
+        "wins": 2180,
+        "win_rate": 58.18
+      },
+      "3": {
+        "games": 6830,
+        "wins": 4079,
+        "win_rate": 59.72
+      },
+      "4": {
+        "games": 14013,
+        "wins": 7439,
+        "win_rate": 53.09
+      },
+      "5": {
+        "games": 12829,
+        "wins": 6180,
+        "win_rate": 48.17
+      },
+      "6": {
+        "games": 5997,
+        "wins": 2765,
+        "win_rate": 46.11
+      },
+      "7": {
+        "games": 2466,
+        "wins": 1225,
+        "win_rate": 49.68
+      }
+    }
+  },
+  {
+    "champion": "kennen",
+    "buckets": {
+      "1": {
+        "games": 192,
+        "wins": 116,
+        "win_rate": 60.42
+      },
+      "2": {
+        "games": 2119,
+        "wins": 1136,
+        "win_rate": 53.61
+      },
+      "3": {
+        "games": 3241,
+        "wins": 1707,
+        "win_rate": 52.67
+      },
+      "4": {
+        "games": 7965,
+        "wins": 4133,
+        "win_rate": 51.89
+      },
+      "5": {
+        "games": 7748,
+        "wins": 3872,
+        "win_rate": 49.97
+      },
+      "6": {
+        "games": 3803,
+        "wins": 1991,
+        "win_rate": 52.35
+      },
+      "7": {
+        "games": 1512,
+        "wins": 753,
+        "win_rate": 49.8
+      }
+    }
+  },
+  {
+    "champion": "garen",
+    "buckets": {
+      "1": {
+        "games": 856,
+        "wins": 470,
+        "win_rate": 54.91
+      },
+      "2": {
+        "games": 8272,
+        "wins": 4611,
+        "win_rate": 55.74
+      },
+      "3": {
+        "games": 14862,
+        "wins": 8304,
+        "win_rate": 55.87
+      },
+      "4": {
+        "games": 35806,
+        "wins": 19212,
+        "win_rate": 53.66
+      },
+      "5": {
+        "games": 34925,
+        "wins": 18407,
+        "win_rate": 52.7
+      },
+      "6": {
+        "games": 17279,
+        "wins": 9011,
+        "win_rate": 52.15
+      },
+      "7": {
+        "games": 7364,
+        "wins": 3861,
+        "win_rate": 52.43
+      }
+    }
+  },
+  {
+    "champion": "leona",
+    "buckets": {
+      "1": {
+        "games": 656,
+        "wins": 339,
+        "win_rate": 51.68
+      },
+      "2": {
+        "games": 6676,
+        "wins": 3544,
+        "win_rate": 53.09
+      },
+      "3": {
+        "games": 11769,
+        "wins": 6252,
+        "win_rate": 53.12
+      },
+      "4": {
+        "games": 27194,
+        "wins": 14246,
+        "win_rate": 52.39
+      },
+      "5": {
+        "games": 25512,
+        "wins": 13367,
+        "win_rate": 52.39
+      },
+      "6": {
+        "games": 11892,
+        "wins": 6104,
+        "win_rate": 51.33
+      },
+      "7": {
+        "games": 4491,
+        "wins": 2200,
+        "win_rate": 48.99
+      }
+    }
+  },
+  {
+    "champion": "malzahar",
+    "buckets": {
+      "1": {
+        "games": 669,
+        "wins": 297,
+        "win_rate": 44.39
+      },
+      "2": {
+        "games": 5638,
+        "wins": 2400,
+        "win_rate": 42.57
+      },
+      "3": {
+        "games": 10755,
+        "wins": 5696,
+        "win_rate": 52.96
+      },
+      "4": {
+        "games": 27129,
+        "wins": 14658,
+        "win_rate": 54.03
+      },
+      "5": {
+        "games": 26867,
+        "wins": 14143,
+        "win_rate": 52.64
+      },
+      "6": {
+        "games": 13145,
+        "wins": 7043,
+        "win_rate": 53.58
+      },
+      "7": {
+        "games": 5582,
+        "wins": 2948,
+        "win_rate": 52.81
+      }
+    }
+  },
+  {
+    "champion": "riven",
+    "buckets": {
+      "1": {
+        "games": 353,
+        "wins": 166,
+        "win_rate": 47.03
+      },
+      "2": {
+        "games": 3124,
+        "wins": 1421,
+        "win_rate": 45.49
+      },
+      "3": {
+        "games": 5256,
+        "wins": 2455,
+        "win_rate": 46.71
+      },
+      "4": {
+        "games": 12306,
+        "wins": 6120,
+        "win_rate": 49.73
+      },
+      "5": {
+        "games": 11720,
+        "wins": 6187,
+        "win_rate": 52.79
+      },
+      "6": {
+        "games": 5657,
+        "wins": 3010,
+        "win_rate": 53.21
+      },
+      "7": {
+        "games": 2170,
+        "wins": 1162,
+        "win_rate": 53.55
+      }
+    }
+  },
+  {
+    "champion": "talon",
+    "buckets": {
+      "1": {
+        "games": 346,
+        "wins": 158,
+        "win_rate": 45.66
+      },
+      "2": {
+        "games": 2955,
+        "wins": 1544,
+        "win_rate": 52.25
+      },
+      "3": {
+        "games": 4982,
+        "wins": 2499,
+        "win_rate": 50.16
+      },
+      "4": {
+        "games": 12345,
+        "wins": 6212,
+        "win_rate": 50.32
+      },
+      "5": {
+        "games": 12462,
+        "wins": 6294,
+        "win_rate": 50.51
+      },
+      "6": {
+        "games": 6569,
+        "wins": 3152,
+        "win_rate": 47.98
+      },
+      "7": {
+        "games": 3113,
+        "wins": 1454,
+        "win_rate": 46.71
+      }
+    }
+  },
+  {
+    "champion": "kogmaw",
+    "buckets": {
+      "1": {
+        "games": 184,
+        "wins": 100,
+        "win_rate": 54.35
+      },
+      "2": {
+        "games": 1380,
+        "wins": 788,
+        "win_rate": 57.1
+      },
+      "3": {
+        "games": 2601,
+        "wins": 1512,
+        "win_rate": 58.13
+      },
+      "4": {
+        "games": 6861,
+        "wins": 3861,
+        "win_rate": 56.27
+      },
+      "5": {
+        "games": 6865,
+        "wins": 3687,
+        "win_rate": 53.71
+      },
+      "6": {
+        "games": 3602,
+        "wins": 1846,
+        "win_rate": 51.25
+      },
+      "7": {
+        "games": 1553,
+        "wins": 781,
+        "win_rate": 50.29
+      }
+    }
+  },
+  {
+    "champion": "shen",
+    "buckets": {
+      "1": {
+        "games": 327,
+        "wins": 181,
+        "win_rate": 55.35
+      },
+      "2": {
+        "games": 3235,
+        "wins": 1810,
+        "win_rate": 55.95
+      },
+      "3": {
+        "games": 6230,
+        "wins": 3274,
+        "win_rate": 52.55
+      },
+      "4": {
+        "games": 14680,
+        "wins": 7814,
+        "win_rate": 53.23
+      },
+      "5": {
+        "games": 13900,
+        "wins": 7399,
+        "win_rate": 53.23
+      },
+      "6": {
+        "games": 6832,
+        "wins": 3595,
+        "win_rate": 52.62
+      },
+      "7": {
+        "games": 2792,
+        "wins": 1448,
+        "win_rate": 51.86
+      }
+    }
+  },
+  {
+    "champion": "lux",
+    "buckets": {
+      "1": {
+        "games": 626,
+        "wins": 344,
+        "win_rate": 54.95
+      },
+      "2": {
+        "games": 5461,
+        "wins": 3133,
+        "win_rate": 57.37
+      },
+      "3": {
+        "games": 8342,
+        "wins": 4782,
+        "win_rate": 57.32
+      },
+      "4": {
+        "games": 20633,
+        "wins": 10745,
+        "win_rate": 52.08
+      },
+      "5": {
+        "games": 22092,
+        "wins": 10689,
+        "win_rate": 48.38
+      },
+      "6": {
+        "games": 12143,
+        "wins": 5899,
+        "win_rate": 48.58
+      },
+      "7": {
+        "games": 5955,
+        "wins": 3027,
+        "win_rate": 50.83
+      }
+    }
+  },
+  {
+    "champion": "xerath",
+    "buckets": {
+      "1": {
+        "games": 533,
+        "wins": 287,
+        "win_rate": 53.85
+      },
+      "2": {
+        "games": 5108,
+        "wins": 2751,
+        "win_rate": 53.86
+      },
+      "3": {
+        "games": 7885,
+        "wins": 4264,
+        "win_rate": 54.08
+      },
+      "4": {
+        "games": 20098,
+        "wins": 10524,
+        "win_rate": 52.36
+      },
+      "5": {
+        "games": 20695,
+        "wins": 11002,
+        "win_rate": 53.16
+      },
+      "6": {
+        "games": 10708,
+        "wins": 5825,
+        "win_rate": 54.4
+      },
+      "7": {
+        "games": 4974,
+        "wins": 2658,
+        "win_rate": 53.44
+      }
+    }
+  },
+  {
+    "champion": "shyvana",
+    "buckets": {
+      "1": {
+        "games": 151,
+        "wins": 64,
+        "win_rate": 42.38
+      },
+      "2": {
+        "games": 1248,
+        "wins": 618,
+        "win_rate": 49.52
+      },
+      "3": {
+        "games": 2550,
+        "wins": 1340,
+        "win_rate": 52.55
+      },
+      "4": {
+        "games": 5675,
+        "wins": 2983,
+        "win_rate": 52.56
+      },
+      "5": {
+        "games": 4905,
+        "wins": 2432,
+        "win_rate": 49.58
+      },
+      "6": {
+        "games": 2339,
+        "wins": 1174,
+        "win_rate": 50.19
+      },
+      "7": {
+        "games": 940,
+        "wins": 463,
+        "win_rate": 49.26
+      }
+    }
+  },
+  {
+    "champion": "graves",
+    "buckets": {
+      "1": {
+        "games": 1120,
+        "wins": 587,
+        "win_rate": 52.41
+      },
+      "2": {
+        "games": 12019,
+        "wins": 5751,
+        "win_rate": 47.85
+      },
+      "3": {
+        "games": 18693,
+        "wins": 9355,
+        "win_rate": 50.05
+      },
+      "4": {
+        "games": 42447,
+        "wins": 22008,
+        "win_rate": 51.85
+      },
+      "5": {
+        "games": 40121,
+        "wins": 21084,
+        "win_rate": 52.55
+      },
+      "6": {
+        "games": 19380,
+        "wins": 10051,
+        "win_rate": 51.86
+      },
+      "7": {
+        "games": 8503,
+        "wins": 4341,
+        "win_rate": 51.05
+      }
+    }
+  },
+  {
+    "champion": "ahri",
+    "buckets": {
+      "1": {
+        "games": 1349,
+        "wins": 696,
+        "win_rate": 51.59
+      },
+      "2": {
+        "games": 13485,
+        "wins": 6874,
+        "win_rate": 50.98
+      },
+      "3": {
+        "games": 23077,
+        "wins": 12347,
+        "win_rate": 53.5
+      },
+      "4": {
+        "games": 53655,
+        "wins": 29075,
+        "win_rate": 54.19
+      },
+      "5": {
+        "games": 50239,
+        "wins": 26677,
+        "win_rate": 53.1
+      },
+      "6": {
+        "games": 24177,
+        "wins": 12538,
+        "win_rate": 51.86
+      },
+      "7": {
+        "games": 9728,
+        "wins": 4989,
+        "win_rate": 51.28
+      }
+    }
+  },
+  {
+    "champion": "volibear",
+    "buckets": {
+      "1": {
+        "games": 366,
+        "wins": 191,
+        "win_rate": 52.19
+      },
+      "2": {
+        "games": 3269,
+        "wins": 1641,
+        "win_rate": 50.2
+      },
+      "3": {
+        "games": 6026,
+        "wins": 3059,
+        "win_rate": 50.76
+      },
+      "4": {
+        "games": 13232,
+        "wins": 6722,
+        "win_rate": 50.8
+      },
+      "5": {
+        "games": 12169,
+        "wins": 6001,
+        "win_rate": 49.31
+      },
+      "6": {
+        "games": 5788,
+        "wins": 2861,
+        "win_rate": 49.43
+      },
+      "7": {
+        "games": 2199,
+        "wins": 1127,
+        "win_rate": 51.25
+      }
+    }
+  },
+  {
+    "champion": "varus",
+    "buckets": {
+      "1": {
+        "games": 394,
+        "wins": 207,
+        "win_rate": 52.54
+      },
+      "2": {
+        "games": 4340,
+        "wins": 2255,
+        "win_rate": 51.96
+      },
+      "3": {
+        "games": 6329,
+        "wins": 3277,
+        "win_rate": 51.78
+      },
+      "4": {
+        "games": 14684,
+        "wins": 7321,
+        "win_rate": 49.86
+      },
+      "5": {
+        "games": 14520,
+        "wins": 6862,
+        "win_rate": 47.26
+      },
+      "6": {
+        "games": 7534,
+        "wins": 3480,
+        "win_rate": 46.19
+      },
+      "7": {
+        "games": 3371,
+        "wins": 1517,
+        "win_rate": 45.0
+      }
+    }
+  },
+  {
+    "champion": "rengar",
+    "buckets": {
+      "1": {
+        "games": 351,
+        "wins": 185,
+        "win_rate": 52.71
+      },
+      "2": {
+        "games": 2888,
+        "wins": 1265,
+        "win_rate": 43.8
+      },
+      "3": {
+        "games": 5498,
+        "wins": 2327,
+        "win_rate": 42.32
+      },
+      "4": {
+        "games": 12809,
+        "wins": 6022,
+        "win_rate": 47.01
+      },
+      "5": {
+        "games": 12751,
+        "wins": 6658,
+        "win_rate": 52.22
+      },
+      "6": {
+        "games": 6564,
+        "wins": 3464,
+        "win_rate": 52.77
+      },
+      "7": {
+        "games": 2973,
+        "wins": 1578,
+        "win_rate": 53.08
+      }
+    }
+  },
+  {
+    "champion": "nautilus",
+    "buckets": {
+      "1": {
+        "games": 956,
+        "wins": 508,
+        "win_rate": 53.14
+      },
+      "2": {
+        "games": 9669,
+        "wins": 4745,
+        "win_rate": 49.07
+      },
+      "3": {
+        "games": 17033,
+        "wins": 8301,
+        "win_rate": 48.73
+      },
+      "4": {
+        "games": 37930,
+        "wins": 19243,
+        "win_rate": 50.73
+      },
+      "5": {
+        "games": 34162,
+        "wins": 17742,
+        "win_rate": 51.93
+      },
+      "6": {
+        "games": 15080,
+        "wins": 7917,
+        "win_rate": 52.5
+      },
+      "7": {
+        "games": 5356,
+        "wins": 2841,
+        "win_rate": 53.04
+      }
+    }
+  },
+  {
+    "champion": "akali",
+    "buckets": {
+      "1": {
+        "games": 640,
+        "wins": 347,
+        "win_rate": 54.22
+      },
+      "2": {
+        "games": 6393,
+        "wins": 3684,
+        "win_rate": 57.63
+      },
+      "3": {
+        "games": 10383,
+        "wins": 5319,
+        "win_rate": 51.23
+      },
+      "4": {
+        "games": 24090,
+        "wins": 12192,
+        "win_rate": 50.61
+      },
+      "5": {
+        "games": 23603,
+        "wins": 11881,
+        "win_rate": 50.34
+      },
+      "6": {
+        "games": 11870,
+        "wins": 5903,
+        "win_rate": 49.73
+      },
+      "7": {
+        "games": 4762,
+        "wins": 2380,
+        "win_rate": 49.98
+      }
+    }
+  },
+  {
+    "champion": "viktor",
+    "buckets": {
+      "1": {
+        "games": 659,
+        "wins": 328,
+        "win_rate": 49.77
+      },
+      "2": {
+        "games": 7460,
+        "wins": 3586,
+        "win_rate": 48.07
+      },
+      "3": {
+        "games": 11549,
+        "wins": 6344,
+        "win_rate": 54.93
+      },
+      "4": {
+        "games": 27075,
+        "wins": 14352,
+        "win_rate": 53.01
+      },
+      "5": {
+        "games": 26522,
+        "wins": 13716,
+        "win_rate": 51.72
+      },
+      "6": {
+        "games": 13184,
+        "wins": 6702,
+        "win_rate": 50.83
+      },
+      "7": {
+        "games": 5857,
+        "wins": 3040,
+        "win_rate": 51.9
+      }
+    }
+  },
+  {
+    "champion": "sejuani",
+    "buckets": {
+      "1": {
+        "games": 173,
+        "wins": 76,
+        "win_rate": 43.93
+      },
+      "2": {
+        "games": 1660,
+        "wins": 878,
+        "win_rate": 52.89
+      },
+      "3": {
+        "games": 2814,
+        "wins": 1470,
+        "win_rate": 52.24
+      },
+      "4": {
+        "games": 6962,
+        "wins": 3667,
+        "win_rate": 52.67
+      },
+      "5": {
+        "games": 6835,
+        "wins": 3590,
+        "win_rate": 52.52
+      },
+      "6": {
+        "games": 3291,
+        "wins": 1722,
+        "win_rate": 52.32
+      },
+      "7": {
+        "games": 1305,
+        "wins": 703,
+        "win_rate": 53.87
+      }
+    }
+  },
+  {
+    "champion": "fiora",
+    "buckets": {
+      "1": {
+        "games": 394,
+        "wins": 208,
+        "win_rate": 52.79
+      },
+      "2": {
+        "games": 3447,
+        "wins": 1654,
+        "win_rate": 47.98
+      },
+      "3": {
+        "games": 6068,
+        "wins": 3172,
+        "win_rate": 52.27
+      },
+      "4": {
+        "games": 13118,
+        "wins": 6668,
+        "win_rate": 50.83
+      },
+      "5": {
+        "games": 11607,
+        "wins": 5833,
+        "win_rate": 50.25
+      },
+      "6": {
+        "games": 5426,
+        "wins": 2731,
+        "win_rate": 50.33
+      },
+      "7": {
+        "games": 2050,
+        "wins": 1111,
+        "win_rate": 54.2
+      }
+    }
+  },
+  {
+    "champion": "ziggs",
+    "buckets": {
+      "1": {
+        "games": 166,
+        "wins": 76,
+        "win_rate": 45.78
+      },
+      "2": {
+        "games": 1333,
+        "wins": 725,
+        "win_rate": 54.39
+      },
+      "3": {
+        "games": 2188,
+        "wins": 1325,
+        "win_rate": 60.56
+      },
+      "4": {
+        "games": 5433,
+        "wins": 3124,
+        "win_rate": 57.5
+      },
+      "5": {
+        "games": 5727,
+        "wins": 2839,
+        "win_rate": 49.57
+      },
+      "6": {
+        "games": 3202,
+        "wins": 1517,
+        "win_rate": 47.38
+      },
+      "7": {
+        "games": 1682,
+        "wins": 819,
+        "win_rate": 48.69
+      }
+    }
+  },
+  {
+    "champion": "lulu",
+    "buckets": {
+      "1": {
+        "games": 891,
+        "wins": 439,
+        "win_rate": 49.27
+      },
+      "2": {
+        "games": 9529,
+        "wins": 4723,
+        "win_rate": 49.56
+      },
+      "3": {
+        "games": 17565,
+        "wins": 8645,
+        "win_rate": 49.22
+      },
+      "4": {
+        "games": 37822,
+        "wins": 18978,
+        "win_rate": 50.18
+      },
+      "5": {
+        "games": 33316,
+        "wins": 17284,
+        "win_rate": 51.88
+      },
+      "6": {
+        "games": 15150,
+        "wins": 8048,
+        "win_rate": 53.12
+      },
+      "7": {
+        "games": 5659,
+        "wins": 3036,
+        "win_rate": 53.65
+      }
+    }
+  },
+  {
+    "champion": "draven",
+    "buckets": {
+      "1": {
+        "games": 431,
+        "wins": 222,
+        "win_rate": 51.51
+      },
+      "2": {
+        "games": 3926,
+        "wins": 2078,
+        "win_rate": 52.93
+      },
+      "3": {
+        "games": 6794,
+        "wins": 3603,
+        "win_rate": 53.03
+      },
+      "4": {
+        "games": 14487,
+        "wins": 7393,
+        "win_rate": 51.03
+      },
+      "5": {
+        "games": 13014,
+        "wins": 6526,
+        "win_rate": 50.15
+      },
+      "6": {
+        "games": 6109,
+        "wins": 3041,
+        "win_rate": 49.78
+      },
+      "7": {
+        "games": 2515,
+        "wins": 1259,
+        "win_rate": 50.06
+      }
+    }
+  },
+  {
+    "champion": "hecarim",
+    "buckets": {
+      "1": {
+        "games": 311,
+        "wins": 171,
+        "win_rate": 54.98
+      },
+      "2": {
+        "games": 3235,
+        "wins": 1760,
+        "win_rate": 54.4
+      },
+      "3": {
+        "games": 5629,
+        "wins": 2813,
+        "win_rate": 49.97
+      },
+      "4": {
+        "games": 12774,
+        "wins": 6429,
+        "win_rate": 50.33
+      },
+      "5": {
+        "games": 10963,
+        "wins": 5278,
+        "win_rate": 48.14
+      },
+      "6": {
+        "games": 5011,
+        "wins": 2381,
+        "win_rate": 47.52
+      },
+      "7": {
+        "games": 1870,
+        "wins": 892,
+        "win_rate": 47.7
+      }
+    }
+  },
+  {
+    "champion": "khazix",
+    "buckets": {
+      "1": {
+        "games": 696,
+        "wins": 356,
+        "win_rate": 51.15
+      },
+      "2": {
+        "games": 6758,
+        "wins": 3329,
+        "win_rate": 49.26
+      },
+      "3": {
+        "games": 10963,
+        "wins": 5136,
+        "win_rate": 46.85
+      },
+      "4": {
+        "games": 26816,
+        "wins": 13143,
+        "win_rate": 49.01
+      },
+      "5": {
+        "games": 26334,
+        "wins": 13540,
+        "win_rate": 51.42
+      },
+      "6": {
+        "games": 13239,
+        "wins": 6881,
+        "win_rate": 51.98
+      },
+      "7": {
+        "games": 5994,
+        "wins": 2996,
+        "win_rate": 49.98
+      }
+    }
+  },
+  {
+    "champion": "darius",
+    "buckets": {
+      "1": {
+        "games": 735,
+        "wins": 414,
+        "win_rate": 56.33
+      },
+      "2": {
+        "games": 6403,
+        "wins": 3244,
+        "win_rate": 50.66
+      },
+      "3": {
+        "games": 10565,
+        "wins": 5399,
+        "win_rate": 51.1
+      },
+      "4": {
+        "games": 25459,
+        "wins": 12918,
+        "win_rate": 50.74
+      },
+      "5": {
+        "games": 24521,
+        "wins": 12453,
+        "win_rate": 50.79
+      },
+      "6": {
+        "games": 12108,
+        "wins": 6148,
+        "win_rate": 50.78
+      },
+      "7": {
+        "games": 5308,
+        "wins": 2685,
+        "win_rate": 50.58
+      }
+    }
+  },
+  {
+    "champion": "jayce",
+    "buckets": {
+      "1": {
+        "games": 323,
+        "wins": 157,
+        "win_rate": 48.61
+      },
+      "2": {
+        "games": 3734,
+        "wins": 1857,
+        "win_rate": 49.73
+      },
+      "3": {
+        "games": 5419,
+        "wins": 2756,
+        "win_rate": 50.86
+      },
+      "4": {
+        "games": 12053,
+        "wins": 6142,
+        "win_rate": 50.96
+      },
+      "5": {
+        "games": 11315,
+        "wins": 5507,
+        "win_rate": 48.67
+      },
+      "6": {
+        "games": 5427,
+        "wins": 2553,
+        "win_rate": 47.04
+      },
+      "7": {
+        "games": 2262,
+        "wins": 1075,
+        "win_rate": 47.52
+      }
+    }
+  },
+  {
+    "champion": "lissandra",
+    "buckets": {
+      "1": {
+        "games": 298,
+        "wins": 160,
+        "win_rate": 53.69
+      },
+      "2": {
+        "games": 2808,
+        "wins": 1411,
+        "win_rate": 50.25
+      },
+      "3": {
+        "games": 4956,
+        "wins": 2555,
+        "win_rate": 51.55
+      },
+      "4": {
+        "games": 11955,
+        "wins": 6093,
+        "win_rate": 50.97
+      },
+      "5": {
+        "games": 11292,
+        "wins": 5814,
+        "win_rate": 51.49
+      },
+      "6": {
+        "games": 5256,
+        "wins": 2776,
+        "win_rate": 52.82
+      },
+      "7": {
+        "games": 2041,
+        "wins": 1078,
+        "win_rate": 52.82
+      }
+    }
+  },
+  {
+    "champion": "diana",
+    "buckets": {
+      "1": {
+        "games": 446,
+        "wins": 209,
+        "win_rate": 46.86
+      },
+      "2": {
+        "games": 3929,
+        "wins": 1998,
+        "win_rate": 50.85
+      },
+      "3": {
+        "games": 7702,
+        "wins": 4335,
+        "win_rate": 56.28
+      },
+      "4": {
+        "games": 17635,
+        "wins": 9243,
+        "win_rate": 52.41
+      },
+      "5": {
+        "games": 15460,
+        "wins": 7668,
+        "win_rate": 49.6
+      },
+      "6": {
+        "games": 7214,
+        "wins": 3464,
+        "win_rate": 48.02
+      },
+      "7": {
+        "games": 2747,
+        "wins": 1375,
+        "win_rate": 50.05
+      }
+    }
+  },
+  {
+    "champion": "quinn",
+    "buckets": {
+      "1": {
+        "games": 102,
+        "wins": 51,
+        "win_rate": 50.0
+      },
+      "2": {
+        "games": 835,
+        "wins": 426,
+        "win_rate": 51.02
+      },
+      "3": {
+        "games": 1609,
+        "wins": 756,
+        "win_rate": 46.99
+      },
+      "4": {
+        "games": 3978,
+        "wins": 2071,
+        "win_rate": 52.06
+      },
+      "5": {
+        "games": 3906,
+        "wins": 2123,
+        "win_rate": 54.35
+      },
+      "6": {
+        "games": 1993,
+        "wins": 1108,
+        "win_rate": 55.59
+      },
+      "7": {
+        "games": 878,
+        "wins": 480,
+        "win_rate": 54.67
+      }
+    }
+  },
+  {
+    "champion": "syndra",
+    "buckets": {
+      "1": {
+        "games": 424,
+        "wins": 196,
+        "win_rate": 46.23
+      },
+      "2": {
+        "games": 4022,
+        "wins": 1717,
+        "win_rate": 42.69
+      },
+      "3": {
+        "games": 7018,
+        "wins": 3409,
+        "win_rate": 48.58
+      },
+      "4": {
+        "games": 17351,
+        "wins": 8889,
+        "win_rate": 51.23
+      },
+      "5": {
+        "games": 17111,
+        "wins": 8963,
+        "win_rate": 52.38
+      },
+      "6": {
+        "games": 8845,
+        "wins": 4524,
+        "win_rate": 51.15
+      },
+      "7": {
+        "games": 3848,
+        "wins": 1936,
+        "win_rate": 50.31
+      }
+    }
+  },
+  {
+    "champion": "aurelionsol",
+    "buckets": {
+      "1": {
+        "games": 260,
+        "wins": 112,
+        "win_rate": 43.08
+      },
+      "2": {
+        "games": 2391,
+        "wins": 986,
+        "win_rate": 41.24
+      },
+      "3": {
+        "games": 4639,
+        "wins": 2051,
+        "win_rate": 44.21
+      },
+      "4": {
+        "games": 11479,
+        "wins": 5797,
+        "win_rate": 50.5
+      },
+      "5": {
+        "games": 11866,
+        "wins": 6720,
+        "win_rate": 56.63
+      },
+      "6": {
+        "games": 6155,
+        "wins": 3697,
+        "win_rate": 60.06
+      },
+      "7": {
+        "games": 2599,
+        "wins": 1546,
+        "win_rate": 59.48
+      }
+    }
+  },
+  {
+    "champion": "fizz",
+    "buckets": {
+      "1": {
+        "games": 516,
+        "wins": 305,
+        "win_rate": 59.11
+      },
+      "2": {
+        "games": 4313,
+        "wins": 2523,
+        "win_rate": 58.5
+      },
+      "3": {
+        "games": 7555,
+        "wins": 4091,
+        "win_rate": 54.15
+      },
+      "4": {
+        "games": 17919,
+        "wins": 9375,
+        "win_rate": 52.32
+      },
+      "5": {
+        "games": 17551,
+        "wins": 9013,
+        "win_rate": 51.35
+      },
+      "6": {
+        "games": 8652,
+        "wins": 4532,
+        "win_rate": 52.38
+      },
+      "7": {
+        "games": 3501,
+        "wins": 1837,
+        "win_rate": 52.47
+      }
+    }
+  },
+  {
+    "champion": "kayn",
+    "buckets": {
+      "1": {
+        "games": 587,
+        "wins": 281,
+        "win_rate": 47.87
+      },
+      "2": {
+        "games": 4944,
+        "wins": 2374,
+        "win_rate": 48.02
+      },
+      "3": {
+        "games": 9318,
+        "wins": 4697,
+        "win_rate": 50.41
+      },
+      "4": {
+        "games": 22927,
+        "wins": 11870,
+        "win_rate": 51.77
+      },
+      "5": {
+        "games": 23584,
+        "wins": 12494,
+        "win_rate": 52.98
+      },
+      "6": {
+        "games": 12310,
+        "wins": 6481,
+        "win_rate": 52.65
+      },
+      "7": {
+        "games": 5356,
+        "wins": 2875,
+        "win_rate": 53.68
+      }
+    }
+  },
+  {
+    "champion": "zoe",
+    "buckets": {
+      "1": {
+        "games": 271,
+        "wins": 142,
+        "win_rate": 52.4
+      },
+      "2": {
+        "games": 3124,
+        "wins": 1869,
+        "win_rate": 59.83
+      },
+      "3": {
+        "games": 4992,
+        "wins": 2654,
+        "win_rate": 53.17
+      },
+      "4": {
+        "games": 11214,
+        "wins": 5685,
+        "win_rate": 50.7
+      },
+      "5": {
+        "games": 10998,
+        "wins": 5513,
+        "win_rate": 50.13
+      },
+      "6": {
+        "games": 5329,
+        "wins": 2633,
+        "win_rate": 49.41
+      },
+      "7": {
+        "games": 2279,
+        "wins": 1128,
+        "win_rate": 49.5
+      }
+    }
+  },
+  {
+    "champion": "zyra",
+    "buckets": {
+      "1": {
+        "games": 301,
+        "wins": 154,
+        "win_rate": 51.16
+      },
+      "2": {
+        "games": 2468,
+        "wins": 1277,
+        "win_rate": 51.74
+      },
+      "3": {
+        "games": 4141,
+        "wins": 2312,
+        "win_rate": 55.83
+      },
+      "4": {
+        "games": 10494,
+        "wins": 5622,
+        "win_rate": 53.57
+      },
+      "5": {
+        "games": 11607,
+        "wins": 6060,
+        "win_rate": 52.21
+      },
+      "6": {
+        "games": 6480,
+        "wins": 3348,
+        "win_rate": 51.67
+      },
+      "7": {
+        "games": 3345,
+        "wins": 1768,
+        "win_rate": 52.86
+      }
+    }
+  },
+  {
+    "champion": "kaisa",
+    "buckets": {
+      "1": {
+        "games": 1597,
+        "wins": 789,
+        "win_rate": 49.41
+      },
+      "2": {
+        "games": 16449,
+        "wins": 8152,
+        "win_rate": 49.56
+      },
+      "3": {
+        "games": 28998,
+        "wins": 14234,
+        "win_rate": 49.09
+      },
+      "4": {
+        "games": 65473,
+        "wins": 33306,
+        "win_rate": 50.87
+      },
+      "5": {
+        "games": 60208,
+        "wins": 30455,
+        "win_rate": 50.58
+      },
+      "6": {
+        "games": 27647,
+        "wins": 13375,
+        "win_rate": 48.38
+      },
+      "7": {
+        "games": 10458,
+        "wins": 4905,
+        "win_rate": 46.9
+      }
+    }
+  },
+  {
+    "champion": "seraphine",
+    "buckets": {
+      "1": {
+        "games": 497,
+        "wins": 267,
+        "win_rate": 53.72
+      },
+      "2": {
+        "games": 4733,
+        "wins": 2421,
+        "win_rate": 51.15
+      },
+      "3": {
+        "games": 7996,
+        "wins": 4278,
+        "win_rate": 53.5
+      },
+      "4": {
+        "games": 19258,
+        "wins": 10048,
+        "win_rate": 52.18
+      },
+      "5": {
+        "games": 18449,
+        "wins": 9730,
+        "win_rate": 52.74
+      },
+      "6": {
+        "games": 8748,
+        "wins": 4744,
+        "win_rate": 54.23
+      },
+      "7": {
+        "games": 3553,
+        "wins": 1888,
+        "win_rate": 53.14
+      }
+    }
+  },
+  {
+    "champion": "zac",
+    "buckets": {
+      "1": {
+        "games": 234,
+        "wins": 114,
+        "win_rate": 48.72
+      },
+      "2": {
+        "games": 2308,
+        "wins": 1208,
+        "win_rate": 52.34
+      },
+      "3": {
+        "games": 3990,
+        "wins": 2031,
+        "win_rate": 50.9
+      },
+      "4": {
+        "games": 9364,
+        "wins": 4755,
+        "win_rate": 50.78
+      },
+      "5": {
+        "games": 8776,
+        "wins": 4458,
+        "win_rate": 50.8
+      },
+      "6": {
+        "games": 4119,
+        "wins": 2164,
+        "win_rate": 52.54
+      },
+      "7": {
+        "games": 1567,
+        "wins": 797,
+        "win_rate": 50.86
+      }
+    }
+  },
+  {
+    "champion": "gnar",
+    "buckets": {
+      "1": {
+        "games": 377,
+        "wins": 194,
+        "win_rate": 51.46
+      },
+      "2": {
+        "games": 3765,
+        "wins": 1934,
+        "win_rate": 51.37
+      },
+      "3": {
+        "games": 6305,
+        "wins": 3280,
+        "win_rate": 52.02
+      },
+      "4": {
+        "games": 14377,
+        "wins": 7311,
+        "win_rate": 50.85
+      },
+      "5": {
+        "games": 13620,
+        "wins": 6864,
+        "win_rate": 50.4
+      },
+      "6": {
+        "games": 6523,
+        "wins": 3291,
+        "win_rate": 50.45
+      },
+      "7": {
+        "games": 2555,
+        "wins": 1284,
+        "win_rate": 50.25
+      }
+    }
+  },
+  {
+    "champion": "yasuo",
+    "buckets": {
+      "1": {
+        "games": 1002,
+        "wins": 508,
+        "win_rate": 50.7
+      },
+      "2": {
+        "games": 8397,
+        "wins": 4286,
+        "win_rate": 51.04
+      },
+      "3": {
+        "games": 15463,
+        "wins": 8270,
+        "win_rate": 53.48
+      },
+      "4": {
+        "games": 35773,
+        "wins": 18105,
+        "win_rate": 50.61
+      },
+      "5": {
+        "games": 32926,
+        "wins": 16226,
+        "win_rate": 49.28
+      },
+      "6": {
+        "games": 15164,
+        "wins": 7571,
+        "win_rate": 49.93
+      },
+      "7": {
+        "games": 5629,
+        "wins": 2910,
+        "win_rate": 51.7
+      }
+    }
+  },
+  {
+    "champion": "velkoz",
+    "buckets": {
+      "1": {
+        "games": 317,
+        "wins": 169,
+        "win_rate": 53.31
+      },
+      "2": {
+        "games": 2562,
+        "wins": 1477,
+        "win_rate": 57.65
+      },
+      "3": {
+        "games": 4041,
+        "wins": 2399,
+        "win_rate": 59.37
+      },
+      "4": {
+        "games": 10400,
+        "wins": 5629,
+        "win_rate": 54.12
+      },
+      "5": {
+        "games": 11267,
+        "wins": 5624,
+        "win_rate": 49.92
+      },
+      "6": {
+        "games": 6499,
+        "wins": 3214,
+        "win_rate": 49.45
+      },
+      "7": {
+        "games": 3347,
+        "wins": 1623,
+        "win_rate": 48.49
+      }
+    }
+  },
+  {
+    "champion": "taliyah",
+    "buckets": {
+      "1": {
+        "games": 146,
+        "wins": 61,
+        "win_rate": 41.78
+      },
+      "2": {
+        "games": 1587,
+        "wins": 609,
+        "win_rate": 38.37
+      },
+      "3": {
+        "games": 2379,
+        "wins": 1131,
+        "win_rate": 47.54
+      },
+      "4": {
+        "games": 5551,
+        "wins": 2716,
+        "win_rate": 48.93
+      },
+      "5": {
+        "games": 5324,
+        "wins": 2594,
+        "win_rate": 48.72
+      },
+      "6": {
+        "games": 2524,
+        "wins": 1267,
+        "win_rate": 50.2
+      },
+      "7": {
+        "games": 1038,
+        "wins": 509,
+        "win_rate": 49.04
+      }
+    }
+  },
+  {
+    "champion": "camille",
+    "buckets": {
+      "1": {
+        "games": 293,
+        "wins": 140,
+        "win_rate": 47.78
+      },
+      "2": {
+        "games": 2636,
+        "wins": 1343,
+        "win_rate": 50.95
+      },
+      "3": {
+        "games": 4657,
+        "wins": 2395,
+        "win_rate": 51.43
+      },
+      "4": {
+        "games": 10737,
+        "wins": 5527,
+        "win_rate": 51.48
+      },
+      "5": {
+        "games": 9845,
+        "wins": 5114,
+        "win_rate": 51.95
+      },
+      "6": {
+        "games": 4499,
+        "wins": 2308,
+        "win_rate": 51.3
+      },
+      "7": {
+        "games": 1640,
+        "wins": 874,
+        "win_rate": 53.29
+      }
+    }
+  },
+  {
+    "champion": "akshan",
+    "buckets": {
+      "1": {
+        "games": 260,
+        "wins": 133,
+        "win_rate": 51.15
+      },
+      "2": {
+        "games": 2006,
+        "wins": 1095,
+        "win_rate": 54.59
+      },
+      "3": {
+        "games": 3948,
+        "wins": 2076,
+        "win_rate": 52.58
+      },
+      "4": {
+        "games": 9506,
+        "wins": 4786,
+        "win_rate": 50.35
+      },
+      "5": {
+        "games": 8849,
+        "wins": 4522,
+        "win_rate": 51.1
+      },
+      "6": {
+        "games": 4272,
+        "wins": 2192,
+        "win_rate": 51.31
+      },
+      "7": {
+        "games": 1764,
+        "wins": 869,
+        "win_rate": 49.26
+      }
+    }
+  },
+  {
+    "champion": "belveth",
+    "buckets": {
+      "1": {
+        "games": 160,
+        "wins": 84,
+        "win_rate": 52.5
+      },
+      "2": {
+        "games": 1416,
+        "wins": 756,
+        "win_rate": 53.39
+      },
+      "3": {
+        "games": 3204,
+        "wins": 1853,
+        "win_rate": 57.83
+      },
+      "4": {
+        "games": 6016,
+        "wins": 3093,
+        "win_rate": 51.41
+      },
+      "5": {
+        "games": 4844,
+        "wins": 2373,
+        "win_rate": 48.99
+      },
+      "6": {
+        "games": 1995,
+        "wins": 998,
+        "win_rate": 50.03
+      },
+      "7": {
+        "games": 655,
+        "wins": 319,
+        "win_rate": 48.7
+      }
+    }
+  },
+  {
+    "champion": "jhin",
+    "buckets": {
+      "1": {
+        "games": 1434,
+        "wins": 783,
+        "win_rate": 54.6
+      },
+      "2": {
+        "games": 13791,
+        "wins": 7379,
+        "win_rate": 53.51
+      },
+      "3": {
+        "games": 21865,
+        "wins": 10998,
+        "win_rate": 50.3
+      },
+      "4": {
+        "games": 54179,
+        "wins": 27526,
+        "win_rate": 50.81
+      },
+      "5": {
+        "games": 55983,
+        "wins": 28732,
+        "win_rate": 51.32
+      },
+      "6": {
+        "games": 28970,
+        "wins": 15032,
+        "win_rate": 51.89
+      },
+      "7": {
+        "games": 13108,
+        "wins": 6934,
+        "win_rate": 52.9
+      }
+    }
+  },
+  {
+    "champion": "braum",
+    "buckets": {
+      "1": {
+        "games": 588,
+        "wins": 282,
+        "win_rate": 47.96
+      },
+      "2": {
+        "games": 6045,
+        "wins": 2975,
+        "win_rate": 49.21
+      },
+      "3": {
+        "games": 10160,
+        "wins": 5034,
+        "win_rate": 49.55
+      },
+      "4": {
+        "games": 23449,
+        "wins": 12113,
+        "win_rate": 51.66
+      },
+      "5": {
+        "games": 20836,
+        "wins": 11357,
+        "win_rate": 54.51
+      },
+      "6": {
+        "games": 9350,
+        "wins": 5084,
+        "win_rate": 54.37
+      },
+      "7": {
+        "games": 3541,
+        "wins": 1885,
+        "win_rate": 53.23
+      }
+    }
+  },
+  {
+    "champion": "kindred",
+    "buckets": {
+      "1": {
+        "games": 207,
+        "wins": 100,
+        "win_rate": 48.31
+      },
+      "2": {
+        "games": 2248,
+        "wins": 1113,
+        "win_rate": 49.51
+      },
+      "3": {
+        "games": 3685,
+        "wins": 1871,
+        "win_rate": 50.77
+      },
+      "4": {
+        "games": 7824,
+        "wins": 3894,
+        "win_rate": 49.77
+      },
+      "5": {
+        "games": 7261,
+        "wins": 3719,
+        "win_rate": 51.22
+      },
+      "6": {
+        "games": 3518,
+        "wins": 1808,
+        "win_rate": 51.39
+      },
+      "7": {
+        "games": 1446,
+        "wins": 770,
+        "win_rate": 53.25
+      }
+    }
+  },
+  {
+    "champion": "zeri",
+    "buckets": {
+      "1": {
+        "games": 202,
+        "wins": 89,
+        "win_rate": 44.06
+      },
+      "2": {
+        "games": 1949,
+        "wins": 862,
+        "win_rate": 44.23
+      },
+      "3": {
+        "games": 3522,
+        "wins": 1632,
+        "win_rate": 46.34
+      },
+      "4": {
+        "games": 7557,
+        "wins": 3809,
+        "win_rate": 50.4
+      },
+      "5": {
+        "games": 6905,
+        "wins": 3730,
+        "win_rate": 54.02
+      },
+      "6": {
+        "games": 3268,
+        "wins": 1838,
+        "win_rate": 56.24
+      },
+      "7": {
+        "games": 1234,
+        "wins": 691,
+        "win_rate": 56.0
+      }
+    }
+  },
+  {
+    "champion": "jinx",
+    "buckets": {
+      "1": {
+        "games": 1516,
+        "wins": 752,
+        "win_rate": 49.6
+      },
+      "2": {
+        "games": 15472,
+        "wins": 7659,
+        "win_rate": 49.5
+      },
+      "3": {
+        "games": 29212,
+        "wins": 15771,
+        "win_rate": 53.99
+      },
+      "4": {
+        "games": 64128,
+        "wins": 33770,
+        "win_rate": 52.66
+      },
+      "5": {
+        "games": 56507,
+        "wins": 29904,
+        "win_rate": 52.92
+      },
+      "6": {
+        "games": 25813,
+        "wins": 13883,
+        "win_rate": 53.78
+      },
+      "7": {
+        "games": 9192,
+        "wins": 4977,
+        "win_rate": 54.14
+      }
+    }
+  },
+  {
+    "champion": "tahmkench",
+    "buckets": {
+      "1": {
+        "games": 204,
+        "wins": 109,
+        "win_rate": 53.43
+      },
+      "2": {
+        "games": 1919,
+        "wins": 1106,
+        "win_rate": 57.63
+      },
+      "3": {
+        "games": 3609,
+        "wins": 1955,
+        "win_rate": 54.17
+      },
+      "4": {
+        "games": 8461,
+        "wins": 4429,
+        "win_rate": 52.35
+      },
+      "5": {
+        "games": 7994,
+        "wins": 3995,
+        "win_rate": 49.97
+      },
+      "6": {
+        "games": 3891,
+        "wins": 1960,
+        "win_rate": 50.37
+      },
+      "7": {
+        "games": 1554,
+        "wins": 826,
+        "win_rate": 53.15
+      }
+    }
+  },
+  {
+    "champion": "briar",
+    "buckets": {
+      "1": {
+        "games": 576,
+        "wins": 317,
+        "win_rate": 55.03
+      },
+      "2": {
+        "games": 4784,
+        "wins": 2699,
+        "win_rate": 56.42
+      },
+      "3": {
+        "games": 8915,
+        "wins": 4743,
+        "win_rate": 53.2
+      },
+      "4": {
+        "games": 22171,
+        "wins": 12057,
+        "win_rate": 54.38
+      },
+      "5": {
+        "games": 21428,
+        "wins": 11326,
+        "win_rate": 52.86
+      },
+      "6": {
+        "games": 10585,
+        "wins": 5590,
+        "win_rate": 52.81
+      },
+      "7": {
+        "games": 3971,
+        "wins": 2106,
+        "win_rate": 53.03
+      }
+    }
+  },
+  {
+    "champion": "viego",
+    "buckets": {
+      "1": {
+        "games": 1058,
+        "wins": 566,
+        "win_rate": 53.5
+      },
+      "2": {
+        "games": 10450,
+        "wins": 5651,
+        "win_rate": 54.08
+      },
+      "3": {
+        "games": 18897,
+        "wins": 9202,
+        "win_rate": 48.7
+      },
+      "4": {
+        "games": 43532,
+        "wins": 21507,
+        "win_rate": 49.41
+      },
+      "5": {
+        "games": 40562,
+        "wins": 20734,
+        "win_rate": 51.12
+      },
+      "6": {
+        "games": 19514,
+        "wins": 9942,
+        "win_rate": 50.95
+      },
+      "7": {
+        "games": 7799,
+        "wins": 4042,
+        "win_rate": 51.83
+      }
+    }
+  },
+  {
+    "champion": "senna",
+    "buckets": {
+      "1": {
+        "games": 463,
+        "wins": 211,
+        "win_rate": 45.57
+      },
+      "2": {
+        "games": 4194,
+        "wins": 1947,
+        "win_rate": 46.42
+      },
+      "3": {
+        "games": 7408,
+        "wins": 3883,
+        "win_rate": 52.42
+      },
+      "4": {
+        "games": 17759,
+        "wins": 9220,
+        "win_rate": 51.92
+      },
+      "5": {
+        "games": 17019,
+        "wins": 8779,
+        "win_rate": 51.58
+      },
+      "6": {
+        "games": 8437,
+        "wins": 4450,
+        "win_rate": 52.74
+      },
+      "7": {
+        "games": 3408,
+        "wins": 1855,
+        "win_rate": 54.43
+      }
+    }
+  },
+  {
+    "champion": "lucian",
+    "buckets": {
+      "1": {
+        "games": 749,
+        "wins": 395,
+        "win_rate": 52.74
+      },
+      "2": {
+        "games": 8403,
+        "wins": 4472,
+        "win_rate": 53.22
+      },
+      "3": {
+        "games": 12870,
+        "wins": 6288,
+        "win_rate": 48.86
+      },
+      "4": {
+        "games": 29504,
+        "wins": 14746,
+        "win_rate": 49.98
+      },
+      "5": {
+        "games": 27722,
+        "wins": 13963,
+        "win_rate": 50.37
+      },
+      "6": {
+        "games": 12948,
+        "wins": 6569,
+        "win_rate": 50.73
+      },
+      "7": {
+        "games": 4923,
+        "wins": 2498,
+        "win_rate": 50.74
+      }
+    }
+  },
+  {
+    "champion": "zed",
+    "buckets": {
+      "1": {
+        "games": 735,
+        "wins": 371,
+        "win_rate": 50.48
+      },
+      "2": {
+        "games": 6517,
+        "wins": 3548,
+        "win_rate": 54.44
+      },
+      "3": {
+        "games": 10268,
+        "wins": 5142,
+        "win_rate": 50.08
+      },
+      "4": {
+        "games": 25217,
+        "wins": 12594,
+        "win_rate": 49.94
+      },
+      "5": {
+        "games": 25189,
+        "wins": 12958,
+        "win_rate": 51.44
+      },
+      "6": {
+        "games": 12976,
+        "wins": 6558,
+        "win_rate": 50.54
+      },
+      "7": {
+        "games": 5988,
+        "wins": 3027,
+        "win_rate": 50.55
+      }
+    }
+  },
+  {
+    "champion": "kled",
+    "buckets": {
+      "1": {
+        "games": 167,
+        "wins": 107,
+        "win_rate": 64.07
+      },
+      "2": {
+        "games": 1510,
+        "wins": 876,
+        "win_rate": 58.01
+      },
+      "3": {
+        "games": 2860,
+        "wins": 1651,
+        "win_rate": 57.73
+      },
+      "4": {
+        "games": 6306,
+        "wins": 3377,
+        "win_rate": 53.55
+      },
+      "5": {
+        "games": 5872,
+        "wins": 2874,
+        "win_rate": 48.94
+      },
+      "6": {
+        "games": 2666,
+        "wins": 1276,
+        "win_rate": 47.86
+      },
+      "7": {
+        "games": 1035,
+        "wins": 514,
+        "win_rate": 49.66
+      }
+    }
+  },
+  {
+    "champion": "ekko",
+    "buckets": {
+      "1": {
+        "games": 434,
+        "wins": 216,
+        "win_rate": 49.77
+      },
+      "2": {
+        "games": 3638,
+        "wins": 1892,
+        "win_rate": 52.01
+      },
+      "3": {
+        "games": 6245,
+        "wins": 3322,
+        "win_rate": 53.19
+      },
+      "4": {
+        "games": 15390,
+        "wins": 8072,
+        "win_rate": 52.45
+      },
+      "5": {
+        "games": 15414,
+        "wins": 7795,
+        "win_rate": 50.57
+      },
+      "6": {
+        "games": 7795,
+        "wins": 3858,
+        "win_rate": 49.49
+      },
+      "7": {
+        "games": 3424,
+        "wins": 1785,
+        "win_rate": 52.13
+      }
+    }
+  },
+  {
+    "champion": "qiyana",
+    "buckets": {
+      "1": {
+        "games": 222,
+        "wins": 136,
+        "win_rate": 61.26
+      },
+      "2": {
+        "games": 1980,
+        "wins": 1026,
+        "win_rate": 51.82
+      },
+      "3": {
+        "games": 3097,
+        "wins": 1533,
+        "win_rate": 49.5
+      },
+      "4": {
+        "games": 7400,
+        "wins": 3609,
+        "win_rate": 48.77
+      },
+      "5": {
+        "games": 6946,
+        "wins": 3519,
+        "win_rate": 50.66
+      },
+      "6": {
+        "games": 3484,
+        "wins": 1736,
+        "win_rate": 49.83
+      },
+      "7": {
+        "games": 1479,
+        "wins": 783,
+        "win_rate": 52.94
+      }
+    }
+  },
+  {
+    "champion": "vi",
+    "buckets": {
+      "1": {
+        "games": 501,
+        "wins": 243,
+        "win_rate": 48.5
+      },
+      "2": {
+        "games": 5552,
+        "wins": 2621,
+        "win_rate": 47.21
+      },
+      "3": {
+        "games": 8988,
+        "wins": 4523,
+        "win_rate": 50.32
+      },
+      "4": {
+        "games": 20483,
+        "wins": 10540,
+        "win_rate": 51.46
+      },
+      "5": {
+        "games": 18663,
+        "wins": 9789,
+        "win_rate": 52.45
+      },
+      "6": {
+        "games": 8598,
+        "wins": 4517,
+        "win_rate": 52.54
+      },
+      "7": {
+        "games": 3325,
+        "wins": 1768,
+        "win_rate": 53.17
+      }
+    }
+  },
+  {
+    "champion": "aatrox",
+    "buckets": {
+      "1": {
+        "games": 705,
+        "wins": 414,
+        "win_rate": 58.72
+      },
+      "2": {
+        "games": 7433,
+        "wins": 3975,
+        "win_rate": 53.48
+      },
+      "3": {
+        "games": 11346,
+        "wins": 5884,
+        "win_rate": 51.86
+      },
+      "4": {
+        "games": 26348,
+        "wins": 13469,
+        "win_rate": 51.12
+      },
+      "5": {
+        "games": 23742,
+        "wins": 11865,
+        "win_rate": 49.97
+      },
+      "6": {
+        "games": 11476,
+        "wins": 5786,
+        "win_rate": 50.42
+      },
+      "7": {
+        "games": 4573,
+        "wins": 2356,
+        "win_rate": 51.52
+      }
+    }
+  },
+  {
+    "champion": "nami",
+    "buckets": {
+      "1": {
+        "games": 1445,
+        "wins": 755,
+        "win_rate": 52.25
+      },
+      "2": {
+        "games": 12092,
+        "wins": 6446,
+        "win_rate": 53.31
+      },
+      "3": {
+        "games": 23502,
+        "wins": 12594,
+        "win_rate": 53.59
+      },
+      "4": {
+        "games": 55562,
+        "wins": 29903,
+        "win_rate": 53.82
+      },
+      "5": {
+        "games": 52987,
+        "wins": 28109,
+        "win_rate": 53.05
+      },
+      "6": {
+        "games": 25628,
+        "wins": 13671,
+        "win_rate": 53.34
+      },
+      "7": {
+        "games": 10456,
+        "wins": 5516,
+        "win_rate": 52.75
+      }
+    }
+  },
+  {
+    "champion": "azir",
+    "buckets": {
+      "1": {
+        "games": 143,
+        "wins": 51,
+        "win_rate": 35.66
+      },
+      "2": {
+        "games": 1657,
+        "wins": 569,
+        "win_rate": 34.34
+      },
+      "3": {
+        "games": 2981,
+        "wins": 1201,
+        "win_rate": 40.29
+      },
+      "4": {
+        "games": 6757,
+        "wins": 2864,
+        "win_rate": 42.39
+      },
+      "5": {
+        "games": 6160,
+        "wins": 2921,
+        "win_rate": 47.42
+      },
+      "6": {
+        "games": 2935,
+        "wins": 1493,
+        "win_rate": 50.87
+      },
+      "7": {
+        "games": 1171,
+        "wins": 595,
+        "win_rate": 50.81
+      }
+    }
+  },
+  {
+    "champion": "yuumi",
+    "buckets": {
+      "1": {
+        "games": 470,
+        "wins": 244,
+        "win_rate": 51.91
+      },
+      "2": {
+        "games": 5393,
+        "wins": 2543,
+        "win_rate": 47.15
+      },
+      "3": {
+        "games": 9419,
+        "wins": 3995,
+        "win_rate": 42.41
+      },
+      "4": {
+        "games": 19013,
+        "wins": 8994,
+        "win_rate": 47.3
+      },
+      "5": {
+        "games": 16127,
+        "wins": 8587,
+        "win_rate": 53.25
+      },
+      "6": {
+        "games": 6819,
+        "wins": 3808,
+        "win_rate": 55.84
+      },
+      "7": {
+        "games": 2212,
+        "wins": 1283,
+        "win_rate": 58.0
+      }
+    }
+  },
+  {
+    "champion": "samira",
+    "buckets": {
+      "1": {
+        "games": 609,
+        "wins": 369,
+        "win_rate": 60.59
+      },
+      "2": {
+        "games": 5713,
+        "wins": 3207,
+        "win_rate": 56.14
+      },
+      "3": {
+        "games": 10735,
+        "wins": 5449,
+        "win_rate": 50.76
+      },
+      "4": {
+        "games": 23383,
+        "wins": 12061,
+        "win_rate": 51.58
+      },
+      "5": {
+        "games": 20991,
+        "wins": 11358,
+        "win_rate": 54.11
+      },
+      "6": {
+        "games": 9466,
+        "wins": 5143,
+        "win_rate": 54.33
+      },
+      "7": {
+        "games": 3334,
+        "wins": 1785,
+        "win_rate": 53.54
+      }
+    }
+  },
+  {
+    "champion": "thresh",
+    "buckets": {
+      "1": {
+        "games": 1349,
+        "wins": 727,
+        "win_rate": 53.89
+      },
+      "2": {
+        "games": 12649,
+        "wins": 6752,
+        "win_rate": 53.38
+      },
+      "3": {
+        "games": 21735,
+        "wins": 11440,
+        "win_rate": 52.63
+      },
+      "4": {
+        "games": 51480,
+        "wins": 26870,
+        "win_rate": 52.2
+      },
+      "5": {
+        "games": 47960,
+        "wins": 25106,
+        "win_rate": 52.35
+      },
+      "6": {
+        "games": 22799,
+        "wins": 11852,
+        "win_rate": 51.98
+      },
+      "7": {
+        "games": 9082,
+        "wins": 4665,
+        "win_rate": 51.37
+      }
+    }
+  },
+  {
+    "champion": "illaoi",
+    "buckets": {
+      "1": {
+        "games": 248,
+        "wins": 154,
+        "win_rate": 62.1
+      },
+      "2": {
+        "games": 2253,
+        "wins": 1353,
+        "win_rate": 60.05
+      },
+      "3": {
+        "games": 3803,
+        "wins": 2224,
+        "win_rate": 58.48
+      },
+      "4": {
+        "games": 8856,
+        "wins": 4695,
+        "win_rate": 53.01
+      },
+      "5": {
+        "games": 8620,
+        "wins": 4158,
+        "win_rate": 48.24
+      },
+      "6": {
+        "games": 4602,
+        "wins": 2255,
+        "win_rate": 49.0
+      },
+      "7": {
+        "games": 2063,
+        "wins": 1045,
+        "win_rate": 50.65
+      }
+    }
+  },
+  {
+    "champion": "reksai",
+    "buckets": {
+      "1": {
+        "games": 145,
+        "wins": 75,
+        "win_rate": 51.72
+      },
+      "2": {
+        "games": 1936,
+        "wins": 1089,
+        "win_rate": 56.25
+      },
+      "3": {
+        "games": 3120,
+        "wins": 1681,
+        "win_rate": 53.88
+      },
+      "4": {
+        "games": 6983,
+        "wins": 3684,
+        "win_rate": 52.76
+      },
+      "5": {
+        "games": 6409,
+        "wins": 3280,
+        "win_rate": 51.18
+      },
+      "6": {
+        "games": 2985,
+        "wins": 1503,
+        "win_rate": 50.35
+      },
+      "7": {
+        "games": 1185,
+        "wins": 559,
+        "win_rate": 47.17
+      }
+    }
+  },
+  {
+    "champion": "kalista",
+    "buckets": {
+      "1": {
+        "games": 81,
+        "wins": 48,
+        "win_rate": 59.26
+      },
+      "2": {
+        "games": 986,
+        "wins": 442,
+        "win_rate": 44.83
+      },
+      "3": {
+        "games": 1628,
+        "wins": 815,
+        "win_rate": 50.06
+      },
+      "4": {
+        "games": 3387,
+        "wins": 1615,
+        "win_rate": 47.68
+      },
+      "5": {
+        "games": 2880,
+        "wins": 1329,
+        "win_rate": 46.15
+      },
+      "6": {
+        "games": 1339,
+        "wins": 609,
+        "win_rate": 45.48
+      },
+      "7": {
+        "games": 455,
+        "wins": 223,
+        "win_rate": 49.01
+      }
+    }
+  },
+  {
+    "champion": "ivern",
+    "buckets": {
+      "1": {
+        "games": 89,
+        "wins": 54,
+        "win_rate": 60.67
+      },
+      "2": {
+        "games": 757,
+        "wins": 398,
+        "win_rate": 52.58
+      },
+      "3": {
+        "games": 1503,
+        "wins": 784,
+        "win_rate": 52.16
+      },
+      "4": {
+        "games": 3284,
+        "wins": 1768,
+        "win_rate": 53.84
+      },
+      "5": {
+        "games": 3032,
+        "wins": 1623,
+        "win_rate": 53.53
+      },
+      "6": {
+        "games": 1420,
+        "wins": 776,
+        "win_rate": 54.65
+      },
+      "7": {
+        "games": 648,
+        "wins": 325,
+        "win_rate": 50.15
+      }
+    }
+  },
+  {
+    "champion": "rakan",
+    "buckets": {
+      "1": {
+        "games": 327,
+        "wins": 165,
+        "win_rate": 50.46
+      },
+      "2": {
+        "games": 3416,
+        "wins": 1538,
+        "win_rate": 45.02
+      },
+      "3": {
+        "games": 6010,
+        "wins": 2847,
+        "win_rate": 47.37
+      },
+      "4": {
+        "games": 13772,
+        "wins": 6972,
+        "win_rate": 50.62
+      },
+      "5": {
+        "games": 12384,
+        "wins": 6625,
+        "win_rate": 53.5
+      },
+      "6": {
+        "games": 5563,
+        "wins": 3012,
+        "win_rate": 54.14
+      },
+      "7": {
+        "games": 2105,
+        "wins": 1113,
+        "win_rate": 52.87
+      }
+    }
+  },
+  {
+    "champion": "bard",
+    "buckets": {
+      "1": {
+        "games": 515,
+        "wins": 265,
+        "win_rate": 51.46
+      },
+      "2": {
+        "games": 4965,
+        "wins": 2604,
+        "win_rate": 52.45
+      },
+      "3": {
+        "games": 8281,
+        "wins": 4335,
+        "win_rate": 52.35
+      },
+      "4": {
+        "games": 20176,
+        "wins": 10355,
+        "win_rate": 51.32
+      },
+      "5": {
+        "games": 19690,
+        "wins": 10038,
+        "win_rate": 50.98
+      },
+      "6": {
+        "games": 9607,
+        "wins": 4816,
+        "win_rate": 50.13
+      },
+      "7": {
+        "games": 4023,
+        "wins": 1989,
+        "win_rate": 49.44
+      }
+    }
+  },
+  {
+    "champion": "xayah",
+    "buckets": {
+      "1": {
+        "games": 561,
+        "wins": 291,
+        "win_rate": 51.87
+      },
+      "2": {
+        "games": 5287,
+        "wins": 2781,
+        "win_rate": 52.6
+      },
+      "3": {
+        "games": 9280,
+        "wins": 4849,
+        "win_rate": 52.25
+      },
+      "4": {
+        "games": 21307,
+        "wins": 11107,
+        "win_rate": 52.13
+      },
+      "5": {
+        "games": 20067,
+        "wins": 10677,
+        "win_rate": 53.21
+      },
+      "6": {
+        "games": 9377,
+        "wins": 5072,
+        "win_rate": 54.09
+      },
+      "7": {
+        "games": 3796,
+        "wins": 2036,
+        "win_rate": 53.64
+      }
+    }
+  },
+  {
+    "champion": "ornn",
+    "buckets": {
+      "1": {
+        "games": 425,
+        "wins": 208,
+        "win_rate": 48.94
+      },
+      "2": {
+        "games": 3892,
+        "wins": 1799,
+        "win_rate": 46.22
+      },
+      "3": {
+        "games": 7459,
+        "wins": 3535,
+        "win_rate": 47.39
+      },
+      "4": {
+        "games": 19261,
+        "wins": 10104,
+        "win_rate": 52.46
+      },
+      "5": {
+        "games": 18393,
+        "wins": 10234,
+        "win_rate": 55.64
+      },
+      "6": {
+        "games": 8740,
+        "wins": 4997,
+        "win_rate": 57.17
+      },
+      "7": {
+        "games": 3548,
+        "wins": 1917,
+        "win_rate": 54.03
+      }
+    }
+  },
+  {
+    "champion": "sylas",
+    "buckets": {
+      "1": {
+        "games": 655,
+        "wins": 332,
+        "win_rate": 50.69
+      },
+      "2": {
+        "games": 7429,
+        "wins": 3937,
+        "win_rate": 53.0
+      },
+      "3": {
+        "games": 11910,
+        "wins": 5660,
+        "win_rate": 47.52
+      },
+      "4": {
+        "games": 25514,
+        "wins": 12773,
+        "win_rate": 50.06
+      },
+      "5": {
+        "games": 22615,
+        "wins": 11349,
+        "win_rate": 50.18
+      },
+      "6": {
+        "games": 9999,
+        "wins": 4998,
+        "win_rate": 49.98
+      },
+      "7": {
+        "games": 3647,
+        "wins": 1854,
+        "win_rate": 50.84
+      }
+    }
+  },
+  {
+    "champion": "neeko",
+    "buckets": {
+      "1": {
+        "games": 175,
+        "wins": 106,
+        "win_rate": 60.57
+      },
+      "2": {
+        "games": 2046,
+        "wins": 1066,
+        "win_rate": 52.1
+      },
+      "3": {
+        "games": 3231,
+        "wins": 1710,
+        "win_rate": 52.92
+      },
+      "4": {
+        "games": 7822,
+        "wins": 3912,
+        "win_rate": 50.01
+      },
+      "5": {
+        "games": 7789,
+        "wins": 3780,
+        "win_rate": 48.53
+      },
+      "6": {
+        "games": 3929,
+        "wins": 1906,
+        "win_rate": 48.51
+      },
+      "7": {
+        "games": 1725,
+        "wins": 842,
+        "win_rate": 48.81
+      }
+    }
+  },
+  {
+    "champion": "aphelios",
+    "buckets": {
+      "1": {
+        "games": 573,
+        "wins": 261,
+        "win_rate": 45.55
+      },
+      "2": {
+        "games": 5953,
+        "wins": 2586,
+        "win_rate": 43.44
+      },
+      "3": {
+        "games": 10340,
+        "wins": 4640,
+        "win_rate": 44.87
+      },
+      "4": {
+        "games": 23075,
+        "wins": 11238,
+        "win_rate": 48.7
+      },
+      "5": {
+        "games": 20434,
+        "wins": 10650,
+        "win_rate": 52.12
+      },
+      "6": {
+        "games": 9489,
+        "wins": 5094,
+        "win_rate": 53.68
+      },
+      "7": {
+        "games": 3822,
+        "wins": 2176,
+        "win_rate": 56.93
+      }
+    }
+  },
+  {
+    "champion": "rell",
+    "buckets": {
+      "1": {
+        "games": 218,
+        "wins": 99,
+        "win_rate": 45.41
+      },
+      "2": {
+        "games": 2049,
+        "wins": 965,
+        "win_rate": 47.1
+      },
+      "3": {
+        "games": 3717,
+        "wins": 1764,
+        "win_rate": 47.46
+      },
+      "4": {
+        "games": 8537,
+        "wins": 4175,
+        "win_rate": 48.9
+      },
+      "5": {
+        "games": 7692,
+        "wins": 4062,
+        "win_rate": 52.81
+      },
+      "6": {
+        "games": 3484,
+        "wins": 1813,
+        "win_rate": 52.04
+      },
+      "7": {
+        "games": 1263,
+        "wins": 643,
+        "win_rate": 50.91
+      }
+    }
+  },
+  {
+    "champion": "pyke",
+    "buckets": {
+      "1": {
+        "games": 564,
+        "wins": 331,
+        "win_rate": 58.69
+      },
+      "2": {
+        "games": 5436,
+        "wins": 3205,
+        "win_rate": 58.96
+      },
+      "3": {
+        "games": 8905,
+        "wins": 4740,
+        "win_rate": 53.23
+      },
+      "4": {
+        "games": 21358,
+        "wins": 10790,
+        "win_rate": 50.52
+      },
+      "5": {
+        "games": 20491,
+        "wins": 10145,
+        "win_rate": 49.51
+      },
+      "6": {
+        "games": 10135,
+        "wins": 5008,
+        "win_rate": 49.41
+      },
+      "7": {
+        "games": 4047,
+        "wins": 1939,
+        "win_rate": 47.91
+      }
+    }
+  },
+  {
+    "champion": "vex",
+    "buckets": {
+      "1": {
+        "games": 280,
+        "wins": 141,
+        "win_rate": 50.36
+      },
+      "2": {
+        "games": 2853,
+        "wins": 1593,
+        "win_rate": 55.84
+      },
+      "3": {
+        "games": 4842,
+        "wins": 2716,
+        "win_rate": 56.09
+      },
+      "4": {
+        "games": 11581,
+        "wins": 6234,
+        "win_rate": 53.83
+      },
+      "5": {
+        "games": 10887,
+        "wins": 5721,
+        "win_rate": 52.55
+      },
+      "6": {
+        "games": 5354,
+        "wins": 2740,
+        "win_rate": 51.18
+      },
+      "7": {
+        "games": 2109,
+        "wins": 1096,
+        "win_rate": 51.97
+      }
+    }
+  },
+  {
+    "champion": "ambessa",
+    "buckets": {
+      "1": {
+        "games": 358,
+        "wins": 167,
+        "win_rate": 46.65
+      },
+      "2": {
+        "games": 3962,
+        "wins": 1926,
+        "win_rate": 48.61
+      },
+      "3": {
+        "games": 6103,
+        "wins": 2875,
+        "win_rate": 47.11
+      },
+      "4": {
+        "games": 14425,
+        "wins": 7013,
+        "win_rate": 48.62
+      },
+      "5": {
+        "games": 13451,
+        "wins": 6765,
+        "win_rate": 50.29
+      },
+      "6": {
+        "games": 6516,
+        "wins": 3282,
+        "win_rate": 50.37
+      },
+      "7": {
+        "games": 2587,
+        "wins": 1352,
+        "win_rate": 52.26
+      }
+    }
+  },
+  {
+    "champion": "yone",
+    "buckets": {
+      "1": {
+        "games": 543,
+        "wins": 255,
+        "win_rate": 46.96
+      },
+      "2": {
+        "games": 5739,
+        "wins": 2654,
+        "win_rate": 46.24
+      },
+      "3": {
+        "games": 9990,
+        "wins": 4860,
+        "win_rate": 48.65
+      },
+      "4": {
+        "games": 22131,
+        "wins": 11084,
+        "win_rate": 50.08
+      },
+      "5": {
+        "games": 20164,
+        "wins": 10195,
+        "win_rate": 50.56
+      },
+      "6": {
+        "games": 9615,
+        "wins": 4917,
+        "win_rate": 51.14
+      },
+      "7": {
+        "games": 3746,
+        "wins": 1926,
+        "win_rate": 51.41
+      }
+    }
+  },
+  {
+    "champion": "mel",
+    "buckets": {
+      "1": {
+        "games": 570,
+        "wins": 312,
+        "win_rate": 54.74
+      },
+      "2": {
+        "games": 5369,
+        "wins": 3129,
+        "win_rate": 58.28
+      },
+      "3": {
+        "games": 8976,
+        "wins": 4842,
+        "win_rate": 53.94
+      },
+      "4": {
+        "games": 21893,
+        "wins": 10815,
+        "win_rate": 49.4
+      },
+      "5": {
+        "games": 21945,
+        "wins": 10559,
+        "win_rate": 48.12
+      },
+      "6": {
+        "games": 11330,
+        "wins": 5494,
+        "win_rate": 48.49
+      },
+      "7": {
+        "games": 4994,
+        "wins": 2565,
+        "win_rate": 51.36
+      }
+    }
+  },
+  {
+    "champion": "yunara",
+    "buckets": {
+      "1": {
+        "games": 687,
+        "wins": 321,
+        "win_rate": 46.72
+      },
+      "2": {
+        "games": 7632,
+        "wins": 3523,
+        "win_rate": 46.16
+      },
+      "3": {
+        "games": 12535,
+        "wins": 5839,
+        "win_rate": 46.58
+      },
+      "4": {
+        "games": 28034,
+        "wins": 13379,
+        "win_rate": 47.72
+      },
+      "5": {
+        "games": 25493,
+        "wins": 12827,
+        "win_rate": 50.32
+      },
+      "6": {
+        "games": 11712,
+        "wins": 6068,
+        "win_rate": 51.81
+      },
+      "7": {
+        "games": 4291,
+        "wins": 2271,
+        "win_rate": 52.92
+      }
+    }
+  },
+  {
+    "champion": "lillia",
+    "buckets": {
+      "1": {
+        "games": 355,
+        "wins": 166,
+        "win_rate": 46.76
+      },
+      "2": {
+        "games": 3294,
+        "wins": 1634,
+        "win_rate": 49.61
+      },
+      "3": {
+        "games": 5584,
+        "wins": 2840,
+        "win_rate": 50.86
+      },
+      "4": {
+        "games": 13237,
+        "wins": 6823,
+        "win_rate": 51.54
+      },
+      "5": {
+        "games": 12919,
+        "wins": 6554,
+        "win_rate": 50.73
+      },
+      "6": {
+        "games": 6207,
+        "wins": 3190,
+        "win_rate": 51.39
+      },
+      "7": {
+        "games": 2653,
+        "wins": 1434,
+        "win_rate": 54.05
+      }
+    }
+  },
+  {
+    "champion": "sett",
+    "buckets": {
+      "1": {
+        "games": 615,
+        "wins": 331,
+        "win_rate": 53.82
+      },
+      "2": {
+        "games": 5101,
+        "wins": 2513,
+        "win_rate": 49.26
+      },
+      "3": {
+        "games": 9353,
+        "wins": 4931,
+        "win_rate": 52.72
+      },
+      "4": {
+        "games": 22603,
+        "wins": 11901,
+        "win_rate": 52.65
+      },
+      "5": {
+        "games": 21942,
+        "wins": 11370,
+        "win_rate": 51.82
+      },
+      "6": {
+        "games": 10883,
+        "wins": 5940,
+        "win_rate": 54.58
+      },
+      "7": {
+        "games": 4538,
+        "wins": 2432,
+        "win_rate": 53.59
+      }
+    }
+  },
+  {
+    "champion": "gwen",
+    "buckets": {
+      "1": {
+        "games": 251,
+        "wins": 115,
+        "win_rate": 45.82
+      },
+      "2": {
+        "games": 2169,
+        "wins": 978,
+        "win_rate": 45.09
+      },
+      "3": {
+        "games": 4111,
+        "wins": 1923,
+        "win_rate": 46.78
+      },
+      "4": {
+        "games": 9618,
+        "wins": 4712,
+        "win_rate": 48.99
+      },
+      "5": {
+        "games": 8926,
+        "wins": 4492,
+        "win_rate": 50.32
+      },
+      "6": {
+        "games": 4065,
+        "wins": 2166,
+        "win_rate": 53.28
+      },
+      "7": {
+        "games": 1585,
+        "wins": 871,
+        "win_rate": 54.95
+      }
+    }
+  },
+  {
+    "champion": "renata",
+    "buckets": {
+      "1": {
+        "games": 107,
+        "wins": 46,
+        "win_rate": 42.99
+      },
+      "2": {
+        "games": 882,
+        "wins": 383,
+        "win_rate": 43.42
+      },
+      "3": {
+        "games": 1773,
+        "wins": 869,
+        "win_rate": 49.01
+      },
+      "4": {
+        "games": 4186,
+        "wins": 2076,
+        "win_rate": 49.59
+      },
+      "5": {
+        "games": 3975,
+        "wins": 2193,
+        "win_rate": 55.17
+      },
+      "6": {
+        "games": 2002,
+        "wins": 1114,
+        "win_rate": 55.64
+      },
+      "7": {
+        "games": 772,
+        "wins": 416,
+        "win_rate": 53.89
+      }
+    }
+  },
+  {
+    "champion": "aurora",
+    "buckets": {
+      "1": {
+        "games": 291,
+        "wins": 151,
+        "win_rate": 51.89
+      },
+      "2": {
+        "games": 3219,
+        "wins": 1631,
+        "win_rate": 50.67
+      },
+      "3": {
+        "games": 5034,
+        "wins": 2452,
+        "win_rate": 48.71
+      },
+      "4": {
+        "games": 11523,
+        "wins": 5733,
+        "win_rate": 49.75
+      },
+      "5": {
+        "games": 11265,
+        "wins": 5715,
+        "win_rate": 50.73
+      },
+      "6": {
+        "games": 5452,
+        "wins": 2836,
+        "win_rate": 52.02
+      },
+      "7": {
+        "games": 2403,
+        "wins": 1240,
+        "win_rate": 51.6
+      }
+    }
+  },
+  {
+    "champion": "nilah",
+    "buckets": {
+      "1": {
+        "games": 156,
+        "wins": 93,
+        "win_rate": 59.62
+      },
+      "2": {
+        "games": 1375,
+        "wins": 716,
+        "win_rate": 52.07
+      },
+      "3": {
+        "games": 2845,
+        "wins": 1421,
+        "win_rate": 49.95
+      },
+      "4": {
+        "games": 6372,
+        "wins": 3378,
+        "win_rate": 53.01
+      },
+      "5": {
+        "games": 5623,
+        "wins": 3148,
+        "win_rate": 55.98
+      },
+      "6": {
+        "games": 2358,
+        "wins": 1365,
+        "win_rate": 57.89
+      },
+      "7": {
+        "games": 856,
+        "wins": 490,
+        "win_rate": 57.24
+      }
+    }
+  },
+  {
+    "champion": "ksante",
+    "buckets": {
+      "1": {
+        "games": 271,
+        "wins": 159,
+        "win_rate": 58.67
+      },
+      "2": {
+        "games": 3362,
+        "wins": 1781,
+        "win_rate": 52.97
+      },
+      "3": {
+        "games": 5208,
+        "wins": 2483,
+        "win_rate": 47.68
+      },
+      "4": {
+        "games": 11718,
+        "wins": 5421,
+        "win_rate": 46.26
+      },
+      "5": {
+        "games": 10995,
+        "wins": 5207,
+        "win_rate": 47.36
+      },
+      "6": {
+        "games": 5477,
+        "wins": 2633,
+        "win_rate": 48.07
+      },
+      "7": {
+        "games": 2221,
+        "wins": 1073,
+        "win_rate": 48.31
+      }
+    }
+  },
+  {
+    "champion": "smolder",
+    "buckets": {
+      "1": {
+        "games": 1023,
+        "wins": 504,
+        "win_rate": 49.27
+      },
+      "2": {
+        "games": 7666,
+        "wins": 4141,
+        "win_rate": 54.02
+      },
+      "3": {
+        "games": 14249,
+        "wins": 7196,
+        "win_rate": 50.5
+      },
+      "4": {
+        "games": 38898,
+        "wins": 19929,
+        "win_rate": 51.23
+      },
+      "5": {
+        "games": 40470,
+        "wins": 21273,
+        "win_rate": 52.56
+      },
+      "6": {
+        "games": 21976,
+        "wins": 11843,
+        "win_rate": 53.89
+      },
+      "7": {
+        "games": 10476,
+        "wins": 5812,
+        "win_rate": 55.48
+      }
+    }
+  },
+  {
+    "champion": "milio",
+    "buckets": {
+      "1": {
+        "games": 704,
+        "wins": 353,
+        "win_rate": 50.14
+      },
+      "2": {
+        "games": 5840,
+        "wins": 2700,
+        "win_rate": 46.23
+      },
+      "3": {
+        "games": 11122,
+        "wins": 5356,
+        "win_rate": 48.16
+      },
+      "4": {
+        "games": 26660,
+        "wins": 13942,
+        "win_rate": 52.3
+      },
+      "5": {
+        "games": 24978,
+        "wins": 13619,
+        "win_rate": 54.52
+      },
+      "6": {
+        "games": 11949,
+        "wins": 6566,
+        "win_rate": 54.95
+      },
+      "7": {
+        "games": 4702,
+        "wins": 2679,
+        "win_rate": 56.98
+      }
+    }
+  },
+  {
+    "champion": "zaahen",
+    "buckets": {
+      "1": {
+        "games": 474,
+        "wins": 225,
+        "win_rate": 47.47
+      },
+      "2": {
+        "games": 5100,
+        "wins": 2274,
+        "win_rate": 44.59
+      },
+      "3": {
+        "games": 8547,
+        "wins": 4300,
+        "win_rate": 50.31
+      },
+      "4": {
+        "games": 19420,
+        "wins": 10135,
+        "win_rate": 52.19
+      },
+      "5": {
+        "games": 17772,
+        "wins": 9636,
+        "win_rate": 54.22
+      },
+      "6": {
+        "games": 8384,
+        "wins": 4639,
+        "win_rate": 55.33
+      },
+      "7": {
+        "games": 3092,
+        "wins": 1720,
+        "win_rate": 55.63
+      }
+    }
+  },
+  {
+    "champion": "hwei",
+    "buckets": {
+      "1": {
+        "games": 302,
+        "wins": 158,
+        "win_rate": 52.32
+      },
+      "2": {
+        "games": 2833,
+        "wins": 1386,
+        "win_rate": 48.92
+      },
+      "3": {
+        "games": 4761,
+        "wins": 2488,
+        "win_rate": 52.26
+      },
+      "4": {
+        "games": 11235,
+        "wins": 5891,
+        "win_rate": 52.43
+      },
+      "5": {
+        "games": 11510,
+        "wins": 5930,
+        "win_rate": 51.52
+      },
+      "6": {
+        "games": 6097,
+        "wins": 3092,
+        "win_rate": 50.71
+      },
+      "7": {
+        "games": 2879,
+        "wins": 1446,
+        "win_rate": 50.23
+      }
+    }
+  },
+  {
+    "champion": "naafiri",
+    "buckets": {
+      "1": {
+        "games": 358,
+        "wins": 198,
+        "win_rate": 55.31
+      },
+      "2": {
+        "games": 3809,
+        "wins": 1968,
+        "win_rate": 51.67
+      },
+      "3": {
+        "games": 6317,
+        "wins": 3315,
+        "win_rate": 52.48
+      },
+      "4": {
+        "games": 14246,
+        "wins": 7654,
+        "win_rate": 53.73
+      },
+      "5": {
+        "games": 12962,
+        "wins": 6657,
+        "win_rate": 51.36
+      },
+      "6": {
+        "games": 6113,
+        "wins": 3028,
+        "win_rate": 49.53
+      },
+      "7": {
+        "games": 2446,
+        "wins": 1187,
+        "win_rate": 48.53
+      }
+    }
+  }
+]
