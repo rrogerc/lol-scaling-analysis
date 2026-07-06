@@ -1,0 +1,2 @@
+nodriver>=0.50
+curl_cffi>=0.15

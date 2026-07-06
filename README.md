@@ -1,69 +1,77 @@
 # LoL Scaling Analysis
 
-This project aggregates and analyzes League of Legends champion win rates over specific game time intervals (e.g., 0-15 min, 30-35 min) to identify scaling patterns. It scrapes data from Lolalytics and provides a ranked list of champions based on their performance at different stages of the game.
+Scrapes League of Legends champion win rates by game length from Lolalytics and
+analyzes which champions scale into the late game. Champions are tracked
+per role: every lane with more than 10% play rate gets its own entry, so flex
+picks like Gragas have separate top/jungle/mid stats.
 
-## Features
-
-- **Smart Scraper**: Fetches champion win rate data by game time for specified patches and tiers. It automatically skips re-scraping historical patches if the data already exists, only updating the latest patch.
-- **Scaling Analysis**: Aggregates data across multiple patches to smooth out variance and ranks champions by win rate in 5-minute intervals.
-- **Configurable**: Easily adjust which patches and rank tiers to analyze via a JSON configuration file.
-
-## Prerequisites
-
-- Python 3.7+
-- `aiohttp` library for asynchronous scraping.
+Everything lives in one SQLite database (`lol.db`) and one CLI (`lol.py`).
+There is no config file — what to scrape and what to analyze are just flags.
 
 ## Setup
 
-1.  **Install Dependencies:**
-    ```bash
-    pip install aiohttp
-    ```
-
-2.  **Configuration (`config.json`):**
-    Ensure a `config.json` file exists in the root directory. It controls which data is fetched and analyzed.
-
-    ```json
-    {
-      "patches": ["15.24", "15.23", "15.22"],
-      "tiers": ["diamond"],
-      "concurrency": 5
-    }
-    ```
-    *   `patches`: List of patch numbers to process.
-    *   `tiers`: Rank tiers to filter by (e.g., "diamond", "emerald", "master").
-    *   `concurrency`: Number of simultaneous requests (default: 5).
-
-## Usage
-
-### 1. Scrape Data
-Run the scraper to download data from Lolalytics.
 ```bash
-python3 scraper.py
+python3 -m venv .venv
+.venv/bin/pip install -r requirements.txt
 ```
-*   **Note:** The scraper will automatically detect the latest patch in your config. It will always re-scrape the latest patch to ensure data is fresh but will skip older patches if the data files already exist locally.
 
-### 2. Analyze Data
-Run the analysis script to generate rankings.
+If you have a legacy `data/` JSON tree, import it once:
+
 ```bash
-python3 analyze_data.py
+.venv/bin/python lol.py import-json
 ```
 
-**Options:**
-- `-n` or `--top`: Specify the number of top champions to display per time bucket (default: 10).
-  ```bash
-  python3 analyze_data.py --top 20
-  ```
+## The dashboard (recommended)
 
-## Output
-The analysis script prints the results to the console, organized by time intervals (e.g., "0 - 15 min", "40+ min").
-
-Example output:
-```text
-=== 30 - 35 min (Top 10, min 100 games) ===
-Rank  Champion             Win Rate   Games
---------------------------------------------------
-1     kayle                56.66%    111880
-2     quinn                55.10%     70193
-...
+```bash
+.venv/bin/python lol.py serve
 ```
+
+Opens `http://127.0.0.1:8321` — an interactive local dashboard where you can do
+everything without touching the CLI:
+
+- **Overview** — win-rate-by-game-length chart + sortable scaling table, with
+  tier/lane/min-games filters. Click table rows to chart champions.
+- **Champion** — any champion's win-rate curve per lane, plus their win rate
+  across patches.
+- **Data & Scrape** — see what's in the database and launch scrapes from the
+  browser with a live progress log. New data appears when the scrape finishes.
+
+## CLI equivalents
+
+```bash
+# Scrape a tier. Detects the current patch automatically, scrapes every
+# season patch that's missing from the DB, always refreshes the current one,
+# and skips patches lolalytics no longer serves.
+.venv/bin/python lol.py scrape --tier diamond_plus
+
+# Ranked win-rate tables per game-length bucket (0-15 ... 40+ min)
+.venv/bin/python lol.py report --top 10 --min-games 5000
+
+# Rank by scaling instead: late-game WR (35+ min) minus early WR (0-20 min)
+.venv/bin/python lol.py report --scaling
+
+# One champion's win-rate curve, per lane
+.venv/bin/python lol.py champion kayle
+
+# Self-contained interactive HTML dashboard (chart + sortable table)
+.venv/bin/python lol.py dashboard && open dashboard.html
+
+# What's in the database
+.venv/bin/python lol.py status
+```
+
+Analysis commands default to the most recently scraped tier and all of its
+patches; narrow with `--tier`, `--patches`, `--lane`, `--min-games`. Add
+`--csv out.csv` to a report to export it.
+
+## Notes
+
+- The scraper normally runs without a browser (curl_cffi impersonates Chrome's
+  TLS fingerprint). If Cloudflare starts serving a JS challenge it falls back
+  to a headless browser automatically, and a visible one as a last resort.
+- Champion names are lolalytics slugs (`missfortune`, `aurelionsol`).
+- `lol.db` is gitignored; the legacy `data/` JSON tree is kept as an archive
+  and can rebuild the DB via `import-json` at any time.
+- Lolalytics prunes old patches (all of season 15, and 16.2, are already
+  gone) — scrape a season while it's live if you want to keep it.

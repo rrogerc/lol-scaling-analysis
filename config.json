@@ -1,5 +1,0 @@
-{
-  "patches": ["16.5", "16.4", "16.3", "16.2", "16.1"],
-  "tiers": ["emerald", "diamond"],
-  "concurrency": 5
-}

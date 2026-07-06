@@ -1,0 +1,616 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LoL Scaling</title>
+<style>
+  :root {
+    --surface-1: #fcfcfb; --page: #f9f9f7;
+    --text-primary: #0b0b0b; --text-secondary: #52514e; --muted: #898781;
+    --grid: #e1e0d9; --baseline: #c3c2b7; --border: rgba(11,11,11,0.10);
+    --s1:#2a78d6; --s2:#1baf7a; --s3:#eda100; --s4:#008300;
+    --s5:#4a3aa7; --s6:#e34948; --s7:#e87ba4; --s8:#eb6834;
+    --up: #006300; --down: #d03b3b;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --surface-1: #1a1a19; --page: #0d0d0d;
+      --text-primary: #ffffff; --text-secondary: #c3c2b7; --muted: #898781;
+      --grid: #2c2c2a; --baseline: #383835; --border: rgba(255,255,255,0.10);
+      --s1:#3987e5; --s2:#199e70; --s3:#c98500; --s4:#008300;
+      --s5:#9085e9; --s6:#e66767; --s7:#d55181; --s8:#d95926;
+      --up: #0ca30c; --down: #d03b3b;
+    }
+  }
+  * { box-sizing: border-box; margin: 0; }
+  body {
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    background: var(--page); color: var(--text-primary);
+    padding: 24px; max-width: 1200px; margin: 0 auto;
+  }
+  header { display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; }
+  h1 { font-size: 20px; font-weight: 600; }
+  .sub { color: var(--text-secondary); font-size: 13px; }
+  select, input[type=search], input[type=text], button {
+    font: inherit; font-size: 13px; color: var(--text-primary);
+    background: var(--surface-1); border: 1px solid var(--border);
+    border-radius: 6px; padding: 6px 10px;
+  }
+  button { cursor: pointer; }
+  button:hover { border-color: var(--baseline); }
+  button:disabled { opacity: 0.5; cursor: default; }
+  nav { display: flex; gap: 4px; margin: 18px 0 16px; border-bottom: 1px solid var(--grid); }
+  nav button {
+    background: none; border: none; border-bottom: 2px solid transparent; border-radius: 0;
+    padding: 8px 14px; color: var(--text-secondary);
+  }
+  nav button.active { color: var(--text-primary); border-bottom-color: var(--s1); font-weight: 600; }
+  .kpis { display: flex; gap: 12px; margin: 0 0 16px; flex-wrap: wrap; }
+  .tile {
+    background: var(--surface-1); border: 1px solid var(--border); border-radius: 8px;
+    padding: 12px 16px; min-width: 150px; flex: 1;
+  }
+  .tile .label { font-size: 12px; color: var(--text-secondary); }
+  .tile .value { font-size: 26px; font-weight: 600; margin-top: 2px; }
+  .controls { display: flex; gap: 10px; margin: 0 0 16px; flex-wrap: wrap; align-items: center; }
+  .controls input[type=search] { width: 200px; }
+  .card {
+    background: var(--surface-1); border: 1px solid var(--border); border-radius: 8px;
+    padding: 16px; margin-bottom: 16px;
+  }
+  .card h2 { font-size: 14px; font-weight: 600; margin-bottom: 2px; }
+  .card .hint { font-size: 12px; color: var(--muted); margin-bottom: 10px; }
+  .legend { display: flex; gap: 14px; flex-wrap: wrap; margin: 10px 2px 0; font-size: 12px; color: var(--text-secondary); }
+  .legend .key { display: inline-flex; align-items: center; gap: 6px; }
+  .legend .swatch { width: 14px; height: 2px; border-radius: 1px; }
+  .chartwrap { position: relative; }
+  .tooltip {
+    position: absolute; pointer-events: none; display: none; z-index: 5;
+    background: var(--surface-1); border: 1px solid var(--border); border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12); padding: 8px 10px; font-size: 12px;
+    min-width: 170px;
+  }
+  .tooltip .tt-title { color: var(--muted); margin-bottom: 6px; }
+  .tooltip .tt-row { display: flex; align-items: center; gap: 6px; margin-top: 3px; }
+  .tooltip .tt-key { width: 12px; height: 2px; border-radius: 1px; flex: none; }
+  .tooltip .tt-val { font-weight: 600; font-variant-numeric: tabular-nums; }
+  .tooltip .tt-name { color: var(--text-secondary); }
+  .tooltip .tt-games { color: var(--muted); margin-left: auto; font-variant-numeric: tabular-nums; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th, td { text-align: right; padding: 7px 10px; border-bottom: 1px solid var(--grid); }
+  th:first-child, td:first-child, th:nth-child(2), td:nth-child(2) { text-align: left; }
+  td { font-variant-numeric: tabular-nums; }
+  th {
+    color: var(--text-secondary); font-weight: 500; user-select: none;
+    white-space: nowrap; position: sticky; top: 0; background: var(--surface-1);
+  }
+  #tbl th { cursor: pointer; }
+  th .arrow { color: var(--muted); font-size: 10px; }
+  #tbl tbody tr { cursor: pointer; }
+  #tbl tbody tr:hover { background: color-mix(in srgb, var(--text-primary) 4%, transparent); }
+  tbody tr.sel td:first-child { font-weight: 600; }
+  .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 8px; }
+  .dot.off { background: transparent; border: 1px solid var(--baseline); width: 6px; height: 6px; }
+  .pos { color: var(--up); } .neg { color: var(--down); }
+  .tablewrap { max-height: 480px; overflow-y: auto; overflow-x: auto; }
+  .lane-tag { color: var(--text-secondary); }
+  svg text { font-family: inherit; }
+  .view { display: none; }
+  .view.active { display: block; }
+  #scrape-log {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px;
+    background: var(--page); border: 1px solid var(--grid); border-radius: 6px;
+    padding: 10px; margin-top: 12px; max-height: 320px; overflow-y: auto;
+    white-space: pre-wrap; color: var(--text-secondary); display: none;
+  }
+  .spin {
+    display: inline-block; width: 12px; height: 12px; border-radius: 50%;
+    border: 2px solid var(--grid); border-top-color: var(--s1);
+    animation: spin 0.8s linear infinite; vertical-align: -2px; margin-right: 6px;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+</style>
+</head>
+<body>
+<header>
+  <h1>LoL Scaling</h1>
+  <label class="sub">Tier
+    <select id="tier" aria-label="Tier"></select>
+  </label>
+  <span class="sub" id="subtitle"></span>
+</header>
+
+<nav>
+  <button data-view="overview" class="active">Overview</button>
+  <button data-view="champion">Champion</button>
+  <button data-view="data">Data &amp; Scrape</button>
+</nav>
+
+<!-- ============================ Overview ============================ -->
+<section class="view active" id="view-overview">
+  <div class="kpis">
+    <div class="tile"><div class="label">Champion-roles</div><div class="value" id="kpi-roles">—</div></div>
+    <div class="tile"><div class="label">Games analyzed</div><div class="value" id="kpi-games">—</div></div>
+    <div class="tile"><div class="label">Patches</div><div class="value" id="kpi-patches">—</div></div>
+    <div class="tile"><div class="label">Biggest scaler</div><div class="value" id="kpi-scaler" style="font-size:18px">—</div></div>
+  </div>
+
+  <div class="controls">
+    <input id="search" type="search" placeholder="Search champion..." aria-label="Search champion">
+    <select id="lane" aria-label="Lane filter">
+      <option value="">All lanes</option>
+      <option>top</option><option>jungle</option><option>middle</option>
+      <option>bottom</option><option>support</option>
+    </select>
+    <select id="mingames" aria-label="Minimum games">
+      <option value="1000">≥ 1,000 games</option>
+      <option value="5000" selected>≥ 5,000 games</option>
+      <option value="20000">≥ 20,000 games</option>
+      <option value="50000">≥ 50,000 games</option>
+    </select>
+  </div>
+
+  <div class="card">
+    <h2>Win rate by game length</h2>
+    <div class="hint">Click table rows to add or remove champions (up to 8).</div>
+    <div class="chartwrap">
+      <svg id="chart" width="100%" height="340" role="img" aria-label="Win rate by game length"></svg>
+      <div class="tooltip" id="chart-tt"></div>
+    </div>
+    <div class="legend" id="legend"></div>
+  </div>
+
+  <div class="card">
+    <h2>Champions</h2>
+    <div class="hint">Scaling Δ = win rate in 35+ min games minus win rate in games under 20 min. Click a column to sort, a row to chart.</div>
+    <div class="tablewrap">
+      <table id="tbl">
+        <thead><tr>
+          <th data-k="c">Champion <span class="arrow"></span></th>
+          <th data-k="l">Lane <span class="arrow"></span></th>
+          <th data-k="early">Early WR <span class="arrow"></span></th>
+          <th data-k="late">Late WR <span class="arrow"></span></th>
+          <th data-k="delta">Scaling Δ <span class="arrow"></span></th>
+          <th data-k="total">Games <span class="arrow"></span></th>
+        </tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ Champion ============================ -->
+<section class="view" id="view-champion">
+  <div class="controls">
+    <input id="champ-search" type="search" list="champ-list" placeholder="Type a champion (e.g. kayle)..." aria-label="Champion">
+    <datalist id="champ-list"></datalist>
+  </div>
+  <div class="card">
+    <h2 id="champ-title">Pick a champion</h2>
+    <div class="hint">Win rate by game length, one line per lane (lanes with data at this tier).</div>
+    <div class="chartwrap">
+      <svg id="champ-chart" width="100%" height="320" role="img" aria-label="Champion win rate by game length"></svg>
+      <div class="tooltip" id="champ-tt"></div>
+    </div>
+    <div class="legend" id="champ-legend"></div>
+  </div>
+  <div class="card">
+    <h2>Win rate by patch</h2>
+    <div class="hint">Overall win rate per patch (all game lengths), one line per lane.</div>
+    <div class="chartwrap">
+      <svg id="patch-chart" width="100%" height="320" role="img" aria-label="Champion win rate by patch"></svg>
+      <div class="tooltip" id="patch-tt"></div>
+    </div>
+    <div class="legend" id="patch-legend"></div>
+  </div>
+</section>
+
+<!-- ============================ Data & Scrape ============================ -->
+<section class="view" id="view-data">
+  <div class="card">
+    <h2>Scrape</h2>
+    <div class="hint">Scrapes every missing patch of the current season for a tier; the current patch is always refreshed. Runs on the server — you can keep browsing while it works.</div>
+    <div class="controls" style="margin-top:8px">
+      <input id="scrape-tier" type="text" list="tier-list" placeholder="tier, e.g. diamond_plus" aria-label="Tier to scrape">
+      <datalist id="tier-list">
+        <option>diamond_plus</option><option>master_plus</option><option>emerald_plus</option>
+        <option>platinum_plus</option><option>gold_plus</option><option>all</option>
+      </datalist>
+      <label class="sub"><input type="checkbox" id="scrape-force"> re-scrape existing patches</label>
+      <button id="scrape-btn">Start scrape</button>
+      <span class="sub" id="scrape-msg"></span>
+    </div>
+    <div id="scrape-log"></div>
+  </div>
+  <div class="card">
+    <h2>Database</h2>
+    <div class="hint">Everything in lol.db, per tier and patch.</div>
+    <div class="tablewrap">
+      <table id="inv">
+        <thead><tr>
+          <th>Tier</th><th style="text-align:left">Patch</th><th>Champ-lanes</th><th>Games</th><th>Scraped at</th>
+        </tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<script>
+"use strict";
+const BUCKETS = ["0–15", "15–20", "20–25", "25–30", "30–35", "35–40", "40+"];
+const SLOTS = ["--s1","--s2","--s3","--s4","--s5","--s6","--s7","--s8"];
+const LANE_SLOT = { top: 0, jungle: 1, middle: 2, bottom: 3, support: 4, main: 0 };
+const css = k => getComputedStyle(document.documentElement).getPropertyValue(k).trim();
+const fmtInt = n => n.toLocaleString("en-US");
+const fmtCompact = n => n >= 1e6 ? (n/1e6).toFixed(1) + "M" : n >= 1e3 ? (n/1e3).toFixed(0) + "K" : "" + n;
+const api = (path) => fetch(path).then(r => r.json());
+
+let META = null;
+let DATA = { rows: [], patches: [], totalGames: 0, tier: null };
+const state = { tier: null, view: "overview", champion: null };
+
+// ---------------- generic line chart ----------------
+// series: [{name, color, values:[..], games:[..]}]; values may contain nulls.
+function lineChart(svg, tooltip, series, xLabels, emptyMsg) {
+  const W = svg.clientWidth || 800, H = +svg.getAttribute("height");
+  const M = { top: 16, right: 24, bottom: 28, left: 44 };
+  svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
+  const iw = W - M.left - M.right, ih = H - M.top - M.bottom;
+  const n = xLabels.length;
+  const xs = i => M.left + iw * i / Math.max(1, n - 1);
+
+  let lo = 46, hi = 56;
+  const vals = series.flatMap(s => s.values.filter(v => v != null));
+  if (vals.length) {
+    lo = Math.floor(Math.min(...vals, 49) - 1);
+    hi = Math.ceil(Math.max(...vals, 51) + 1);
+  }
+  const ys = v => M.top + ih * (1 - (v - lo) / (hi - lo));
+  const ns = "http://www.w3.org/2000/svg";
+  const el = (tag, attrs) => {
+    const e = document.createElementNS(ns, tag);
+    for (const [k, v] of Object.entries(attrs)) e.setAttribute(k, v);
+    return e;
+  };
+  svg.replaceChildren();
+
+  const step = (hi - lo) <= 8 ? 2 : (hi - lo) <= 16 ? 4 : 5;
+  for (let v = Math.ceil(lo / step) * step; v <= hi; v += step) {
+    svg.append(el("line", { x1: M.left, x2: W - M.right, y1: ys(v), y2: ys(v),
+                            stroke: css("--grid"), "stroke-width": 1 }));
+    const t = el("text", { x: M.left - 8, y: ys(v) + 4, "text-anchor": "end",
+                           fill: css("--muted"), "font-size": 11 });
+    t.textContent = v + "%";
+    svg.append(t);
+  }
+  if (lo <= 50 && 50 <= hi)
+    svg.append(el("line", { x1: M.left, x2: W - M.right, y1: ys(50), y2: ys(50),
+                            stroke: css("--baseline"), "stroke-width": 1 }));
+  const labelEvery = Math.ceil(n / 14);
+  xLabels.forEach((b, i) => {
+    if (i % labelEvery) return;
+    const t = el("text", { x: xs(i), y: H - 8, "text-anchor": "middle",
+                           fill: css("--muted"), "font-size": 11 });
+    t.textContent = b;
+    svg.append(t);
+  });
+
+  for (const s of series) {
+    const pts = s.values.map((v, i) => v == null ? null : [xs(i), ys(v)]);
+    let d = "", started = false;
+    pts.forEach(p => {
+      if (!p) { started = false; return; }
+      d += (started ? "L" : "M") + p[0].toFixed(1) + " " + p[1].toFixed(1);
+      started = true;
+    });
+    svg.append(el("path", { d, fill: "none", stroke: s.color, "stroke-width": 2,
+                            "stroke-linecap": "round", "stroke-linejoin": "round" }));
+    pts.forEach(p => {
+      if (!p) return;
+      svg.append(el("circle", { cx: p[0], cy: p[1], r: 5.5, fill: css("--surface-1") }));
+      svg.append(el("circle", { cx: p[0], cy: p[1], r: 4, fill: s.color }));
+    });
+  }
+
+  if (!series.length) {
+    const t = el("text", { x: W / 2, y: H / 2, "text-anchor": "middle",
+                           fill: css("--muted"), "font-size": 13 });
+    t.textContent = emptyMsg || "No data";
+    svg.append(t);
+  }
+
+  svg.onpointermove = ev => {
+    if (!series.length) return;
+    const rect = svg.getBoundingClientRect();
+    const x = ev.clientX - rect.left;
+    const i = Math.max(0, Math.min(n - 1, Math.round((x - M.left) / (iw / Math.max(1, n - 1)))));
+    svg.querySelector(".xhair")?.remove();
+    svg.append(el("line", { class: "xhair", x1: xs(i), x2: xs(i), y1: M.top, y2: H - M.bottom,
+                            stroke: css("--baseline"), "stroke-width": 1 }));
+    tooltip.replaceChildren();
+    const title = document.createElement("div");
+    title.className = "tt-title";
+    title.textContent = xLabels[i];
+    tooltip.append(title);
+    series.slice().sort((a, b) => (b.values[i] ?? -1) - (a.values[i] ?? -1)).forEach(s => {
+      const row = document.createElement("div");
+      row.className = "tt-row";
+      const key = document.createElement("span");
+      key.className = "tt-key";
+      key.style.background = s.color;
+      const val = document.createElement("span");
+      val.className = "tt-val";
+      val.textContent = s.values[i] == null ? "—" : s.values[i].toFixed(1) + "%";
+      const name = document.createElement("span");
+      name.className = "tt-name";
+      name.textContent = s.name;
+      const games = document.createElement("span");
+      games.className = "tt-games";
+      games.textContent = s.games ? fmtCompact(s.games[i] || 0) : "";
+      row.append(key, val, name, games);
+      tooltip.append(row);
+    });
+    tooltip.style.display = "block";
+    const tw = tooltip.offsetWidth;
+    tooltip.style.left = Math.min(xs(i) + 12, W - tw - 8) + "px";
+    tooltip.style.top = M.top + 8 + "px";
+  };
+  svg.onpointerleave = () => {
+    tooltip.style.display = "none";
+    svg.querySelector(".xhair")?.remove();
+  };
+}
+
+function renderLegend(box, series) {
+  box.replaceChildren(...series.map(s => {
+    const k = document.createElement("span");
+    k.className = "key";
+    const sw = document.createElement("span");
+    sw.className = "swatch";
+    sw.style.background = s.color;
+    k.append(sw, document.createTextNode(s.name));
+    return k;
+  }));
+}
+
+// ---------------- overview ----------------
+const selected = new Map();   // "champ/lane" -> slot
+const rid = r => r.c + "/" + r.l;
+function freeSlot() { const used = new Set(selected.values()); return SLOTS.findIndex((_, i) => !used.has(i)); }
+function toggle(r) {
+  const id = rid(r);
+  if (selected.has(id)) selected.delete(id);
+  else { const s = freeSlot(); if (s === -1) return; selected.set(id, s); }
+  renderOverview();
+}
+
+let sortKey = "delta", sortDir = -1;
+function visibleRows() {
+  const q = document.getElementById("search").value.trim().toLowerCase();
+  const lane = document.getElementById("lane").value;
+  const min = +document.getElementById("mingames").value;
+  return DATA.rows.filter(r =>
+    r.total >= min && (!lane || r.l === lane) && (!q || r.c.includes(q)));
+}
+function cell(text, cls) {
+  const td = document.createElement("td");
+  td.textContent = text;
+  if (cls) td.className = cls;
+  return td;
+}
+function renderTable() {
+  const rows = visibleRows().slice().sort((a, b) => {
+    const va = a[sortKey], vb = b[sortKey];
+    if (va == null) return 1; if (vb == null) return -1;
+    return (va < vb ? -1 : va > vb ? 1 : 0) * sortDir;
+  });
+  document.querySelector("#tbl tbody").replaceChildren(...rows.map(r => {
+    const tr = document.createElement("tr");
+    const id = rid(r);
+    if (selected.has(id)) tr.className = "sel";
+    const dot = document.createElement("span");
+    dot.className = "dot" + (selected.has(id) ? "" : " off");
+    if (selected.has(id)) dot.style.background = css(SLOTS[selected.get(id)]);
+    const tdName = document.createElement("td");
+    tdName.append(dot, document.createTextNode(r.c));
+    tr.append(
+      tdName, cell(r.l, "lane-tag"),
+      cell(r.early == null ? "—" : r.early.toFixed(2) + "%"),
+      cell(r.late == null ? "—" : r.late.toFixed(2) + "%"),
+      cell(r.delta == null ? "—" : (r.delta > 0 ? "+" : "") + r.delta.toFixed(2),
+           r.delta > 0 ? "pos" : "neg"),
+      cell(fmtInt(r.total)));
+    tr.addEventListener("click", () => toggle(r));
+    return tr;
+  }));
+  document.querySelectorAll("#tbl th").forEach(th => {
+    th.querySelector(".arrow").textContent =
+      th.dataset.k === sortKey ? (sortDir === 1 ? "▲" : "▼") : "";
+  });
+}
+function renderOverview() {
+  renderTable();
+  const series = [...selected.entries()].map(([id, slot]) => {
+    const r = DATA.rows.find(x => rid(x) === id);
+    return r ? { name: `${r.c} (${r.l})`, color: css(SLOTS[slot]), values: r.wr, games: r.g } : null;
+  }).filter(Boolean);
+  lineChart(document.getElementById("chart"), document.getElementById("chart-tt"),
+            series, BUCKETS, "Select champions from the table below");
+  renderLegend(document.getElementById("legend"), series);
+}
+
+async function loadOverview() {
+  DATA = await api(`/api/rows?tier=${encodeURIComponent(state.tier)}&min_games=1000`);
+  document.getElementById("subtitle").textContent =
+    `Patches ${DATA.patches[0]}–${DATA.patches[DATA.patches.length - 1]} · ${DATA.generated}`;
+  document.getElementById("kpi-roles").textContent = fmtInt(DATA.rows.length);
+  document.getElementById("kpi-games").textContent = fmtCompact(DATA.totalGames);
+  document.getElementById("kpi-patches").textContent = DATA.patches.length;
+  const best = DATA.rows.filter(r => r.delta != null && r.total > 20000)
+                        .reduce((a, b) => (a && a.delta > b.delta ? a : b), null);
+  document.getElementById("kpi-scaler").textContent =
+    best ? `${best.c} (${best.l}) +${best.delta.toFixed(1)}` : "—";
+  selected.clear();
+  DATA.rows.filter(r => r.delta != null && r.total > 20000)
+    .sort((a, b) => b.delta - a.delta).slice(0, 5)
+    .forEach(r => selected.set(rid(r), freeSlot()));
+  renderOverview();
+}
+
+// ---------------- champion view ----------------
+async function loadChampion(name) {
+  state.champion = name;
+  updateHash();
+  const d = await api(`/api/champion?tier=${encodeURIComponent(state.tier)}&name=${encodeURIComponent(name)}`);
+  document.getElementById("champ-title").textContent =
+    `${d.name} — win rate by game length (${d.tier})`;
+  const laneNames = Object.keys(d.lanes)
+    .sort((a, b) => (LANE_SLOT[a] ?? 9) - (LANE_SLOT[b] ?? 9));
+  const curveSeries = laneNames.map(l => ({
+    name: l, color: css(SLOTS[LANE_SLOT[l] ?? 5]),
+    values: d.lanes[l].wr, games: d.lanes[l].g,
+  }));
+  lineChart(document.getElementById("champ-chart"), document.getElementById("champ-tt"),
+            curveSeries, BUCKETS, "No data for this champion");
+  renderLegend(document.getElementById("champ-legend"), curveSeries);
+
+  const patchSeries = laneNames.map(l => ({
+    name: l, color: css(SLOTS[LANE_SLOT[l] ?? 5]),
+    values: d.patches.map(p => d.perPatch[l]?.[p]?.wr ?? null),
+    games: d.patches.map(p => d.perPatch[l]?.[p]?.g ?? 0),
+  }));
+  lineChart(document.getElementById("patch-chart"), document.getElementById("patch-tt"),
+            patchSeries, d.patches, "No data");
+  renderLegend(document.getElementById("patch-legend"), patchSeries);
+}
+
+async function loadChampionList() {
+  const names = await api(`/api/champions?tier=${encodeURIComponent(state.tier)}`);
+  document.getElementById("champ-list").replaceChildren(...names.map(n => {
+    const o = document.createElement("option");
+    o.value = n;
+    return o;
+  }));
+}
+
+// ---------------- data & scrape view ----------------
+async function loadInventory() {
+  const meta = await api("/api/meta");
+  META = meta;
+  document.querySelector("#inv tbody").replaceChildren(...meta.inventory.map(r => {
+    const tr = document.createElement("tr");
+    tr.append(cell(r.tier), cell(r.patch), cell(fmtInt(r.champLanes)),
+              cell(fmtInt(r.games)), cell(r.scrapedAt));
+    tr.firstChild.style.textAlign = "left";
+    return tr;
+  }));
+}
+
+let scrapePoll = null;
+async function pollScrape() {
+  const s = await api("/api/scrape");
+  const logBox = document.getElementById("scrape-log");
+  const btn = document.getElementById("scrape-btn");
+  const msg = document.getElementById("scrape-msg");
+  if (s.lines && s.lines.length) {
+    logBox.style.display = "block";
+    logBox.textContent = s.lines.join("\n");
+    logBox.scrollTop = logBox.scrollHeight;
+  }
+  if (s.running) {
+    btn.disabled = true;
+    msg.replaceChildren(Object.assign(document.createElement("span"), { className: "spin" }),
+                        document.createTextNode(`scraping ${s.tier}...`));
+    if (!scrapePoll) scrapePoll = setInterval(pollScrape, 2000);
+  } else {
+    btn.disabled = false;
+    if (scrapePoll) {
+      clearInterval(scrapePoll);
+      scrapePoll = null;
+      msg.textContent = s.error ? `failed: ${s.error}` : (s.finished_at ? "done — data refreshed" : "");
+      loadInventory();
+      loadOverview();
+    }
+  }
+}
+document.getElementById("scrape-btn").addEventListener("click", async () => {
+  const tier = document.getElementById("scrape-tier").value.trim();
+  if (!tier) { document.getElementById("scrape-msg").textContent = "enter a tier first"; return; }
+  const force = document.getElementById("scrape-force").checked;
+  const r = await fetch("/api/scrape", {
+    method: "POST", headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ tier, force }),
+  });
+  const body = await r.json();
+  if (!body.started) document.getElementById("scrape-msg").textContent = body.error || "could not start";
+  else { document.getElementById("scrape-log").textContent = ""; pollScrape(); }
+});
+
+// ---------------- shell: tabs, tier, hash routing ----------------
+function updateHash() {
+  const parts = [`tab=${state.view}`, `tier=${state.tier}`];
+  if (state.view === "champion" && state.champion) parts.push(`name=${state.champion}`);
+  history.replaceState(null, "", "#" + parts.join("&"));
+}
+function showView(v) {
+  state.view = v;
+  document.querySelectorAll("nav button").forEach(b =>
+    b.classList.toggle("active", b.dataset.view === v));
+  document.querySelectorAll(".view").forEach(s =>
+    s.classList.toggle("active", s.id === "view-" + v));
+  updateHash();
+}
+document.querySelectorAll("nav button").forEach(b =>
+  b.addEventListener("click", () => showView(b.dataset.view)));
+
+document.getElementById("tier").addEventListener("change", async e => {
+  state.tier = e.target.value;
+  updateHash();
+  await Promise.all([loadOverview(), loadChampionList()]);
+  if (state.champion) loadChampion(state.champion);
+});
+["search", "lane", "mingames"].forEach(id =>
+  document.getElementById(id).addEventListener("input", renderTable));
+document.querySelectorAll("#tbl th").forEach(th =>
+  th.addEventListener("click", () => {
+    const k = th.dataset.k;
+    if (sortKey === k) sortDir = -sortDir;
+    else { sortKey = k; sortDir = k === "c" || k === "l" ? 1 : -1; }
+    renderTable();
+  }));
+document.getElementById("champ-search").addEventListener("change", e => {
+  const v = e.target.value.trim().toLowerCase();
+  if (v) loadChampion(v);
+});
+
+async function init() {
+  const meta = await api("/api/meta");
+  META = meta;
+  const hash = Object.fromEntries(location.hash.slice(1).split("&")
+    .filter(Boolean).map(kv => kv.split("=").map(decodeURIComponent)));
+  state.tier = meta.tiers.includes(hash.tier) ? hash.tier : meta.defaultTier;
+  const tierSel = document.getElementById("tier");
+  tierSel.replaceChildren(...meta.tiers.map(t => {
+    const o = document.createElement("option");
+    o.value = o.textContent = t;
+    return o;
+  }));
+  tierSel.value = state.tier;
+  await Promise.all([loadOverview(), loadChampionList(), loadInventory()]);
+  pollScrape();
+  if (hash.tab === "champion" && hash.name) {
+    showView("champion");
+    document.getElementById("champ-search").value = hash.name;
+    loadChampion(hash.name);
+  } else if (hash.tab && ["overview", "champion", "data"].includes(hash.tab)) {
+    showView(hash.tab);
+  }
+}
+window.addEventListener("resize", () => { renderOverview(); });
+window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => renderOverview());
+init();
+</script>
+</body>
+</html>
