@@ -1014,6 +1014,37 @@ def _api_champion(con, tier, name):
             "lanes": lanes, "perPatch": per_patch}
 
 
+def cmd_export(args):
+    """Write the web app + pre-generated API JSON as a static site (for GitHub Pages)."""
+    import shutil
+    con = db_connect()
+    meta = _api_meta(con)
+    if not meta["tiers"]:
+        sys.exit("Database is empty — run import-json or scrape first.")
+    out = args.out
+    os.makedirs(os.path.join(out, "api"), exist_ok=True)
+    shutil.copy(os.path.join(WEB_DIR, "index.html"), os.path.join(out, "index.html"))
+
+    def dump(rel, obj):
+        path = os.path.join(out, rel)
+        os.makedirs(os.path.dirname(path), exist_ok=True)
+        with open(path, "w") as f:
+            json.dump(obj, f, separators=(",", ":"))
+
+    dump("api/meta.json", meta)
+    files = 1
+    for tier in meta["tiers"]:
+        patches = db_patches(con, tier)
+        dump(f"api/rows/{tier}.json", build_rows(con, tier, patches))
+        names = [r[0] for r in con.execute(
+            "SELECT DISTINCT champion FROM stats WHERE tier=? ORDER BY champion", (tier,))]
+        dump(f"api/champions/{tier}.json", names)
+        for name in names:
+            dump(f"api/champion/{tier}/{name}.json", _api_champion(con, tier, name))
+        files += 2 + len(names)
+    print(f"Exported static site to {out}/ ({files} API files, tiers: {', '.join(meta['tiers'])})")
+
+
 def cmd_serve(args):
     import threading
     import webbrowser
@@ -1046,28 +1077,22 @@ def cmd_serve(args):
                     self.wfile.write(body)
                     return
                 con = db_connect()
-                if u.path == "/api/meta":
+                if u.path == "/api/meta.json":
                     self._json(_api_meta(con))
-                elif u.path == "/api/rows":
-                    tier = q.get("tier") or default_tier(con)
+                elif m := re.fullmatch(r"/api/rows/([a-z0-9_]+)\.json", u.path):
+                    tier = m.group(1)
                     patches = db_patches(con, tier)
                     if not patches:
                         self._json({"error": f"no data for tier {tier}"}, 404)
                         return
-                    self._json(build_rows(con, tier, patches,
-                                          int(q.get("min_games", 1000))))
-                elif u.path == "/api/champions":
-                    tier = q.get("tier") or default_tier(con)
+                    self._json(build_rows(con, tier, patches))
+                elif m := re.fullmatch(r"/api/champions/([a-z0-9_]+)\.json", u.path):
                     names = [r[0] for r in con.execute(
                         "SELECT DISTINCT champion FROM stats WHERE tier=? ORDER BY champion",
-                        (tier,))]
+                        (m.group(1),))]
                     self._json(names)
-                elif u.path == "/api/champion":
-                    tier = q.get("tier") or default_tier(con)
-                    if not q.get("name"):
-                        self._json({"error": "name required"}, 400)
-                        return
-                    self._json(_api_champion(con, tier, q["name"]))
+                elif m := re.fullmatch(r"/api/champion/([a-z0-9_]+)/([a-z0-9]+)\.json", u.path):
+                    self._json(_api_champion(con, m.group(1), m.group(2)))
                 elif u.path == "/api/scrape":
                     self._json({k: v for k, v in SCRAPE_STATE.items()})
                 else:
@@ -1151,6 +1176,10 @@ def main():
     sp.add_argument("--min-bucket-games", type=int, default=200,
                     help="blank out chart points backed by fewer games")
     sp.set_defaults(func=cmd_dashboard)
+
+    sp = sub.add_parser("export", help="write the web app as a static site (used by GitHub Pages)")
+    sp.add_argument("--out", default="_site")
+    sp.set_defaults(func=cmd_export)
 
     sp = sub.add_parser("serve", help="run the local web dashboard (data + scraping in the browser)")
     sp.add_argument("--host", default="127.0.0.1")

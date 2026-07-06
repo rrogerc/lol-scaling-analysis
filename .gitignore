@@ -3,3 +3,4 @@ __pycache__/
 .DS_Store
 lol.db
 dashboard.html
+_site/

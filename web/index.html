@@ -208,7 +208,12 @@
 
 <!-- ============================ Data & Scrape ============================ -->
 <section class="view" id="view-data">
-  <div class="card">
+  <div class="card" id="static-note" style="display:none">
+    <h2>Static snapshot</h2>
+    <div class="hint" id="static-note-text">This is a read-only copy published from the repository data.
+      Run <code>lol.py serve</code> locally to scrape new patches.</div>
+  </div>
+  <div class="card" id="scrape-card">
     <h2>Scrape</h2>
     <div class="hint">Scrapes every missing patch of the current season for a tier; the current patch is always refreshed. Runs on the server — you can keep browsing while it works.</div>
     <div class="controls" style="margin-top:8px">
@@ -245,7 +250,10 @@ const LANE_SLOT = { top: 0, jungle: 1, middle: 2, bottom: 3, support: 4, main: 0
 const css = k => getComputedStyle(document.documentElement).getPropertyValue(k).trim();
 const fmtInt = n => n.toLocaleString("en-US");
 const fmtCompact = n => n >= 1e6 ? (n/1e6).toFixed(1) + "M" : n >= 1e3 ? (n/1e3).toFixed(0) + "K" : "" + n;
-const api = (path) => fetch(path).then(r => r.json());
+const api = (path) => fetch(path).then(r => {
+  if (!r.ok) throw new Error("HTTP " + r.status);
+  return r.json();
+});
 
 let META = null;
 let DATA = { rows: [], patches: [], totalGames: 0, tier: null };
@@ -442,7 +450,7 @@ function renderOverview() {
 }
 
 async function loadOverview() {
-  DATA = await api(`/api/rows?tier=${encodeURIComponent(state.tier)}&min_games=1000`);
+  DATA = await api(`api/rows/${encodeURIComponent(state.tier)}.json`);
   document.getElementById("subtitle").textContent =
     `Patches ${DATA.patches[0]}–${DATA.patches[DATA.patches.length - 1]} · ${DATA.generated}`;
   document.getElementById("kpi-roles").textContent = fmtInt(DATA.rows.length);
@@ -463,7 +471,14 @@ async function loadOverview() {
 async function loadChampion(name) {
   state.champion = name;
   updateHash();
-  const d = await api(`/api/champion?tier=${encodeURIComponent(state.tier)}&name=${encodeURIComponent(name)}`);
+  let d;
+  try {
+    d = await api(`api/champion/${encodeURIComponent(state.tier)}/${encodeURIComponent(name)}.json`);
+  } catch (e) {
+    document.getElementById("champ-title").textContent =
+      `No data for "${name}" at ${state.tier} — names are lolalytics slugs, e.g. missfortune`;
+    return;
+  }
   document.getElementById("champ-title").textContent =
     `${d.name} — win rate by game length (${d.tier})`;
   const laneNames = Object.keys(d.lanes)
@@ -487,7 +502,7 @@ async function loadChampion(name) {
 }
 
 async function loadChampionList() {
-  const names = await api(`/api/champions?tier=${encodeURIComponent(state.tier)}`);
+  const names = await api(`api/champions/${encodeURIComponent(state.tier)}.json`);
   document.getElementById("champ-list").replaceChildren(...names.map(n => {
     const o = document.createElement("option");
     o.value = n;
@@ -497,7 +512,7 @@ async function loadChampionList() {
 
 // ---------------- data & scrape view ----------------
 async function loadInventory() {
-  const meta = await api("/api/meta");
+  const meta = await api("api/meta.json");
   META = meta;
   document.querySelector("#inv tbody").replaceChildren(...meta.inventory.map(r => {
     const tr = document.createElement("tr");
@@ -509,8 +524,21 @@ async function loadInventory() {
 }
 
 let scrapePoll = null;
+let staticMode = false;
+function enterStaticMode() {
+  staticMode = true;
+  document.getElementById("scrape-card").style.display = "none";
+  document.getElementById("static-note").style.display = "block";
+}
 async function pollScrape() {
-  const s = await api("/api/scrape");
+  if (staticMode) return;
+  let s;
+  try {
+    s = await api("api/scrape");
+  } catch (e) {
+    enterStaticMode();   // no live server behind us (e.g. GitHub Pages)
+    return;
+  }
   const logBox = document.getElementById("scrape-log");
   const btn = document.getElementById("scrape-btn");
   const msg = document.getElementById("scrape-msg");
@@ -539,7 +567,7 @@ document.getElementById("scrape-btn").addEventListener("click", async () => {
   const tier = document.getElementById("scrape-tier").value.trim();
   if (!tier) { document.getElementById("scrape-msg").textContent = "enter a tier first"; return; }
   const force = document.getElementById("scrape-force").checked;
-  const r = await fetch("/api/scrape", {
+  const r = await fetch("api/scrape", {
     method: "POST", headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ tier, force }),
   });
@@ -586,7 +614,7 @@ document.getElementById("champ-search").addEventListener("change", e => {
 });
 
 async function init() {
-  const meta = await api("/api/meta");
+  const meta = await api("api/meta.json");
   META = meta;
   const hash = Object.fromEntries(location.hash.slice(1).split("&")
     .filter(Boolean).map(kv => kv.split("=").map(decodeURIComponent)));
