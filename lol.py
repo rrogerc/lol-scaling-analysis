@@ -21,7 +21,9 @@ import sqlite3
 import sys
 from datetime import datetime, timezone
 
-DB_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "lol.db")
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DB_PATH = os.path.join(BASE_DIR, "lol.db")
+DATA_DIR = os.path.join(BASE_DIR, "data")
 
 BUCKET_LABELS = {
     1: "0-15 min", 2: "15-20 min", 3: "20-25 min", 4: "25-30 min",
@@ -368,6 +370,12 @@ async def run_scrape(args, log=print):
                 log(f"{patch}/{args.tier}: WARNING — no data extracted, nothing saved.")
                 continue
             replace_patch_data(con, patch, args.tier, entries)
+            # Mirror to the JSON archive so a commit + push updates the
+            # published site (its CI rebuilds the DB from data/).
+            out_dir = os.path.join(DATA_DIR, patch, args.tier)
+            os.makedirs(out_dir, exist_ok=True)
+            with open(os.path.join(out_dir, "champion_win_rates.json"), "w") as f:
+                json.dump(entries, f, indent=2)
             log(f"{patch}/{args.tier}: saved {len(entries)} champion-lane records.")
     log("Done.")
 
