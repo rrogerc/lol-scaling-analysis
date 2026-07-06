@@ -74,10 +74,16 @@ def db_patches(con, tier):
 
 
 def default_tier(con):
-    row = con.execute(
-        "SELECT tier FROM stats GROUP BY tier ORDER BY MAX(scraped_at) DESC LIMIT 1"
-    ).fetchone()
-    return row[0] if row else None
+    """Most recently scraped tier; ties (e.g. one bulk import) broken by
+    newest patch covered, then by data volume."""
+    rows = con.execute(
+        "SELECT tier, MAX(scraped_at), SUM(games) FROM stats GROUP BY tier"
+    ).fetchall()
+    if not rows:
+        return None
+    newest = {t: max((patch_key(p) for p in db_patches(con, t)), default=(0,))
+              for t, _, _ in rows}
+    return max(rows, key=lambda r: (r[1], newest[r[0]], r[2]))[0]
 
 
 def replace_patch_data(con, patch, tier, entries):
