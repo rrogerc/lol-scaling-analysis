@@ -85,16 +85,24 @@
     color: var(--text-secondary); font-weight: 500; user-select: none;
     white-space: nowrap; position: sticky; top: 0; background: var(--surface-1);
   }
-  #tbl th { cursor: pointer; }
-  th .arrow { color: var(--muted); font-size: 10px; }
   #tbl tbody tr { cursor: pointer; }
   #tbl tbody tr:hover { background: color-mix(in srgb, var(--text-primary) 4%, transparent); }
   tbody tr.sel td:first-child { font-weight: 600; }
   .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 8px; }
   .dot.off { background: transparent; border: 1px solid var(--baseline); width: 6px; height: 6px; }
   .pos { color: var(--up); } .neg { color: var(--down); }
-  .tablewrap { max-height: 480px; overflow-y: auto; overflow-x: auto; }
-  #tbl { min-width: 1000px; }
+  .tablewrap { max-height: 560px; overflow-y: auto; overflow-x: auto; }
+  #tbl th:nth-child(3), #tbl td:nth-child(3) { text-align: left; }
+  #tbl td:first-child { color: var(--muted); }
+  .seg { display: flex; gap: 4px; flex-wrap: wrap; margin: 10px 0 12px; }
+  .seg button {
+    border: 1px solid var(--border); border-radius: 999px; padding: 5px 12px;
+    background: none; color: var(--text-secondary); font-size: 12px;
+  }
+  .seg button.active {
+    background: var(--surface-1); color: var(--text-primary);
+    border-color: var(--baseline); font-weight: 600;
+  }
   .lane-tag { color: var(--text-secondary); }
   svg text { font-family: inherit; }
   .view { display: none; }
@@ -158,10 +166,10 @@
       <option>bottom</option><option>support</option>
     </select>
     <select id="mingames" aria-label="Minimum games">
-      <option value="1000">≥ 1,000 games</option>
-      <option value="5000" selected>≥ 5,000 games</option>
+      <option value="200">≥ 200 games</option>
+      <option value="1000" selected>≥ 1,000 games</option>
+      <option value="5000">≥ 5,000 games</option>
       <option value="20000">≥ 20,000 games</option>
-      <option value="50000">≥ 50,000 games</option>
     </select>
   </div>
 
@@ -176,21 +184,17 @@
   </div>
 
   <div class="card">
-    <h2>Champions</h2>
-    <div class="hint">Win rate per game-length bucket (minutes); hover a cell for its game count. Scaling Δ = win rate in 35+ min games minus win rate in games under 20 min. Click a column to sort, a row to chart. — means fewer than 200 games in that bucket.</div>
+    <h2>Rankings</h2>
+    <div class="hint">Champions ranked by win rate in the selected game-length bucket (minutes). The min-games filter applies to that bucket. Click a row to chart it.</div>
+    <div class="seg" id="bucket-seg"></div>
     <div class="tablewrap">
       <table id="tbl">
         <thead><tr>
-          <th data-k="c">Champion <span class="arrow"></span></th>
-          <th data-k="l">Lane <span class="arrow"></span></th>
-          <th data-k="wr1">15–20 <span class="arrow"></span></th>
-          <th data-k="wr2">20–25 <span class="arrow"></span></th>
-          <th data-k="wr3">25–30 <span class="arrow"></span></th>
-          <th data-k="wr4">30–35 <span class="arrow"></span></th>
-          <th data-k="wr5">35–40 <span class="arrow"></span></th>
-          <th data-k="wr6">40+ <span class="arrow"></span></th>
-          <th data-k="delta">Scaling Δ <span class="arrow"></span></th>
-          <th data-k="total">Games <span class="arrow"></span></th>
+          <th>Rank</th>
+          <th>Champion</th>
+          <th>Lane</th>
+          <th id="tbl-metric">Win Rate</th>
+          <th id="tbl-games">Games</th>
         </tr></thead>
         <tbody></tbody>
       </table>
@@ -426,13 +430,25 @@ function toggle(r) {
   renderOverview();
 }
 
-let sortKey = "delta", sortDir = -1;
+// Bucket 0 (0-15 min) is excluded: games that end that early are too rare
+// for the win rate to mean much.
+const RANK_OPTIONS = [
+  { label: "15–20", b: 1 }, { label: "20–25", b: 2 }, { label: "25–30", b: 3 },
+  { label: "30–35", b: 4 }, { label: "35–40", b: 5 }, { label: "40+", b: 6 },
+  { label: "Scaling Δ", b: "delta" },
+];
+let rankBucket = 4;   // 30-35 min
+
 function visibleRows() {
   const q = document.getElementById("search").value.trim().toLowerCase();
   const lane = document.getElementById("lane").value;
   const min = +document.getElementById("mingames").value;
-  return DATA.rows.filter(r =>
-    r.total >= min && (!lane || r.l === lane) && (!q || r.c.includes(q)));
+  return DATA.rows.filter(r => {
+    if (lane && r.l !== lane) return false;
+    if (q && !r.c.includes(q)) return false;
+    if (rankBucket === "delta") return r.delta != null && r.total >= min;
+    return r.wr[rankBucket] != null && r.g[rankBucket] >= min;
+  });
 }
 function cell(text, cls) {
   const td = document.createElement("td");
@@ -441,13 +457,13 @@ function cell(text, cls) {
   return td;
 }
 function renderTable() {
-  const get = r => sortKey.startsWith("wr") ? r.wr[+sortKey.slice(2)] : r[sortKey];
-  const rows = visibleRows().slice().sort((a, b) => {
-    const va = get(a), vb = get(b);
-    if (va == null) return 1; if (vb == null) return -1;
-    return (va < vb ? -1 : va > vb ? 1 : 0) * sortDir;
-  });
-  document.querySelector("#tbl tbody").replaceChildren(...rows.map(r => {
+  const byDelta = rankBucket === "delta";
+  const rows = visibleRows().sort(byDelta
+    ? (a, b) => b.delta - a.delta
+    : (a, b) => b.wr[rankBucket] - a.wr[rankBucket]);
+  document.getElementById("tbl-metric").textContent = byDelta ? "Scaling Δ" : "Win Rate";
+  document.getElementById("tbl-games").textContent = byDelta ? "Total games" : "Games";
+  document.querySelector("#tbl tbody").replaceChildren(...rows.map((r, i) => {
     const tr = document.createElement("tr");
     const id = rid(r);
     if (selected.has(id)) tr.className = "sel";
@@ -456,25 +472,25 @@ function renderTable() {
     if (selected.has(id)) dot.style.background = css(SLOTS[selected.get(id)]);
     const tdName = document.createElement("td");
     tdName.append(dot, document.createTextNode(r.c));
-    tr.append(tdName, cell(r.l, "lane-tag"));
-    // Bucket 1 (0-15 min) is skipped: games that end that early are too rare
-    // for the win rate to mean much.
-    r.wr.slice(1).forEach((v, i) => {
-      const td = cell(v == null ? "—" : v.toFixed(1) + "%");
-      td.title = fmtInt(r.g[i + 1]) + " games";
-      tr.append(td);
-    });
     tr.append(
-      cell(r.delta == null ? "—" : (r.delta > 0 ? "+" : "") + r.delta.toFixed(2),
-           r.delta > 0 ? "pos" : "neg"),
-      cell(fmtInt(r.total)));
+      cell(String(i + 1)), tdName, cell(r.l, "lane-tag"),
+      byDelta
+        ? cell((r.delta > 0 ? "+" : "") + r.delta.toFixed(2), r.delta > 0 ? "pos" : "neg")
+        : cell(r.wr[rankBucket].toFixed(2) + "%"),
+      cell(fmtInt(byDelta ? r.total : r.g[rankBucket])));
     tr.addEventListener("click", () => toggle(r));
     return tr;
   }));
-  document.querySelectorAll("#tbl th").forEach(th => {
-    th.querySelector(".arrow").textContent =
-      th.dataset.k === sortKey ? (sortDir === 1 ? "▲" : "▼") : "";
-  });
+  document.querySelectorAll("#bucket-seg button").forEach((btn, i) =>
+    btn.classList.toggle("active", RANK_OPTIONS[i].b === rankBucket));
+}
+function initBucketSeg() {
+  document.getElementById("bucket-seg").replaceChildren(...RANK_OPTIONS.map(o => {
+    const btn = document.createElement("button");
+    btn.textContent = o.label;
+    btn.addEventListener("click", () => { rankBucket = o.b; renderTable(); });
+    return btn;
+  }));
 }
 function renderOverview() {
   renderTable();
@@ -738,13 +754,7 @@ document.getElementById("tier").addEventListener("change", async e => {
 });
 ["search", "lane", "mingames"].forEach(id =>
   document.getElementById(id).addEventListener("input", renderTable));
-document.querySelectorAll("#tbl th").forEach(th =>
-  th.addEventListener("click", () => {
-    const k = th.dataset.k;
-    if (sortKey === k) sortDir = -sortDir;
-    else { sortKey = k; sortDir = k === "c" || k === "l" ? 1 : -1; }
-    renderTable();
-  }));
+initBucketSeg();
 document.getElementById("champ-search").addEventListener("change", e => {
   const v = e.target.value.trim().toLowerCase();
   if (v) loadChampion(v);
