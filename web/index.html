@@ -85,6 +85,8 @@
     color: var(--text-secondary); font-weight: 500; user-select: none;
     white-space: nowrap; position: sticky; top: 0; background: var(--surface-1);
   }
+  #tbl th { cursor: pointer; }
+  th .arrow { color: var(--muted); font-size: 10px; }
   #tbl tbody tr { cursor: pointer; }
   #tbl tbody tr:hover { background: color-mix(in srgb, var(--text-primary) 4%, transparent); }
   tbody tr.sel td:first-child { font-weight: 600; }
@@ -190,11 +192,11 @@
     <div class="tablewrap">
       <table id="tbl">
         <thead><tr>
-          <th>Rank</th>
-          <th>Champion</th>
-          <th>Lane</th>
-          <th id="tbl-metric">Win Rate</th>
-          <th id="tbl-games">Games</th>
+          <th data-k="rank">Rank <span class="arrow"></span></th>
+          <th data-k="c">Champion <span class="arrow"></span></th>
+          <th data-k="l">Lane <span class="arrow"></span></th>
+          <th data-k="metric"><span id="tbl-metric">Win Rate</span> <span class="arrow"></span></th>
+          <th data-k="games"><span id="tbl-games">Games</span> <span class="arrow"></span></th>
         </tr></thead>
         <tbody></tbody>
       </table>
@@ -456,14 +458,24 @@ function cell(text, cls) {
   if (cls) td.className = cls;
   return td;
 }
+let sortKey = "rank", sortDir = 1;
 function renderTable() {
   const byDelta = rankBucket === "delta";
-  const rows = visibleRows().sort(byDelta
-    ? (a, b) => b.delta - a.delta
-    : (a, b) => b.wr[rankBucket] - a.wr[rankBucket]);
+  const metric = r => byDelta ? r.delta : r.wr[rankBucket];
+  const gamesOf = r => byDelta ? r.total : r.g[rankBucket];
+  // Rank is always the position by the bucket's metric, regardless of the
+  // column the table happens to be sorted by.
+  const base = visibleRows().sort((a, b) => metric(b) - metric(a));
+  const rankOf = new Map(base.map((r, i) => [rid(r), i + 1]));
+  const get = { rank: r => rankOf.get(rid(r)), c: r => r.c, l: r => r.l,
+                metric, games: gamesOf }[sortKey];
+  const rows = base.slice().sort((a, b) => {
+    const va = get(a), vb = get(b);
+    return (va < vb ? -1 : va > vb ? 1 : 0) * sortDir;
+  });
   document.getElementById("tbl-metric").textContent = byDelta ? "Scaling Δ" : "Win Rate";
   document.getElementById("tbl-games").textContent = byDelta ? "Total games" : "Games";
-  document.querySelector("#tbl tbody").replaceChildren(...rows.map((r, i) => {
+  document.querySelector("#tbl tbody").replaceChildren(...rows.map(r => {
     const tr = document.createElement("tr");
     const id = rid(r);
     if (selected.has(id)) tr.className = "sel";
@@ -473,16 +485,20 @@ function renderTable() {
     const tdName = document.createElement("td");
     tdName.append(dot, document.createTextNode(r.c));
     tr.append(
-      cell(String(i + 1)), tdName, cell(r.l, "lane-tag"),
+      cell(String(rankOf.get(id))), tdName, cell(r.l, "lane-tag"),
       byDelta
         ? cell((r.delta > 0 ? "+" : "") + r.delta.toFixed(2), r.delta > 0 ? "pos" : "neg")
         : cell(r.wr[rankBucket].toFixed(2) + "%"),
-      cell(fmtInt(byDelta ? r.total : r.g[rankBucket])));
+      cell(fmtInt(gamesOf(r))));
     tr.addEventListener("click", () => toggle(r));
     return tr;
   }));
   document.querySelectorAll("#bucket-seg button").forEach((btn, i) =>
     btn.classList.toggle("active", RANK_OPTIONS[i].b === rankBucket));
+  document.querySelectorAll("#tbl th").forEach(th => {
+    th.querySelector(".arrow").textContent =
+      th.dataset.k === sortKey ? (sortDir === 1 ? "▲" : "▼") : "";
+  });
 }
 function initBucketSeg() {
   document.getElementById("bucket-seg").replaceChildren(...RANK_OPTIONS.map(o => {
@@ -754,6 +770,13 @@ document.getElementById("tier").addEventListener("change", async e => {
 });
 ["search", "lane", "mingames"].forEach(id =>
   document.getElementById(id).addEventListener("input", renderTable));
+document.querySelectorAll("#tbl th").forEach(th =>
+  th.addEventListener("click", () => {
+    const k = th.dataset.k;
+    if (sortKey === k) sortDir = -sortDir;
+    else { sortKey = k; sortDir = (k === "metric" || k === "games") ? -1 : 1; }
+    renderTable();
+  }));
 initBucketSeg();
 document.getElementById("champ-search").addEventListener("change", e => {
   const v = e.target.value.trim().toLowerCase();
