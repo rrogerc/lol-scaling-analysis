@@ -230,11 +230,7 @@
     <h2>Scrape</h2>
     <div class="hint">Scrapes every missing patch of the current season for a tier; the current patch is always refreshed. Runs on the server — you can keep browsing while it works.</div>
     <div class="controls" style="margin-top:8px">
-      <input id="scrape-tier" type="text" list="tier-list" placeholder="tier, e.g. diamond_plus" aria-label="Tier to scrape">
-      <datalist id="tier-list">
-        <option>diamond_plus</option><option>master_plus</option><option>emerald_plus</option>
-        <option>platinum_plus</option><option>gold_plus</option><option>all</option>
-      </datalist>
+      <select id="scrape-tier" aria-label="Tier to scrape"></select>
       <label class="sub"><input type="checkbox" id="scrape-force"> re-scrape existing patches</label>
       <button id="scrape-btn">Start scrape</button>
       <span class="sub" id="scrape-msg"></span>
@@ -258,12 +254,9 @@
 <!-- ============================ CLI Builder ============================ -->
 <section class="view" id="view-cli">
   <div class="card">
-    <h2>Command builder</h2>
-    <div class="hint">Pick a task, fill in the options, copy the command. Run it from the repository root.</div>
-    <div class="controls" style="margin-top:8px">
-      <label class="sub">Command <select id="cli-cmd" aria-label="Command"></select></label>
-      <span class="sub" id="cli-desc"></span>
-    </div>
+    <h2>Scrape command builder</h2>
+    <div class="hint">Configure the scrape, then copy the command and run it from the repository root.</div>
+    <div class="hint" id="cli-desc"></div>
     <div id="cli-fields" class="cli-grid"></div>
   </div>
   <div class="card">
@@ -611,67 +604,25 @@ document.getElementById("scrape-btn").addEventListener("click", async () => {
 });
 
 // ---------------- CLI builder ----------------
-const LANES = ["top", "jungle", "middle", "bottom", "support"];
+// Every tier slug lolalytics accepts (verified against the site).
+const LOLALYTICS_TIERS = [
+  "challenger", "grandmaster_plus", "grandmaster", "master_plus", "master",
+  "d2_plus", "diamond_plus", "diamond", "emerald_plus", "emerald",
+  "platinum_plus", "platinum", "gold_plus", "gold", "silver", "bronze", "iron",
+  "all", "unranked", "1trick",
+];
 const CLI_SPEC = {
   scrape: {
     desc: "Download win-rate data from lolalytics into lol.db and the data/ archive.",
     note: "Scraping always runs locally — commit and push afterwards to update this site.",
     fields: [
-      { flag: "--tier", label: "Tier (required)", type: "tier-free", required: true },
+      { flag: "--tier", label: "Tier", type: "tier", def: "diamond_plus", alwaysInclude: true },
       { flag: "--patches", label: "Patches, space-separated", type: "text", multi: true,
         placeholder: "default: whole current season" },
       { flag: "--concurrency", label: "Concurrent requests", type: "number", def: 5 },
       { flag: "--min-lane-rate", label: "Min lane play rate %", type: "number", def: 10 },
       { flag: "--force", label: "Re-scrape existing patches", type: "check" },
     ],
-  },
-  report: {
-    desc: "Ranked win-rate tables per time bucket, printed to the terminal.",
-    fields: [
-      { flag: "--tier", label: "Tier", type: "tier-db" },
-      { flag: "--patches", label: "Patches, space-separated", type: "text", multi: true,
-        placeholder: "default: all in DB" },
-      { flag: "--lane", label: "Lane", type: "lane" },
-      { flag: "--min-games", label: "Min games", type: "number", def: 1000 },
-      { flag: "--top", label: "Rows per table", type: "number", def: 10 },
-      { flag: "--scaling", label: "Rank by scaling Δ instead", type: "check" },
-      { flag: "--csv", label: "Also write CSV to", type: "text", placeholder: "e.g. out.csv" },
-    ],
-  },
-  champion: {
-    desc: "One champion's win-rate curve per lane, printed to the terminal.",
-    fields: [
-      { flag: "", label: "Champion (required)", type: "champ", required: true, positional: true },
-      { flag: "--tier", label: "Tier", type: "tier-db" },
-      { flag: "--patches", label: "Patches, space-separated", type: "text", multi: true,
-        placeholder: "default: all in DB" },
-    ],
-  },
-  dashboard: {
-    desc: "Write a single self-contained HTML file of the overview (shareable).",
-    fields: [
-      { flag: "--tier", label: "Tier", type: "tier-db" },
-      { flag: "--out", label: "Output file", type: "text", def: "dashboard.html" },
-      { flag: "--min-games", label: "Min games per champion-role", type: "number", def: 1000 },
-      { flag: "--min-bucket-games", label: "Min games per chart point", type: "number", def: 200 },
-    ],
-  },
-  export: {
-    desc: "Write this whole web app plus its data as a static site (what GitHub Pages serves).",
-    fields: [{ flag: "--out", label: "Output directory", type: "text", def: "_site" }],
-  },
-  serve: {
-    desc: "Run this dashboard locally with live data and scraping.",
-    fields: [
-      { flag: "--port", label: "Port", type: "number", def: 8321 },
-      { flag: "--host", label: "Host", type: "text", def: "127.0.0.1" },
-      { flag: "--no-open", label: "Don't auto-open the browser", type: "check" },
-    ],
-  },
-  status: { desc: "Print what's in the database, per tier and patch.", fields: [] },
-  "import-json": {
-    desc: "Rebuild lol.db from the data/ JSON archive.",
-    fields: [{ flag: "--data-dir", label: "Data directory", type: "text", def: "data" }],
   },
 };
 
@@ -686,73 +637,49 @@ function cliFieldEl(f) {
     el.type = "checkbox";
     wrap.append(el, document.createTextNode(f.label));
   } else {
-    if (f.type === "tier-db" || f.type === "lane") {
+    if (f.type === "tier") {
       el = document.createElement("select");
-      const none = document.createElement("option");
-      none.value = "";
-      none.textContent = f.type === "lane" ? "all lanes" : "default (latest scraped)";
-      el.append(none, ...(f.type === "lane" ? LANES : (META?.tiers || [])).map(v => {
+      el.append(...LOLALYTICS_TIERS.map(v => {
         const o = document.createElement("option");
         o.value = o.textContent = v;
         return o;
       }));
+      if (f.def) el.value = f.def;
     } else {
       el = document.createElement("input");
       el.type = f.type === "number" ? "number" : "text";
-      if (f.type === "tier-free") el.setAttribute("list", "tier-list");
-      if (f.type === "champ") el.setAttribute("list", "champ-list");
       if (f.def !== undefined) el.value = f.def;
       el.placeholder = f.placeholder || (f.def !== undefined ? String(f.def) : "");
     }
     wrap.append(document.createTextNode(f.label), el);
   }
-  el.dataset.cli = "1";
   f._el = el;
   return wrap;
 }
 
 function buildCommand() {
-  const cmd = document.getElementById("cli-cmd").value;
-  const spec = CLI_SPEC[cmd];
-  const parts = [".venv/bin/python", "lol.py", cmd];
-  let missing = null;
+  const spec = CLI_SPEC.scrape;
+  const parts = [".venv/bin/python", "lol.py", "scrape"];
   for (const f of spec.fields) {
     if (f.type === "check") {
       if (f._el.checked) parts.push(f.flag);
       continue;
     }
     const v = f._el.value.trim();
-    if (!v) {
-      if (f.required) { missing = f.label; parts.push(f.positional ? "<" + f.label + ">" : f.flag + " <required>"); }
-      continue;
-    }
-    if (f.def !== undefined && String(f.def) === v) continue;
-    if (f.positional) parts.push(shq(v));
-    else if (f.multi) parts.push(f.flag, ...v.split(/\s+/).map(shq));
+    if (!v) continue;
+    if (!f.alwaysInclude && f.def !== undefined && String(f.def) === v) continue;
+    if (f.multi) parts.push(f.flag, ...v.split(/\s+/).map(shq));
     else parts.push(f.flag, shq(v));
   }
   document.getElementById("cli-out").textContent = parts.join(" ");
-  document.getElementById("cli-note").textContent = missing
-    ? `Fill in ${missing.replace(" (required)", "")} to complete the command.`
-    : (spec.note || "Run this from the repository root.");
-}
-
-function renderCliForm() {
-  const cmd = document.getElementById("cli-cmd").value;
-  const spec = CLI_SPEC[cmd];
-  document.getElementById("cli-desc").textContent = spec.desc;
-  document.getElementById("cli-fields").replaceChildren(...spec.fields.map(cliFieldEl));
-  buildCommand();
+  document.getElementById("cli-note").textContent = spec.note;
 }
 
 function initCli() {
-  const sel = document.getElementById("cli-cmd");
-  sel.replaceChildren(...Object.keys(CLI_SPEC).map(c => {
-    const o = document.createElement("option");
-    o.value = o.textContent = c;
-    return o;
-  }));
-  sel.addEventListener("change", renderCliForm);
+  const spec = CLI_SPEC.scrape;
+  document.getElementById("cli-desc").textContent = spec.desc;
+  document.getElementById("cli-fields").replaceChildren(...spec.fields.map(cliFieldEl));
+  buildCommand();
   document.getElementById("cli-fields").addEventListener("input", buildCommand);
   document.getElementById("cli-copy").addEventListener("click", async () => {
     const btn = document.getElementById("cli-copy");
@@ -764,7 +691,14 @@ function initCli() {
     }
     setTimeout(() => { btn.textContent = "Copy"; }, 1500);
   });
-  renderCliForm();
+  // The Scrape panel's tier picker shares the verified tier list.
+  const scrapeTier = document.getElementById("scrape-tier");
+  scrapeTier.replaceChildren(...LOLALYTICS_TIERS.map(v => {
+    const o = document.createElement("option");
+    o.value = o.textContent = v;
+    return o;
+  }));
+  scrapeTier.value = "diamond_plus";
 }
 
 // ---------------- shell: tabs, tier, hash routing ----------------
